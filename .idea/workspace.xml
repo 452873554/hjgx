@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b46be9e-1750-4ee0-836e-4f95b6644957" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="portal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,11 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/manage/product.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
               <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -100,7 +110,7 @@
       <file leaf-file-name="fileinput.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utility/bootstrap-fileinput/fileinput.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-636">
+            <state relative-caret-position="-11040">
               <caret line="11" column="2845" selection-start-line="11" selection-start-column="2845" selection-end-line="11" selection-end-column="2845" />
               <folding />
             </state>
@@ -135,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/Brand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/bootstrap/treegrid/jquery.treegrid.css" />
         <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/NavigatorController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/foreground/common/header.css" />
@@ -186,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/manage/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/manage/product/product_save_or_update.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/manage/product.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1262,12 +1272,12 @@
       <workItem from="1515492743652" duration="24871000" />
       <workItem from="1515665808772" duration="22330000" />
       <workItem from="1515905812918" duration="61260000" />
-      <workItem from="1516183966553" duration="46913000" />
+      <workItem from="1516183966553" duration="46924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225429000" />
+    <option name="totallyTimeSpent" value="225440000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1370,17 +1380,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.15/tomcat-embed-core-8.5.15.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="109" column="15" selection-start-line="109" selection-start-column="15" selection-end-line="109" selection-end-column="15" />
-          <folding>
-            <element signature="e#3162#3163#0" expanded="true" />
-            <element signature="e#3227#3228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.15/tomcat-embed-core-8.5.15.jar!/org/apache/catalina/session/StandardSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -1771,7 +1770,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utility/bootstrap-fileinput/fileinput.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-636">
+        <state relative-caret-position="-11040">
           <caret line="11" column="2845" selection-start-line="11" selection-start-column="2845" selection-end-line="11" selection-end-column="2845" />
           <folding />
         </state>
@@ -1836,6 +1835,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
