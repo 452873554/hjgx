@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 商品管理</title>
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap-fileinput/fileinput.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/summernote/summernote.css}">
+    <link rel="stylesheet" th:href="@{/static/css/backstage/product/product.css}">
+
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <!-- 新增/修改模态框 -->
+        <div class="modal fade" id="save-or-update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">新增/保存商品信息</h4>
+                    </div>
+
+                    <form method="post" action="/backstage/product/save-or-update">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-brandName">商品编号</span>
+                                <input type="text" name="brandName" class="form-control" placeholder="请填写品牌的名称"
+                                       aria-describedby="basic-brandName">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-identifyOrder">排序</span>
+                                <input type="text" name="identifyOrder" class="form-control"
+                                       placeholder="显示时的排序依据，从大到小排序，留空时系统会默认设置为最大值"
+                                       aria-describedby="basic-identifyOrder">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                            <button type="submit" class="btn btn-primary">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="spu" class="col-sm-1 control-label">商品编号</label>
+                    <div class="col-sm-11">
+                        <input type="text" name="spu" class="form-control" id="spu" placeholder="商品SPU，不可重复，生成后不可修改">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="productName" class="col-sm-1 control-label">商品名称</label>
+                    <div class="col-sm-11">
+                        <input type="text" name="productName" class="form-control" id="productName" placeholder="商品名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="categoryId" class="col-sm-1 control-label">商品类目</label>
+                    <div class="col-sm-11">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">类目<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu drop-down-text">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" id="categoryId" name="categoryId" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="brand" class="col-sm-1 control-label">商品品牌</label>
+                    <div class="col-sm-11">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">品牌<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu drop-down-text">
+                                    <li th:each="item : ${brands}"><a href="#" th:text="${item.brandName}"></a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" id="brand" name="brand" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="styleId" class="col-sm-1 control-label">商品风格</label>
+                    <div class="col-sm-11">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">风格<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu drop-down-text">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" id="styleId" name="styleId" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="styleId" class="col-sm-1 control-label">供应商</label>
+                    <div class="col-sm-11">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">供应商<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu drop-down-text">
+                                    <li th:each="item : ${suppliers}"><a href="#" th:text="${item.name}"></a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" id="styleId" name="styleId" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-1 control-label">所属空间</label>
+                    <div class="col-sm-11">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default">
+                                <input type="checkbox" autocomplete="off">客厅
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="checkbox" autocomplete="off">卧室
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="checkbox" autocomplete="off">厨房
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="checkbox" autocomplete="off">厨房
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="checkbox" autocomplete="off">儿童房
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="unit" class="col-sm-1 control-label">计件单位</label>
+                    <div class="col-sm-11">
+                        <input type="text" name="unit" class="form-control" id="unit" placeholder="计件单位">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="unit" class="col-sm-1 control-label">商品属性</label>
+
+                    <!-- 属性值模板 -->
+                    <div style="display: none;" id="attrValTemplate">
+                        <div class="btn-group" role="group" style="width: 24%">
+                            <button type="button" class="btn btn-xs btn-danger delete-attr-val" style="width: 30%">删除
+                            </button>
+                            <input type="text" style="height: 100%;width: 70%" class="attr-val">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-11">
+                        <table class="table table-bordered">
+                            <thead>
+
+                            <!-- 属性对行模板 -->
+                            <tr style="display: none;" id="attrTemplate">
+                                <td></td>
+                                <td><input type="text" class="attr" style="height: 100%;"></td>
+                                <td>
+                                    <button type="button" class="btn btn-xs btn-success add-attr-val" style="width: 4%">
+                                        +
+                                    </button>
+
+                                    <div style="width: 96%;float: right;">
+                                        <div class="btn-group" role="group" style="width: 24%">
+                                            <button type="button" class="btn  btn-xs btn-danger delete-attr-val"
+                                                    style="width: 30%">删除
+                                            </button>
+                                            <input type="text" style="height: 100%;width: 70%" class="attr-val">
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-xs btn-danger del-attr" style="width: 100%;">
+                                        -
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th width="5%">
+                                    <button id="add-attr" type="button" class="btn btn-xs btn-success"
+                                            style="width: 100%;">+
+                                    </button>
+                                </th>
+                                <th width="15%">属性名称</th>
+                                <th width="75%">属性可选值</th>
+                                <th width="5%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="attr-tbody">
+                            <tr>
+                                <td></td>
+                                <td><input type="text" class="attr" style="height: 100%;"></td>
+                                <td>
+                                    <button type="button" class="btn btn-xs btn-success add-attr-val" style="width: 4%">
+                                        +
+                                    </button>
+
+                                    <div style="width: 96%;float: right;">
+                                        <div class="btn-group" role="group" style="width: 24%">
+                                            <button type="button" class="btn btn-xs btn-danger delete-attr-val"
+                                                    style="width: 30%">删除
+                                            </button>
+                                            <input type="text" style="height: 100%;width: 70%" class="attr-val">
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-xs btn-danger del-attr" style="width: 100%;">
+                                        -
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="unit" class="col-sm-1 control-label">商品规格</label>
+                    <div class="col-sm-11">
+
+                        <p>
+                            <button type="button" class="btn btn-primary " id="generate-specification">生成规格信息</button>
+                        </p>
+
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <span><strong>商品规格也视作SKU，从属于商品编号SPU</strong>，SKU将根据<strong>商品属性</strong>自动生成对应的笛卡尔积表格，属性的组合和SKU是一一对应的，如果主动删除了商品规格记录，那么系统则会根据最新的规格记录保存数据，不关心属性组合</span>
+                        </div>
+
+                        <div style="overflow: scroll">
+                            <table class="table table-bordered" id="specification-table">
+                                <tr id="specification-table-header-template" style="display: none;">
+                                    <th>商品编号</th>
+                                    <th>商品货号</th>
+                                    <th>库存</th>
+                                    <th>预警线</th>
+                                    <th>成本价</th>
+                                    <th>零售价</th>
+                                    <th>市场价</th>
+                                    <th>体积</th>
+                                </tr>
+                                <thead>
+                                <tr id="specification-table-header">
+                                    <th>商品编号</th>
+                                    <th>商品货号</th>
+                                    <th>库存</th>
+                                    <th>预警线</th>
+                                    <th>成本价</th>
+                                    <th>零售价</th>
+                                    <th>市场价</th>
+                                    <th>体积</th>
+                                </tr>
+                                </thead>
+                                <tbody id="specification-table-body">
+                                <tr>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="unit" class="col-sm-1 control-label">商品介绍</label>
+                    <div class="col-sm-11">
+                        <div class="summernote"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="unit" class="col-sm-1 control-label">商品相册</label>
+                    <div class="col-sm-11">
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <span><strong>商品规格也视作SKU，从属于商品编号SPU</strong>，SKU将根据<strong>商品属性</strong>自动生成对应的笛卡尔积表格，属性的组合和SKU是一一对应的，如果主动删除了商品规格记录，那么系统则会根据最新的规格记录保存数据，不关心属性组合</span>
+                        </div>
+                        <input id="preview-img" type="file" multiple>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-fileinput/fileinput.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-fileinput/zh.js}"></script>
+
+<script type="text/javascript" th:src="@{/static/js/utility/summernote/summernote.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/utility/summernote/summernote-zh-CN.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/manage/product.js}"></script>
+
+</body>
+</html>

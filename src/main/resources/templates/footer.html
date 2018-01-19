@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<!-- 导航 -->
+<body>
+
+<!-- FOOTER -->
+<footer th:fragment="copy">
+
+    <div class="pfooter" v-if="f">
+        <div class="footwrap clearfix">
+            <div class="footleft">
+                <div class="footleft-t">
+                    <div>公司新闻</div>
+                    <div>|</div>
+                    <div>行业动态</div>
+                    <div>|</div>
+                    <div>关于我们</div>
+                    <div>|</div>
+                    <div>加入我们</div>
+                    <div>|</div>
+                    <div>售后服务</div>
+                </div>
+                <div class="footleft-b">
+                    <div>&copy; 深圳市深装总家居科技有限公司</div>
+                    <div>咨询热线：4008-099-931</div>
+                </div>
+            </div>
+            <div class="footright">
+                <div class="ftl">
+                    <img th:src="@{/static/images/innersrc/erweima1.png}" alt="">
+                    <div style="padding-left:12px;">皇家共享</div>
+                </div>
+                <div class="ftr">
+                    <img th:src="@{/static/images/innersrc/erweima2.png}" alt="">
+                    <div style="padding-left:5px;">深装总家居</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+</footer>
+
+
+<div th:fragment="commonjs">
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script th:src="@{/static/js/bootstrap/jquery.min.js}"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script th:src="@{/static/js/bootstrap/bootstrap.min.js}"></script>
+</div>
+
+</body>
+</html>

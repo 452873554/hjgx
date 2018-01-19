@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.SupplierMapper">
+    <resultMap id="BaseResultMap" type="cn.hjgx.entity.Supplier">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="linkman" property="linkman" jdbcType="VARCHAR"/>
+        <result column="contact_way" property="contactWay" jdbcType="VARCHAR"/>
+        <result column="company_name" property="companyName" jdbcType="VARCHAR"/>
+        <result column="company_address" property="companyAddress" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, name, linkman, contact_way, company_name, company_address, create_time, update_time
+  </sql>
+
+    <select id="getAllSuppliers" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_supplier
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_supplier
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_portal_supplier
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="cn.hjgx.entity.Supplier">
+    insert into t_portal_supplier (id, name, linkman, 
+      contact_way, company_name, company_address, 
+      create_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{linkman,jdbcType=VARCHAR}, 
+      #{contactWay,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{companyAddress,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="cn.hjgx.entity.Supplier">
+        insert into t_portal_supplier
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="linkman != null">
+                linkman,
+            </if>
+            <if test="contactWay != null">
+                contact_way,
+            </if>
+            <if test="companyName != null">
+                company_name,
+            </if>
+            <if test="companyAddress != null">
+                company_address,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="linkman != null">
+                #{linkman,jdbcType=VARCHAR},
+            </if>
+            <if test="contactWay != null">
+                #{contactWay,jdbcType=VARCHAR},
+            </if>
+            <if test="companyName != null">
+                #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="companyAddress != null">
+                #{companyAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.Supplier">
+        update t_portal_supplier
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="linkman != null">
+                linkman = #{linkman,jdbcType=VARCHAR},
+            </if>
+            <if test="contactWay != null">
+                contact_way = #{contactWay,jdbcType=VARCHAR},
+            </if>
+            <if test="companyName != null">
+                company_name = #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="companyAddress != null">
+                company_address = #{companyAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.Supplier">
+    update t_portal_supplier
+    set name = #{name,jdbcType=VARCHAR},
+      linkman = #{linkman,jdbcType=VARCHAR},
+      contact_way = #{contactWay,jdbcType=VARCHAR},
+      company_name = #{companyName,jdbcType=VARCHAR},
+      company_address = #{companyAddress,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+    <!-- 工具外自定义添加内容 -->
+    <select id="selectByPageParam" resultMap="BaseResultMap"
+            parameterType="cn.hjgx.entity.pagedto.SupplierPageParam">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_supplier
+        where 1 = 1
+        <if test="name != null">
+            AND name like '%' || #{name,jdbcType=VARCHAR} || '%'
+        </if>
+        <if test="linkman != null">
+            AND linkman like '%' || #{linkman,jdbcType=VARCHAR} || '%'
+        </if>
+        <if test="contactWay != null">
+            AND contact_way like '%' || #{contactWay,jdbcType=VARCHAR} || '%'
+        </if>
+        <if test="companyName != null">
+            AND company_name like '%' || #{companyName,jdbcType=VARCHAR} || '%'
+        </if>
+        <if test="companyAddress != null">
+            AND company_address like '%' || #{companyAddress,jdbcType=VARCHAR} || '%'
+        </if>
+        <if test="createTime != null">
+            AND create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="updateTime != null">
+            AND update_time = #{updateTime,jdbcType=TIMESTAMP}
+        </if>
+        ORDER BY create_time DESC
+    </select>
+</mapper>

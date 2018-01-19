@@ -1,0 +1,159 @@
+
+*{
+  box-sizing: border-box;
+}
+ .clearfix:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+.toTop{
+  width: 80px;
+  /* height: 320px; */
+  border: 1px solid #808080;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 1000;
+  background: rgba(255,255, 255, .8);
+}
+
+.to{
+  width: 79px;
+  height: 80px;
+  text-align: center;
+  padding-top: 10px;
+  cursor:pointer;
+}
+
+.pfooter{
+  width: 100%;
+  height: 170px;
+  background: #333;
+ margin-top: 50px;
+}
+
+.footwrap{
+  width: 1200px;
+  height: 170px;
+  margin: 0 auto;
+}
+
+.footleft{
+  width: 940px;
+  color: #fff;
+  font-size: 14px;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  float: left;
+  margin-top: 52px;
+}
+.footleft-t{
+  margin-bottom: 20px;
+}
+.footleft div{
+  float: left;
+  margin-right: 25px;
+}
+
+.footright{
+    width: 260px;
+    float: left;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+
+.footright img{
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+.ftl{
+  float: left;
+}
+.ftr{
+  float: left;
+}
+
+
+footer .loginbox{
+  position: relative;
+  width: 260px;
+  height: 290px;
+  background: white;
+  float: right;
+  margin-right: 5px;
+  border-radius:5px;
+  border: 1px solid #6081cc;
+  /* box-shadow: 3px 3px 3px #989898;   */
+  padding:0  30px;
+  color: #989898;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  z-index: 1000;
+}
+
+.box-close{
+  position:absolute;
+  right:10px;
+  top:10px;
+  cursor:pointer;
+}
+.boxtitle{
+  width: 130px;
+  font-size: 20px;
+  margin: 30px auto;
+
+}
+footer .loginbtn{
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  background: #6081cc;
+  font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer .loginipt{
+  width: 200px;
+  height: 40px;
+  margin-bottom: 15px;
+   background: url('/static/img/icon-name.PNG') no-repeat 5px;
+   padding-left: 50px;  
+  border:1px solid #808080;
+  outline: none;
+}
+footer .loginipt:hover{
+  border: #333 1px solid;
+}
+footer .loginbot{
+  width: 1200px;
+  margin: 0 auto;
+  float: left;
+  padding-right: 80px;
+}
+
+footer .footchange{
+  width: 100%;
+  height: 70px;
+  background: #333;
+}
+
+footer .haoma{
+  width: 350px;
+  margin: 0 auto;
+  color: #808080;
+  font-size: 12px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}

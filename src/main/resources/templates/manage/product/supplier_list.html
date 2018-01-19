@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 供应商管理</title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <!-- 删除模态框 -->
+        <div class="modal fade" id="delete-supplier" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确定要删除该供应商信息吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default confirm-delete" id="">确认</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增/修改模态框 -->
+        <div class="modal fade" id="save-or-update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">新增/保存供应商信息</h4>
+                    </div>
+
+                    <form method="post" action="/backstage/supplier/save-or-update">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-name">供应商名称</span>
+                                <input type="text" name="name" class="form-control" placeholder="请填写供应商的名称"
+                                       aria-describedby="basic-name">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-linkman">联系人</span>
+                                <input type="text" name="linkman" class="form-control" placeholder="请填写联系人的名称"
+                                       aria-describedby="basic-linkman">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-contactWay">联系方式</span>
+                                <input type="text" name="contactWay" class="form-control" placeholder="请填写联系方式"
+                                       aria-describedby="basic-contactWay">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-companyName">公司名称</span>
+                                <input type="text" name="companyName" class="form-control" placeholder="请填写公司名称"
+                                       aria-describedby="basic-companyName">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-companyAddress">公司地址</span>
+                                <input type="text" name="companyAddress" class="form-control" placeholder="请填写公司地址"
+                                       aria-describedby="basic-companyAddress">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                            <button type="submit" class="btn btn-primary">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+
+            <div class="row search-bar">
+                <form method="get" action="/backstage/supplier/list.html">
+
+                    <div class="col-lg-8">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#save-or-update">
+                                新增供应商
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="name" placeholder="名称/联系人/联系方式/公司名称/公司地址" th:value="${supplier.name}">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">查找</button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>供应商名称</th>
+                        <th>联系人</th>
+                        <th>联系方式</th>
+                        <th>公司名称</th>
+                        <th>公司地址</th>
+                        <th>创建时间</th>
+                        <th>可用操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item : ${pager.datas}">
+                        <td th:text="${item.name}"></td>
+                        <td th:text="${item.linkman}"></td>
+                        <td th:text="${item.contactWay}"></td>
+                        <td th:text="${item.companyName}"></td>
+                        <td th:text="${item.companyAddress}"></td>
+                        <td th:text="${#calendars.format(item.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                        <td>
+                            <button th:id="${item.id}" type="button" class="btn btn-danger btn-xs" data-toggle="modal"
+                                    data-target="#delete-supplier">删除
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:replace="pager :: pagerbar"></div>
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+<script th:src="@{/static/js/manage/supplier.js}"></script>
+
+</body>
+</html>

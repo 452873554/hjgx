@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 公共头 -->
+<body>
+<header th:fragment="commonheader">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="favicon" rel="shortcut icon" th:href="@{/static/favicon.ico}" />
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap.min.css}">
+</header>
+
+<header th:fragment="bgcommonheader">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="favicon" rel="shortcut icon" th:href="@{/static/favicon.ico}" />
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/dashboard.css}">
+</header>
+
+</body>
+</html>

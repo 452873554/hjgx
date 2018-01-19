@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.ProductSpuMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.ProductSpu" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="spu" property="spu" jdbcType="VARCHAR" />
+    <result column="category_id" property="categoryId" jdbcType="INTEGER" />
+    <result column="brand" property="brand" jdbcType="VARCHAR" />
+    <result column="style_id" property="styleId" jdbcType="INTEGER" />
+    <result column="cost_price" property="costPrice" jdbcType="DOUBLE" />
+    <result column="retail_price" property="retailPrice" jdbcType="DOUBLE" />
+    <result column="market_price" property="marketPrice" jdbcType="DOUBLE" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="identify_order" property="identifyOrder" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="supplier_id" property="supplierId" jdbcType="INTEGER" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, product_name, spu, category_id, brand, style_id, cost_price, retail_price, market_price, 
+    stock, identify_order, status, supplier_id, unit, description
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_product_spu
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_product_spu
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.ProductSpu" >
+    insert into t_portal_product_spu (id, product_name, spu, 
+      category_id, brand, style_id, 
+      cost_price, retail_price, market_price, 
+      stock, identify_order, status, 
+      supplier_id, unit, description
+      )
+    values (#{id,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, #{spu,jdbcType=VARCHAR}, 
+      #{categoryId,jdbcType=INTEGER}, #{brand,jdbcType=VARCHAR}, #{styleId,jdbcType=INTEGER}, 
+      #{costPrice,jdbcType=DOUBLE}, #{retailPrice,jdbcType=DOUBLE}, #{marketPrice,jdbcType=DOUBLE}, 
+      #{stock,jdbcType=INTEGER}, #{identifyOrder,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+      #{supplierId,jdbcType=INTEGER}, #{unit,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.ProductSpu" >
+    insert into t_portal_product_spu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="productName != null" >
+        product_name,
+      </if>
+      <if test="spu != null" >
+        spu,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="brand != null" >
+        brand,
+      </if>
+      <if test="styleId != null" >
+        style_id,
+      </if>
+      <if test="costPrice != null" >
+        cost_price,
+      </if>
+      <if test="retailPrice != null" >
+        retail_price,
+      </if>
+      <if test="marketPrice != null" >
+        market_price,
+      </if>
+      <if test="stock != null" >
+        stock,
+      </if>
+      <if test="identifyOrder != null" >
+        identify_order,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="supplierId != null" >
+        supplier_id,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null" >
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="spu != null" >
+        #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="brand != null" >
+        #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="styleId != null" >
+        #{styleId,jdbcType=INTEGER},
+      </if>
+      <if test="costPrice != null" >
+        #{costPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="retailPrice != null" >
+        #{retailPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="marketPrice != null" >
+        #{marketPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="identifyOrder != null" >
+        #{identifyOrder,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="supplierId != null" >
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.ProductSpu" >
+    update t_portal_product_spu
+    <set >
+      <if test="productName != null" >
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="spu != null" >
+        spu = #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        category_id = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="brand != null" >
+        brand = #{brand,jdbcType=VARCHAR},
+      </if>
+      <if test="styleId != null" >
+        style_id = #{styleId,jdbcType=INTEGER},
+      </if>
+      <if test="costPrice != null" >
+        cost_price = #{costPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="retailPrice != null" >
+        retail_price = #{retailPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="marketPrice != null" >
+        market_price = #{marketPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        stock = #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="identifyOrder != null" >
+        identify_order = #{identifyOrder,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="supplierId != null" >
+        supplier_id = #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.ProductSpu" >
+    update t_portal_product_spu
+    set product_name = #{productName,jdbcType=VARCHAR},
+      spu = #{spu,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=INTEGER},
+      brand = #{brand,jdbcType=VARCHAR},
+      style_id = #{styleId,jdbcType=INTEGER},
+      cost_price = #{costPrice,jdbcType=DOUBLE},
+      retail_price = #{retailPrice,jdbcType=DOUBLE},
+      market_price = #{marketPrice,jdbcType=DOUBLE},
+      stock = #{stock,jdbcType=INTEGER},
+      identify_order = #{identifyOrder,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      supplier_id = #{supplierId,jdbcType=INTEGER},
+      unit = #{unit,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

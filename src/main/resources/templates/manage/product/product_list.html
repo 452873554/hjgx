@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 商品管理</title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+            <div class="row search-bar">
+                <div class="col-lg-8">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-success" href="/backstage/product/save.html">新增商品</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">查找</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th>商品编号</th>
+                        <th>所属分类</th>
+                        <th>品牌</th>
+                        <th>风格</th>
+                        <th>成本价</th>
+                        <th>零售价</th>
+                        <th>市场价</th>
+                        <th>库存</th>
+                        <th>销售状态</th>
+                        <th>可用操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>简欧风格的椅子</td>
+                        <td>MS-125</td>
+                        <td>椅子</td>
+                        <td>耀邦</td>
+                        <td>现代风格</td>
+                        <td>100</td>
+                        <td>120</td>
+                        <td>150</td>
+                        <td>10</td>
+                        <td>在售</td>
+                        <td>编辑，下架</td>
+                    </tr>
+                    <tr>
+                        <td>简欧风格的椅子</td>
+                        <td>MS-125</td>
+                        <td>椅子</td>
+                        <td>耀邦</td>
+                        <td>现代风格</td>
+                        <td>100</td>
+                        <td>120</td>
+                        <td>150</td>
+                        <td>10</td>
+                        <td>在售</td>
+                        <td>编辑，下架</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+</body>
+</html>

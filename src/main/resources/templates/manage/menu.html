@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+
+        <div th:fragment="menulist" class="col-sm-3 col-md-2 sidebar">
+
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'product_list'}? 'active':''"><a href="/backstage/product/list.html">商品管理</a></li>
+                <li th:class="*{current_menu == 'supplier_list'}? 'active':''"><a href="/backstage/supplier/list.html">供应商管理</a></li>
+                <li th:class="*{current_menu == 'brand_list'}? 'active':''"><a href="/backstage/brand/list.html">品牌管理</a></li>
+                <li th:class="*{current_menu == 'category_list'}? 'active':''"><a href="/backstage/category/list.html">商品分类管理</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">规格管理</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">属性管理</a></li>
+            </ul>
+
+            <hr>
+
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施1</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施2</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施3</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施4</a></li>
+            </ul>
+
+            <hr>
+
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施5</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施6</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施7</a></li>
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">待实施8</a></li>
+            </ul>
+
+        </div>
+
+</body>
+</html>
