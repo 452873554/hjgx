@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 属性模板管理</title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <!-- 删除模态框 -->
+        <div class="modal fade" id="delete-template" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确定要删除该模板信息吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default confirm-delete" id="">确认</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增/修改模态框 -->
+        <div class="modal fade" id="save-or-update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">新增/保存属性模板信息</h4>
+                    </div>
+
+                    <form method="post" action="/backstage/attr-template/save-or-update">
+                        <div class="modal-body">
+
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-templateName">模板名称</span>
+                                <input type="text" name="templateName" class="form-control" placeholder="请填写模板的名称"
+                                       aria-describedby="basic-templateName">
+                                <input type="hidden" name="attrsTemplate" id="attrsTemplate">
+                            </div>
+
+                            <table class="table table-bordered">
+                                <thead>
+
+                                <!-- 属性值模板 -->
+                                <div style="display: none;" id="attrValTemplate">
+                                    <div class="btn-group" role="group" style="width: 100%;">
+                                        <button class="btn btn-xs btn-danger delete-attr-val" style="width: 20%;"
+                                                type="button">删除
+                                        </button>
+                                        <input class="attr-val" style="height: 100%;width: 80%;" type="text">
+                                    </div>
+                                </div>
+
+                                <!-- 属性对行模板 -->
+                                <tr style="display: none" id="attrTemplate">
+                                    <td></td>
+                                    <td><input class="attr" style="height: 100%;" type="text"></td>
+                                    <td>
+                                        <button class="btn btn-xs btn-success add-attr-val"
+                                                style="width: 10%;float: left;" type="button">
+                                            +
+                                        </button>
+
+                                        <div style="width: 90%;float: right;">
+                                            <div class="btn-group" role="group" style="width: 100%;">
+                                                <button class="btn btn-xs btn-danger delete-attr-val"
+                                                        style="width: 20%;" type="button">删除
+                                                </button>
+                                                <input class="attr-val" style="height: 100%;width: 80%;" type="text">
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-xs btn-danger del-attr" style="width: 100%;"
+                                                type="button">
+                                            删除
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th width="5%">
+                                        <button class="btn btn-xs btn-success" id="add-attr" style="width: 100%;"
+                                                type="button">+
+                                        </button>
+                                    </th>
+                                    <th width="15%">属性名称</th>
+                                    <th width="75%">属性可选值</th>
+                                    <th width="5%">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="attr-tbody">
+                                <tr>
+                                    <td></td>
+                                    <td><input class="attr" style="height: 100%;" type="text"></td>
+                                    <td>
+                                        <button class="btn btn-xs btn-success add-attr-val"
+                                                style="width: 10%;float: left;" type="button">
+                                            +
+                                        </button>
+
+                                        <div style="width: 90%;float: right;">
+                                            <div class="btn-group" role="group" style="width: 100%;">
+                                                <button class="btn btn-xs btn-danger delete-attr-val"
+                                                        style="width: 20%;" type="button">删除
+                                                </button>
+                                                <input class="attr-val" style="height: 100%;width: 80%;" type="text">
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-xs btn-danger del-attr" style="width: 100%;"
+                                                type="button">
+                                            删除
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                            <button type="submit" class="btn btn-primary save-or-update">保存修改</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+
+            <div class="row search-bar">
+                <form method="get" action="/backstage/attr-template/list.html">
+                    <div class="col-lg-8">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#save-or-update">新增模板
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="text" name="templateName" class="form-control" placeholder="模板名"
+                                   th:text="${productSpuAttrsTemplate.templateName}">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">查找</button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>模板名称</th>
+                        <th>模板内容</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="data-grid">
+                    <tr th:each="item : ${pager.datas}">
+                        <td th:text="${item.templateName}"></td>
+                        <td th:text="${item.attrsTemplate}"></td>
+                        <td>
+                            <button th:id="${item.id}" type="button" class="btn btn-danger btn-xs" data-toggle="modal"
+                            data-target="#delete-template">删除
+                            </button>
+                        <td/>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div th:replace="pager :: pagerbar"></div>
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+<script type="text/javascript" th:src="@{/static/js/manage/attr-template.js}"></script>
+
+
+</body>
+</html>

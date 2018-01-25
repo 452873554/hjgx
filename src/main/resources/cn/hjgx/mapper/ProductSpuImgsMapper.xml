@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.ProductSpuImgsMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.ProductSpuImgs" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="spu" property="spu" jdbcType="VARCHAR" />
+    <result column="image_name" property="imageName" jdbcType="VARCHAR" />
+    <result column="image_url" property="imageUrl" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, spu, image_name, image_url
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_product_spu_imgs
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_product_spu_imgs
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.ProductSpuImgs" >
+    insert into t_portal_product_spu_imgs (id, spu, image_name, 
+      image_url)
+    values (#{id,jdbcType=INTEGER}, #{spu,jdbcType=VARCHAR}, #{imageName,jdbcType=VARCHAR}, 
+      #{imageUrl,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="batchInsert" parameterType="java.util.List">
+    insert into t_portal_product_spu_imgs (spu, image_name,
+    image_url)
+    values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (#{item.spu,jdbcType=VARCHAR}, #{item.imageName,jdbcType=VARCHAR},
+      #{item.imageUrl,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.ProductSpuImgs" >
+    insert into t_portal_product_spu_imgs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="spu != null" >
+        spu,
+      </if>
+      <if test="imageName != null" >
+        image_name,
+      </if>
+      <if test="imageUrl != null" >
+        image_url,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="spu != null" >
+        #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null" >
+        #{imageUrl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.ProductSpuImgs" >
+    update t_portal_product_spu_imgs
+    <set >
+      <if test="spu != null" >
+        spu = #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="imageName != null" >
+        image_name = #{imageName,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null" >
+        image_url = #{imageUrl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.ProductSpuImgs" >
+    update t_portal_product_spu_imgs
+    set spu = #{spu,jdbcType=VARCHAR},
+      image_name = #{imageName,jdbcType=VARCHAR},
+      image_url = #{imageUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

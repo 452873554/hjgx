@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.ProductSpuAttrsTemplateMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.ProductSpuAttrsTemplate" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="template_name" property="templateName" jdbcType="VARCHAR" />
+    <result column="attrs_template" property="attrsTemplate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, template_name, attrs_template
+  </sql>
+
+  <select id="getAllTemplate" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_product_spu_attrs_template
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_product_spu_attrs_template
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_product_spu_attrs_template
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.ProductSpuAttrsTemplate" >
+    insert into t_portal_product_spu_attrs_template (id, template_name, attrs_template
+      )
+    values (#{id,jdbcType=INTEGER}, #{templateName,jdbcType=VARCHAR}, #{attrsTemplate,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.ProductSpuAttrsTemplate" >
+    insert into t_portal_product_spu_attrs_template
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="templateName != null" >
+        template_name,
+      </if>
+      <if test="attrsTemplate != null" >
+        attrs_template,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="templateName != null" >
+        #{templateName,jdbcType=VARCHAR},
+      </if>
+      <if test="attrsTemplate != null" >
+        #{attrsTemplate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.ProductSpuAttrsTemplate" >
+    update t_portal_product_spu_attrs_template
+    <set >
+      <if test="templateName != null" >
+        template_name = #{templateName,jdbcType=VARCHAR},
+      </if>
+      <if test="attrsTemplate != null" >
+        attrs_template = #{attrsTemplate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.ProductSpuAttrsTemplate" >
+    update t_portal_product_spu_attrs_template
+    set template_name = #{templateName,jdbcType=VARCHAR},
+      attrs_template = #{attrsTemplate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!-- 工具外自定义添加内容 -->
+  <select id="selectByPageParam" resultMap="BaseResultMap"
+          parameterType="cn.hjgx.entity.ProductSpuAttrsTemplate">
+    select
+    <include refid="Base_Column_List"/>
+    from t_portal_product_spu_attrs_template
+    where 1 = 1
+    <if test="templateName != null" >
+      AND template_name like '%' || #{templateName,jdbcType=VARCHAR} || '%'
+    </if>
+  </select>
+</mapper>

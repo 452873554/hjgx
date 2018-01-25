@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.ProductSkuMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.ProductSku" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sku" property="sku" jdbcType="VARCHAR" />
+    <result column="spu" property="spu" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="stock_warning" property="stockWarning" jdbcType="INTEGER" />
+    <result column="cost_price" property="costPrice" jdbcType="DOUBLE" />
+    <result column="retail_price" property="retailPrice" jdbcType="DOUBLE" />
+    <result column="market_price" property="marketPrice" jdbcType="DOUBLE" />
+    <result column="volume" property="volume" jdbcType="DOUBLE" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="specification" property="specification" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sku, spu, code, stock, stock_warning, cost_price, retail_price, market_price, 
+    volume, create_time, update_time, specification
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_product_sku
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_product_sku
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.ProductSku" >
+    insert into t_portal_product_sku (id, sku, spu, 
+      code, stock, stock_warning, 
+      cost_price, retail_price, market_price, 
+      volume, create_time, update_time, 
+      specification)
+    values (#{id,jdbcType=INTEGER}, #{sku,jdbcType=VARCHAR}, #{spu,jdbcType=VARCHAR}, 
+      #{code,jdbcType=VARCHAR}, #{stock,jdbcType=INTEGER}, #{stockWarning,jdbcType=INTEGER}, 
+      #{costPrice,jdbcType=DOUBLE}, #{retailPrice,jdbcType=DOUBLE}, #{marketPrice,jdbcType=DOUBLE}, 
+      #{volume,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{specification,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="batchInsert" parameterType="java.util.List">
+    insert into t_portal_product_sku (sku, spu,
+    code, stock, stock_warning,
+    cost_price, retail_price, market_price,
+    volume,specification)
+    values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (#{item.sku,jdbcType=VARCHAR}, #{item.spu,jdbcType=VARCHAR},
+      #{item.code,jdbcType=VARCHAR}, #{item.stock,jdbcType=INTEGER}, #{item.stockWarning,jdbcType=INTEGER},
+      #{item.costPrice,jdbcType=DOUBLE}, #{item.retailPrice,jdbcType=DOUBLE}, #{item.marketPrice,jdbcType=DOUBLE},
+      #{item.volume,jdbcType=DOUBLE}, #{item.specification,jdbcType=VARCHAR})
+    </foreach>
+  </insert>
+
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.ProductSku" >
+    insert into t_portal_product_sku
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sku != null" >
+        sku,
+      </if>
+      <if test="spu != null" >
+        spu,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="stock != null" >
+        stock,
+      </if>
+      <if test="stockWarning != null" >
+        stock_warning,
+      </if>
+      <if test="costPrice != null" >
+        cost_price,
+      </if>
+      <if test="retailPrice != null" >
+        retail_price,
+      </if>
+      <if test="marketPrice != null" >
+        market_price,
+      </if>
+      <if test="volume != null" >
+        volume,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="specification != null" >
+        specification,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sku != null" >
+        #{sku,jdbcType=VARCHAR},
+      </if>
+      <if test="spu != null" >
+        #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null" >
+        #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="stockWarning != null" >
+        #{stockWarning,jdbcType=INTEGER},
+      </if>
+      <if test="costPrice != null" >
+        #{costPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="retailPrice != null" >
+        #{retailPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="marketPrice != null" >
+        #{marketPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="volume != null" >
+        #{volume,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="specification != null" >
+        #{specification,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.ProductSku" >
+    update t_portal_product_sku
+    <set >
+      <if test="sku != null" >
+        sku = #{sku,jdbcType=VARCHAR},
+      </if>
+      <if test="spu != null" >
+        spu = #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null" >
+        stock = #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="stockWarning != null" >
+        stock_warning = #{stockWarning,jdbcType=INTEGER},
+      </if>
+      <if test="costPrice != null" >
+        cost_price = #{costPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="retailPrice != null" >
+        retail_price = #{retailPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="marketPrice != null" >
+        market_price = #{marketPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="volume != null" >
+        volume = #{volume,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="specification != null" >
+        specification = #{specification,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.ProductSku" >
+    update t_portal_product_sku
+    set sku = #{sku,jdbcType=VARCHAR},
+      spu = #{spu,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      stock = #{stock,jdbcType=INTEGER},
+      stock_warning = #{stockWarning,jdbcType=INTEGER},
+      cost_price = #{costPrice,jdbcType=DOUBLE},
+      retail_price = #{retailPrice,jdbcType=DOUBLE},
+      market_price = #{marketPrice,jdbcType=DOUBLE},
+      volume = #{volume,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      specification = #{specification,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

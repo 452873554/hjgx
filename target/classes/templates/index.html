@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>皇家共享</title>
+
+    <!-- Facebook and Twitter integration 底部瀑布流 -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <!-- 公共 -->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/foreground/common/header.css}">
+    <link rel="stylesheet" th:href="@{/static/css/foreground/common/footer.css}">
+
+    <!-- 特有 -->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/index/index.css}">
+    <!-- Animate.css 底部瀑布流-->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/jquery_pbl/animate.css}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/jquery_pbl/magnific-popup.css}">
+    <!-- Salvattore -->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/jquery_pbl/salvattore.css}">
+    <!-- Theme Style -->
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/jquery_pbl/style.css}">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 轮播 */
+        .carousel-indicators .active {
+            background-color: #808080;
+        }
+
+        .carousel-control.left, .carousel-control.right {
+            line-height: 640px;
+            font-size: 60px;
+        }
+    </style>
+
+</head>
+<body class="clearfix">
+
+<div class="fixback clearfix"></div>
+
+<header v-if="back">
+
+    <div class="topheader" style="position:fixed;z-index:998;">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <!-- <li><router-link to="/Register">注册</router-link></li> -->
+            <!-- <li><router-link to="/SalesCenter">商家中心</router-link></li> -->
+            <!-- <li><router-link to="/Backcall">意见反馈</router-link></li> -->
+            <li><a href="#">商家中心</a></li>
+            <li class="last"><a><img th:src="@{/static/images/innersrc/phone.png}"/> 客服热线：4008-099-931</a></li>
+        </ul>
+    </div>
+    <div class="wrapfix">
+        <img th:src="@{/static/images/innersrc/index-logo.png}" class="header-logo"/>
+        <div class="kouhao">皇家品质<br/>共享资源</div>
+        <div class="welLine" style="display:none;"></div>
+        <div class="welcome" style="display:none;"><span>欢迎登录</span></div>
+        <div class="header-menu">
+            <!-- <ul class="menu-list" >
+              <li>首页</li>
+              <li><span>全屋整装</span></li>
+
+              <li><span>新闻公告</span></li>
+              <li><span>关于我们</span></li>
+              <li class="down_apk"></li> 关注公众号 <img src="./static/img/downloadAPP.png" />></li>
+            </ul> -->
+            <ul class="nav">
+                <li class="active">
+                    <a href="/">首页</a>
+                </li>
+                <!--<li><a href="#">全屋整装</a></li>-->
+                <!--<li><a href="#">新闻公告</a></li>-->
+                <!--<li><a href="#">关于我们</a></li>-->
+                <li><a href="#">关注公众号</a></li>
+            </ul>
+            <div class="erweima" style="display:none;"><img th:src="@{/static/images/innersrc/erweima1.png}"
+                                                            alt="加入我们"/></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+</header>
+
+
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <div class="active item"><img th:src="@{/static/images/innersrc/index_banner1.jpg}" alt="" style="width:100%;">
+        </div>
+        <div class="item"><img th:src="@{/static/images/innersrc/index_banner2.jpg}" alt=""></div>
+        <!-- <div class="item">…</div> -->
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<div class="together">整装推荐</div>
+<div class="tuijian clearfix" style="border-bottom:0px;">
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+    <div class="all_room_mouse s_img allRoom">
+        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
+        <div class="zhezhao"></div>
+        <div class="zheword">
+            <p class="mouse_01">都市</p>
+            <p class="mouse_02">三室两厅</p>
+            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- <div class="backcheck"> -->
+
+<div class="BackCheck">
+    展厅实景
+
+</div>
+<!-- 底部瀑布流 -->
+<div id="fh5co-main clearfix">
+    <div class="container">
+
+        <div class="row">
+
+            <div id="fh5co-board" data-columns>
+
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-1.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-1.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                    </div>
+                    <!-- <div class="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div> -->
+                </div>
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-3.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-3.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                        <!-- <div class="fh5co-desc">Veniam voluptatum voluptas tempora debitis harum totam vitae hic quos.</div> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-5.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-5.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                        <!-- <div class="fh5co-desc">Optio commodi quod vitae, vel, officiis similique quaerat odit dicta.</div> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-2.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-2.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                        <!-- <div class="fh5co-desc">Dolore itaque deserunt sit, at exercitationem delectus, consequuntur quaerat sapiente.</div> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-4.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-4.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                        <!-- <div class="fh5co-desc">Tempora distinctio inventore, nisi excepturi pariatur tempore sit quasi animi.</div> -->
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="animate-box">
+                        <a th:href="@{/static/images/innersrc/back-6.jpg}" class="image-popup fh5co-board-img"><img
+                                th:src="@{/static/images/innersrc/back-6.jpg}" alt="Free HTML5 Bootstrap template"></a>
+                        <!-- <div class="fh5co-desc">Sequi, eaque suscipit accusamus. Necessitatibus libero, unde a nesciunt repellendus!</div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+
+    <div class="toTop">
+        <router-link to="/login">
+            <div class="to">
+                <img th:src="@{/static/images/innersrc/top1.png}" alt="">
+                <div>订单管理</div>
+            </div>
+        </router-link>
+
+        <div class="to" style="border-top:1px solid #808080;border-bottom:1px solid #808080;">
+            <img th:src="@{/static/images/innersrc/top2.png}" alt="">
+            <div>预约整装</div>
+        </div>
+
+        <div class="to" @click="goTop">
+            <img th:src="@{/static/images/innersrc/top3.png}" alt="">
+            <div>回到顶部</div>
+        </div>
+
+
+    </div>
+    <!-- <div class="loginbox">
+        <img class="box-close" src="./static/img/chooselist/x.png" alt="" @click="zhenghid"/>
+        <div class="boxtitle">预约整装服务</div>
+
+
+       <div ><input class="loginipt" type="text" placeholder="请输入手机号"></div>
+        <div><input style="background-image:url('./static/img/Password-img.png');background-
+
+position:10px 5px;" class="loginipt" type="text" placeholder="请输入密码"></div>
+
+        <div class="clearfix"></div>
+       <div class="loginbtn">免费预约</div>
+
+      </div> -->
+    <div class="clearfix"></div>
+    <footer th:include="footer :: copy"></footer>
+    <!-- <div class="footchange">
+      <div class="haoma"> ©深圳市深装总家居科技有限公司</div>
+    </div> -->
+</footer>
+
+<script>
+    //让rem跟随屏幕大小等比例改变
+    document.querySelector('html').style.fontSize = document.querySelector('html').clientWidth / 5 + 'px';
+    //让rem跟随屏幕大小等比例改变
+    window.onresize = function () {
+        document.querySelector('html').style.fontSize = document.querySelector('html').clientWidth / 5 + 'px';
+    }
+</script>
+
+<div th:include="footer :: commonjs"></div>
+<!-- jQuery Easing -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/jquery.easing.1.3.js}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/jquery.waypoints.min.js}"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/jquery.magnific-popup.min.js}"></script>
+<!-- Salvattore -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/salvattore.min.js}"></script>
+<!-- Main JS -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/main.js}"></script>
+<!-- Modernizr JS -->
+<script type="text/javascript" th:src="@{/static/js/bootstrap/jquery_pbl/modernizr-2.6.2.min.js}"></script>
+
+
+</body>
+</html>

@@ -2,16 +2,9 @@ package cn.hjgx.controller.manage;
 
 import cn.hjgx.Utils.ParamUtil;
 import cn.hjgx.entity.Brand;
-import cn.hjgx.entity.Site;
-import cn.hjgx.entity.Supplier;
 import cn.hjgx.entity.page.Pager;
-import cn.hjgx.entity.pagedto.SitePageParam;
 import cn.hjgx.service.IBrandService;
-import cn.hjgx.service.ICommonService;
-import cn.hjgx.service.IMeetingRoomService;
-import cn.hjgx.service.ISiteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
@@ -38,12 +31,10 @@ public class BrandController {
     public String bg_brand_save_or_update(Model m,Brand brand) {
 
         try {
-
             //管理员不指定排序时，自动选择一个最大的排序值
             if(ObjectUtils.isEmpty(brand.getIdentifyOrder())){
                 brand.setIdentifyOrder(brandService.getMaxIdentifyOrder());
             }
-
             brandService.insertSelective(brand);
         } catch (Exception e) {
             e.printStackTrace();

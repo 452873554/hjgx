@@ -2,8 +2,6 @@ package cn.hjgx.mapper;
 
 import cn.hjgx.entity.Site;
 import cn.hjgx.entity.Supplier;
-import cn.hjgx.entity.pagedto.SitePageParam;
-import cn.hjgx.entity.pagedto.SupplierPageParam;
 
 import java.util.List;
 

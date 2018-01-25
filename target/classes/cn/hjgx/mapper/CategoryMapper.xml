@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.CategoryMapper">
+    <resultMap id="BaseResultMap" type="cn.hjgx.entity.Category">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="category_name" property="categoryName" jdbcType="VARCHAR"/>
+        <result column="parent_category_id" property="parentCategoryId" jdbcType="INTEGER"/>
+        <result column="identify_order" property="identifyOrder" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, category_name, parent_category_id, identify_order, create_time, update_time
+  </sql>
+
+    <select id="getAllCategory" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_category
+    </select>
+
+    <select id="getMaxIdentifyOrder" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    select
+      COALESCE(MAX(identify_order) + 1, 0)
+    from t_portal_category
+    where parent_category_id = #{id,jdbcType=INTEGER}
+  </select>
+
+    <select id="getRootCategory" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_category
+        where parent_category_id is null
+    </select>
+
+    <select id="getSubCategorys" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_category
+        where parent_category_id = #{id,jdbcType=INTEGER} ORDER BY identify_order DESC,create_time DESC ;
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_category
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteCategoryCascadeById" parameterType="java.lang.Integer">
+
+      WITH RECURSIVE category_tree AS (
+      SELECT
+      c.id,
+      c.category_name,
+      c.parent_category_id
+      FROM t_portal_category c
+      WHERE id = #{id,jdbcType=INTEGER}
+      UNION ALL
+      SELECT
+      c.id,
+      c.category_name,
+      c.parent_category_id
+      FROM t_portal_category c INNER JOIN category_tree t ON t.id = c.parent_category_id
+      )
+      DELETE FROM t_portal_category where id in(
+      SELECT id
+      FROM category_tree);
+    </delete>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_portal_category
+    where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="cn.hjgx.entity.Category">
+    insert into t_portal_category (id, category_name, parent_category_id, 
+      identify_order, create_time, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{categoryName,jdbcType=VARCHAR}, #{parentCategoryId,jdbcType=INTEGER}, 
+      #{identifyOrder,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="cn.hjgx.entity.Category">
+        insert into t_portal_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="categoryName != null">
+                category_name,
+            </if>
+            <if test="parentCategoryId != null">
+                parent_category_id,
+            </if>
+            <if test="identifyOrder != null">
+                identify_order,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="categoryName != null">
+                #{categoryName,jdbcType=VARCHAR},
+            </if>
+            <if test="parentCategoryId != null">
+                #{parentCategoryId,jdbcType=INTEGER},
+            </if>
+            <if test="identifyOrder != null">
+                #{identifyOrder,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.Category">
+        update t_portal_category
+        <set>
+            <if test="categoryName != null">
+                category_name = #{categoryName,jdbcType=VARCHAR},
+            </if>
+            <if test="parentCategoryId != null">
+                parent_category_id = #{parentCategoryId,jdbcType=INTEGER},
+            </if>
+            <if test="identifyOrder != null">
+                identify_order = #{identifyOrder,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.Category">
+    update t_portal_category
+    set category_name = #{categoryName,jdbcType=VARCHAR},
+      parent_category_id = #{parentCategoryId,jdbcType=INTEGER},
+      identify_order = #{identifyOrder,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,17 +1,8 @@
 package cn.hjgx.controller.manage;
 
-import cn.hjgx.Utils.ParamUtil;
 import cn.hjgx.entity.Category;
-import cn.hjgx.entity.Site;
-import cn.hjgx.entity.page.Pager;
-import cn.hjgx.entity.pagedto.SitePageParam;
 import cn.hjgx.service.ICategoryService;
-import cn.hjgx.service.ICommonService;
-import cn.hjgx.service.IMeetingRoomService;
-import cn.hjgx.service.ISiteService;
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
@@ -19,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 
 

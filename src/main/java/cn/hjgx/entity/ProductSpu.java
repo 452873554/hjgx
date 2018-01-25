@@ -2,7 +2,7 @@ package cn.hjgx.entity;
 
 import cn.hjgx.entity.pagedto.PageDto;
 
-public class ProductSpu extends PageDto {
+public class ProductSpu extends PageDto{
     private Integer id;
 
     private String productName;
@@ -10,8 +10,6 @@ public class ProductSpu extends PageDto {
     private String spu;
 
     private Integer categoryId;
-
-    private String brand;
 
     private Integer styleId;
 
@@ -32,6 +30,10 @@ public class ProductSpu extends PageDto {
     private String unit;
 
     private String description;
+
+    private String spaceIds;
+
+    private Integer brandId;
 
     public Integer getId() {
         return id;
@@ -63,14 +65,6 @@ public class ProductSpu extends PageDto {
 
     public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
     }
 
     public Integer getStyleId() {
@@ -151,5 +145,21 @@ public class ProductSpu extends PageDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getSpaceIds() {
+        return spaceIds;
+    }
+
+    public void setSpaceIds(String spaceIds) {
+        this.spaceIds = spaceIds;
+    }
+
+    public Integer getBrandId() {
+        return brandId;
+    }
+
+    public void setBrandId(Integer brandId) {
+        this.brandId = brandId;
     }
 }

@@ -3,8 +3,6 @@ package cn.hjgx.service.impl;
 import cn.hjgx.entity.Site;
 import cn.hjgx.entity.Supplier;
 import cn.hjgx.entity.page.Pager;
-import cn.hjgx.entity.pagedto.SitePageParam;
-import cn.hjgx.entity.pagedto.SupplierPageParam;
 import cn.hjgx.mapper.SupplierMapper;
 import cn.hjgx.service.ISupplierService;
 import com.github.pagehelper.PageHelper;

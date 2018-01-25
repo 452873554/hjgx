@@ -1,0 +1,85 @@
+.allRoom{
+    float: left;
+    margin-right:10px; 
+    margin-bottom: 25px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .short{
+    margin-right: 0;
+  }
+  .together{
+    width: 1200px;
+    height: 80px;
+    margin: 40px auto;
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+   line-height: 80px;
+   font-weight: 700;
+   color: #333333;
+  }
+  .backG{
+    width: 380px;
+    height: 262px;
+    background: url("/static/img/qingshe/keting.jpg") no-repeat;
+    background-size:100%; 
+  }
+   .zhezhao{
+     width: 380px;
+     height: 120px;
+     background:#000000 ;
+     opacity: 0.5;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+   }
+  .zheword{
+    width: 360px;
+    height: 100px;
+    position: absolute;
+    top: 140px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+  .mouse_01{
+    font-size: 21px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  
+  .mouse_02{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .mouse_03{
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  
+  .all_room_ul{ width: 1200px; margin:30px auto 0 auto; }
+  .all_room_ul li{ float: left;margin-right:30px;}
+  .all_room_ul li.last{margin-right: 0;}
+   .img_scale {  overflow: hidden;  } 
+  .tuijian {
+      padding-bottom:40px; 
+      border-bottom:1px solid #ccc;
+       width:1200px;
+       margin: 0 auto;
+      }
+      .BackCheck{
+          width: 1200px;
+          height: 50px;
+          margin: 0 auto;
+          font-weight: 700;
+          line-height: 50px;
+          text-align: center;
+          font-size: 30px;
+          color: #333333;
+      }

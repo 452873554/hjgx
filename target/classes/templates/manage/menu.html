@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+
+        <div th:fragment="menulist" class="col-sm-3 col-md-2 sidebar">
+
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'product_list'}? 'active':''"><a href="/backstage/product/list.html">商品管理</a></li>
+                <li th:class="*{current_menu == 'supplier_list'}? 'active':''"><a href="/backstage/supplier/list.html">供应商管理</a></li>
+                <li th:class="*{current_menu == 'brand_list'}? 'active':''"><a href="/backstage/brand/list.html">品牌管理</a></li>
+                <li th:class="*{current_menu == 'category_list'}? 'active':''"><a href="/backstage/category/list.html">品类管理</a></li>
+                <li th:class="*{current_menu == 'attr_template_list'}? 'active':''"><a href="/backstage/attr-template/list.html">属性模板管理</a></li>
+            </ul>
+
+            <hr>
+
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'site_list'}? 'active':''"><a href="#">全屋整装管理-待实施</a></li>
+                <li th:class="*{current_menu == 'style_list'}? 'active':''"><a href="/backstage/style/list.html">风格管理</a></li>
+                <li th:class="*{current_menu == 'space_list'}? 'active':''"><a href="/backstage/space/list.html">空间管理</a></li>
+
+            </ul>
+
+            <hr>
+
+        </div>
+
+</body>
+</html>
