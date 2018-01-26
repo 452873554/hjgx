@@ -58,6 +58,9 @@ public class ProductController {
     private IProductSpuImgsService iProductSpuImgsService;
 
     @Autowired
+    private IProductSpaceService iProductSpaceService;
+
+    @Autowired
     private Environment env;
 
     @PostMapping("/product/save-or-update")
@@ -139,13 +142,14 @@ public class ProductController {
         List<Category> categories = iCategoryService.getAllCategory();
         List<ProductStyle> styles = iProductStyleService.getAllStyle();
         List<ProductSpuAttrsTemplate> templates = iProductSpuAttrsTemplateService.getAllTemplate();
-
+        List<ProductSpace> spaces = iProductSpaceService.getAllProductSpaces();
 
         m.addAttribute("brands", brands);
         m.addAttribute("suppliers", suppliers);
         m.addAttribute("categories", categories);
         m.addAttribute("styles", styles);
         m.addAttribute("templates", templates);
+        m.addAttribute("spaces", spaces);
 
         m.addAttribute("page_title", "商品编辑");//标题
         m.addAttribute("current_menu", "product_list");//当前菜单高亮

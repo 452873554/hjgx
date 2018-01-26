@@ -118,12 +118,5 @@
     <if test="identifyOrder != null" >
       AND identify_order = #{identifyOrder,jdbcType=INTEGER}
     </if>
-    <if test="createTime != null" >
-      AND create_time = #{createTime,jdbcType=TIMESTAMP}
-    </if>
-    <if test="updateTime != null" >
-      AND update_time = #{updateTime,jdbcType=TIMESTAMP}
-    </if>
-    ORDER BY create_time DESC
   </select>
 </mapper>

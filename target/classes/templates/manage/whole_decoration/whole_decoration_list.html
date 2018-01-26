@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title th:text="'皇家共享 - ' + ${page_title}"></title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+            <div class="row search-bar">
+                <div class="col-lg-8">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-success" href="/backstage/whole-decoration/save.html">新增整装商品</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="整装名称">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" disabled>查找</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th>商品编号</th>
+                        <th>所属分类</th>
+                        <th>品牌</th>
+                        <th>风格</th>
+                        <th>成本价</th>
+                        <th>零售价</th>
+                        <th>市场价</th>
+                        <th>库存</th>
+                        <th>销售状态</th>
+                        <th>可用操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--<tr th:each="item : ${pager.datas}">-->
+                        <!--<td th:text="${item.productName}"></td>-->
+                        <!--<td th:text="${item.spu}"></td>-->
+                        <!--<td th:text="${item.categoryName}">分类</td>-->
+                        <!--<td th:text="${item.brandName}">品牌</td>-->
+                        <!--<td th:text="${item.styleName}">风格</td>-->
+                        <!--<td th:text="${item.costPrice}"></td>-->
+                        <!--<td th:text="${item.retailPrice}"></td>-->
+                        <!--<td th:text="${item.marketPrice}"></td>-->
+                        <!--<td th:text="${item.stock}"></td>-->
+                        <!--<td th:text="${item.status} == 1?'在售':'下架'">-</td>-->
+                        <!--<td>暂无</td>-->
+                    <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+            <!--<div th:replace="pager :: pagerbar"></div>-->
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+</body>
+</html>

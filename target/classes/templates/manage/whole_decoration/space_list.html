@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 品牌管理</title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <!-- 删除模态框 -->
+        <div class="modal fade" id="delete-space" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确定要删除该空间信息吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default confirm-delete" id="">确认</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增/修改模态框 -->
+        <div class="modal fade" id="save-or-update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">新增/保存空间信息</h4>
+                    </div>
+
+                    <form method="post" action="/backstage/space/save-or-update">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-spaceName">品牌名称</span>
+                                <input type="text" name="spaceName" class="form-control" placeholder="请填写空间的名称"
+                                       aria-describedby="basic-spaceName">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-identifyOrder">排序</span>
+                                <input type="text" name="identifyOrder" class="form-control" placeholder="显示时的排序依据，从大到小排序，留空时系统会默认设置为最大值"
+                                       aria-describedby="basic-identifyOrder">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                            <button type="submit" class="btn btn-primary">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+
+            <div class="row search-bar">
+                <form method="get" action="/backstage/space/list.html">
+                    <div class="col-lg-8">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#save-or-update">新增空间
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="text" name="spaceName" class="form-control" placeholder="空间名" th:value="${productSpace.spaceName}">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">查找</button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>空间名称</th>
+                        <th>排序标识</th>
+                        <th>创建时间</th>
+                        <th>可用操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="item : ${pager.datas}">
+                        <td th:text="${item.spaceName}"></td>
+                        <td th:text="${item.identifyOrder}"></td>
+                        <td th:text="${#calendars.format(item.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                        <td>
+                            <button th:id="${item.id}" type="button" class="btn btn-danger btn-xs" data-toggle="modal"
+                                    data-target="#delete-space">删除
+                            </button>
+                        <td/>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div th:replace="pager :: pagerbar"></div>
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+<script th:src="@{/static/js/manage/space.js}"></script>
+
+</body>
+</html>

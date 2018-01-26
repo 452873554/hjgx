@@ -22,6 +22,6 @@ public interface BrandMapper {
 
     List<Brand> selectByPageParam(Brand brand);
 
-    public List<Brand> getAllBrands();
+    List<Brand> getAllBrands();
 
 }

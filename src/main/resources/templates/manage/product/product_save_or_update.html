@@ -86,23 +86,10 @@
                     <label class="col-sm-1 control-label">所属空间</label>
                     <div class="col-sm-11">
                         <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="space" value="1"> 客厅
-                            </label>
-                            <label>
-                                <input type="checkbox" name="space" value="2"> 餐厅
-                            </label>
-                            <label>
-                                <input type="checkbox" name="space" value="3"> 主卧
-                            </label>
-                            <label>
-                                <input type="checkbox" name="space" value="4">次卧
-                            </label>
-                            <label>
-                                <input type="checkbox" name="space" value="5"> 书房
+                            <label th:each="item : ${spaces}">
+                                <input type="checkbox" name="space" th:value="${item.id}" th:text="${item.spaceName}">
                             </label>
                         </div>
-
                     </div>
                 </div>
 
@@ -276,7 +263,7 @@
 
                 <div class="form-group">
 
-                    <label for="unit" class="col-sm-1 control-label">商品相册</label>
+                    <label for="previewImages" class="col-sm-1 control-label">商品相册</label>
                     <div class="col-sm-11">
                         <input id="preview-img" type="file" name="previewImages" multiple>
                     </div>
