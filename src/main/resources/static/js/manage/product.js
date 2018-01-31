@@ -9,14 +9,14 @@ $(function () {
 
     //上传插件初始化
     $("#preview-img").fileinput({
-        allowedFileExtensions: ['jpg', 'png', 'gif'],
+        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
         maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
         maxFileSize: 1024,
         language: 'zh',
         enctype: 'multipart/form-data',
         showUpload: false, //是否显示上传按钮
         uploadUrl: "/testDemo/fileupload/upload.do",
-        fileActionSettings:{showUpload: false}
+        fileActionSettings: {showUpload: false}
     });
 
     //模板变动，重新填充
@@ -137,7 +137,7 @@ $(function () {
         //先上传图片
 
         // $('#preview-img').fileinput('upload');
-        if($("input[name='previewImages']")[0].files.length <= 0){
+        if ($("input[name='previewImages']")[0].files.length <= 0) {
             alert("必须上传预览图");
             return;
         }
@@ -239,8 +239,8 @@ $(function () {
         requestParam.append("attr", JSON.stringify(attr));
 
         var files = $("input[name='previewImages']")[0].files
-        for(var i=0; i< files.length; i++){
-            requestParam.append("previewImages",files[i]);   // 文件对象
+        for (var i = 0; i < files.length; i++) {
+            requestParam.append("previewImages", files[i]);   // 文件对象
         }
 
         $.ajax({

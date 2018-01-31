@@ -11,5 +11,7 @@ public interface IProductSpuService {
 
     public Pager<ProductSpuResultDto> getProductSpuPaged(ProductSpuResultDto productSpu);
 
+    public Pager<ProductSpuResultDto> getProductSpuWithOutPageHelper(ProductSpuResultDto productSpu);
+
 
 }

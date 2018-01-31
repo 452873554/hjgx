@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.WholeDecorationMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecoration" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="style_id" property="styleId" jdbcType="INTEGER" />
+    <result column="banner_img_url" property="bannerImgUrl" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, code, style_id, banner_img_url, description, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_whole_decoration
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_whole_decoration
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.WholeDecoration" >
+    insert into t_portal_whole_decoration (id, name, code, 
+      style_id, banner_img_url, description, 
+      create_time, update_time)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{styleId,jdbcType=INTEGER}, #{bannerImgUrl,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecoration" useGeneratedKeys="true" keyProperty="id">
+    insert into t_portal_whole_decoration
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="styleId != null" >
+        style_id,
+      </if>
+      <if test="bannerImgUrl != null" >
+        banner_img_url,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="styleId != null" >
+        #{styleId,jdbcType=INTEGER},
+      </if>
+      <if test="bannerImgUrl != null" >
+        #{bannerImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecoration" >
+    update t_portal_whole_decoration
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="styleId != null" >
+        style_id = #{styleId,jdbcType=INTEGER},
+      </if>
+      <if test="bannerImgUrl != null" >
+        banner_img_url = #{bannerImgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecoration" >
+    update t_portal_whole_decoration
+    set name = #{name,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      style_id = #{styleId,jdbcType=INTEGER},
+      banner_img_url = #{bannerImgUrl,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <!-- 工具外自定义添加内容 -->
+  <select id="selectByPageParam" parameterType="cn.hjgx.entity.pagedto.WholeDecorationResultDto"
+          resultType="cn.hjgx.entity.pagedto.WholeDecorationResultDto">
+    select
+    wd.name,
+    wd.code,
+    wd.create_time as createTime,
+    s.style_name AS styleName
+    from t_portal_whole_decoration wd
+    LEFT JOIN t_portal_style s ON wd.style_id = s.id
+
+    where 1 = 1
+    <if test="name != null">
+      AND (wd.name ilike '%' || #{name,jdbcType=VARCHAR} || '%' OR
+           wd.code ilike '%' || #{name,jdbcType=VARCHAR} || '%')
+    </if>
+
+  </select>
+
+</mapper>

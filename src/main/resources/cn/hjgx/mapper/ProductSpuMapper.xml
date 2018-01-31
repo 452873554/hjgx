@@ -266,5 +266,43 @@
         </if>
     </select>
 
+    <select id="selectByPageParamWithOutPageHelper" resultMap="ProductSpuResultDtoMap"
+            parameterType="cn.hjgx.entity.pagedto.ProductSpuResultDto">
+        select
+        spu.*,
+        c.category_name AS categoryName,
+        b.brand_name AS brandName,
+        s.style_name AS styleName,c
+        from t_portal_product_spu spu
+        LEFT JOIN t_portal_category c ON spu.category_id = c.id
+        LEFT JOIN t_portal_brand b ON spu.brand_id = b.id
+        LEFT JOIN t_portal_style s ON spu.style_id = s.id
+
+        where 1 = 1
+        <if test="productName != null">
+            AND (spu.product_name ilike '%' || #{productName,jdbcType=VARCHAR} || '%' OR spu.spu ilike '%' || #{productName,jdbcType=VARCHAR} || '%')
+        </if>
+
+        offset (#{pageOffSet,jdbcType=INTEGER} - 1) * #{pageSize,jdbcType=INTEGER}
+        limit #{pageSize,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectByPageParamWithOutPageHelperCount" resultType="java.lang.Integer"
+            parameterType="cn.hjgx.entity.pagedto.ProductSpuResultDto">
+        select
+          COUNT(*)
+        from t_portal_product_spu spu
+        LEFT JOIN t_portal_category c ON spu.category_id = c.id
+        LEFT JOIN t_portal_brand b ON spu.brand_id = b.id
+        LEFT JOIN t_portal_style s ON spu.style_id = s.id
+        where 1 = 1
+        <if test="productName != null">
+            AND (spu.product_name ilike '%' || #{productName,jdbcType=VARCHAR} || '%' OR spu.spu ilike '%' || #{productName,jdbcType=VARCHAR} || '%')
+        </if>
+
+    </select>
+
+
+
 
 </mapper>

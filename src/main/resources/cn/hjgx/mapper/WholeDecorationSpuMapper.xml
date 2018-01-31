@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.WholeDecorationSpuMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecorationSpu" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="spu" property="spu" jdbcType="VARCHAR" />
+    <result column="item_id" property="itemId" jdbcType="INTEGER" />
+    <result column="qty" property="qty" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, spu, item_id, qty
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_whole_decoration_spus
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_whole_decoration_spus
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.WholeDecorationSpu" >
+    insert into t_portal_whole_decoration_spus (id, spu, item_id, 
+      qty)
+    values (#{id,jdbcType=INTEGER}, #{spu,jdbcType=VARCHAR}, #{itemId,jdbcType=INTEGER}, 
+      #{qty,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationSpu" >
+    insert into t_portal_whole_decoration_spus
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="spu != null" >
+        spu,
+      </if>
+      <if test="itemId != null" >
+        item_id,
+      </if>
+      <if test="qty != null" >
+        qty,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="spu != null" >
+        #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="itemId != null" >
+        #{itemId,jdbcType=INTEGER},
+      </if>
+      <if test="qty != null" >
+        #{qty,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecorationSpu" >
+    update t_portal_whole_decoration_spus
+    <set >
+      <if test="spu != null" >
+        spu = #{spu,jdbcType=VARCHAR},
+      </if>
+      <if test="itemId != null" >
+        item_id = #{itemId,jdbcType=INTEGER},
+      </if>
+      <if test="qty != null" >
+        qty = #{qty,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecorationSpu" >
+    update t_portal_whole_decoration_spus
+    set spu = #{spu,jdbcType=VARCHAR},
+      item_id = #{itemId,jdbcType=INTEGER},
+      qty = #{qty,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

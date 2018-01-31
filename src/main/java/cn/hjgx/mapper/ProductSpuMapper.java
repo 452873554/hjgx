@@ -9,6 +9,10 @@ public interface ProductSpuMapper {
 
     List<ProductSpuResultDto> selectByPageParam(ProductSpuResultDto productSpu);
 
+    List<ProductSpuResultDto> selectByPageParamWithOutPageHelper(ProductSpuResultDto productSpu);
+
+    int selectByPageParamWithOutPageHelperCount(ProductSpuResultDto productSpu);
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(ProductSpu record);

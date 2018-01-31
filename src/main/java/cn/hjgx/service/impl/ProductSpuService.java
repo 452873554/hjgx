@@ -34,4 +34,22 @@ public class ProductSpuService implements IProductSpuService {
 
         return pager;
     }
+
+    @Override
+    public Pager<ProductSpuResultDto> getProductSpuWithOutPageHelper(ProductSpuResultDto productSpu) {
+
+        List<ProductSpuResultDto> datas = productSpuMapper.selectByPageParamWithOutPageHelper(productSpu);
+        int totalCount = productSpuMapper.selectByPageParamWithOutPageHelperCount(productSpu);
+
+        Pager<ProductSpuResultDto> pager = new Pager<ProductSpuResultDto>();
+        pager.setDatas(datas);
+        pager.setTotalRecordCount(totalCount);
+        pager.setPageOffSet(productSpu.getPageOffSet());
+        pager.setPerPageSize(productSpu.getPageSize());
+        pager.setTotalPageCount(totalCount % productSpu.getPageSize() == 0?
+                                totalCount / productSpu.getPageSize():
+                                (totalCount / productSpu.getPageSize()) + 1);
+
+        return pager;
+    }
 }
