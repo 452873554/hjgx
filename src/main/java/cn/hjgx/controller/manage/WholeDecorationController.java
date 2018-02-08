@@ -143,7 +143,7 @@ public class WholeDecorationController {
 
     }
 
-    @GetMapping("/whole-decoration/list.html")
+    @GetMapping("/whole-decoration/list.html*")
     public String to_bg_whole_decoration_list(Model m,WholeDecorationResultDto wholeDecoration) {
 
         try {
