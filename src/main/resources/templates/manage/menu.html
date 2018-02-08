@@ -6,6 +6,11 @@
 
         <div th:fragment="menulist" class="col-sm-3 col-md-2 sidebar">
 
+            <!--订单部分-->
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'whole_decoration_order_list'}? 'active':''"><a href="/backstage/whole-decoration-order/list.html">整装订单管理</a></li>
+            </ul>
+
             <!--商品部分-->
             <ul class="nav nav-sidebar">
                 <li th:class="*{current_menu == 'product_list'}? 'active':''"><a href="/backstage/product/list.html">商品管理</a></li>

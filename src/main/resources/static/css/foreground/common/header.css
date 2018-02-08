@@ -1,20 +1,21 @@
+
 .topheader{  height:35px;  width:1200px; margin-top: 5px;}
 .topheader ul{ float: right; margin-top:8px; }
 .topheader ul li{float: left;list-style-type: none;text-align: center; padding:0 10px;border-right: 1px solid #c8c8c8; height:12px;line-height: 0.7em;}
 .topheader .last img{display: inherit; margin-top:-3px;}
 .topheader .last{ border-right:none;padding-right:0px;}
 .topheader a,.topheader a:hover,.topheader a:active,.topheader span{  color: #b3b3b3; font-size:12px;}
-header{height:90px;width:1200px; margin:0 auto;}
+header{height:115px;width:1200px; margin:0 auto;}
 .header-logo{width:178px;height:38px;margin-top:10px; float: left;}
 header .kouhao{ font-size: 14px;color:#808080; display: inline-table;margin-left:24px;
-  margin-top:10px; font-style: normal; font-family: "Microsoft YaHei"; float:left;}
+  margin-top:10px; font-style: normal; font-family: "Microsoft YaHei"; float:left;}  
 .header-menu ul li { float: left;margin-right: 38px; line-height: 1em;height: 1em;}
 .header-menu ul li img{margin-top:-0.3em;}
 .header-menu ul li:first-child{margin-right:55px;}
   .header-menu ul li:last-child {margin-right: 0px;float: right;}
 .header-menu ul {float:left;}
 .header-menu{ float: right; margin-top:1.2em;}
-.header-menu a,.header-menu li{color: #333; font-size:14px;font-family: "Microsoft YaHei"; padding-bottom:15px;}
+.header-menu a,.header-menu li{color: #333; font-size:16px;font-family: "Microsoft YaHei"; padding-bottom:15px;}
 .header-menu{height:50px;position: relative;}
 .welLine{
   width: 20px;
@@ -71,4 +72,24 @@ header .kouhao{ font-size: 14px;color:#808080; display: inline-table;margin-left
   z-index: 997;
   top: 0;
  
+}
+
+
+.header-menu .nav > li > a{
+  color: #333;
+  background: transparent;
+  padding-left:0;
+  padding-right:0;
+  font-size: 15px;
+}
+
+
+.header-menu .nav > li > a:hover{
+  color: #b4a176;
+  background: transparent;
+}
+.header-menu .nav > li > a:focus{
+  color: #b4a176;
+  background: transparent;
+  border-bottom:  2px solid #b4a176;
 }

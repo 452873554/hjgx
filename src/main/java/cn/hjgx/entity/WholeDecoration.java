@@ -21,6 +21,8 @@ public class WholeDecoration extends PageDto{
 
     private Date updateTime;
 
+    private String previewImgUrl;
+
     public Integer getId() {
         return id;
     }
@@ -83,5 +85,13 @@ public class WholeDecoration extends PageDto{
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getPreviewImgUrl() {
+        return previewImgUrl;
+    }
+
+    public void setPreviewImgUrl(String previewImgUrl) {
+        this.previewImgUrl = previewImgUrl;
     }
 }

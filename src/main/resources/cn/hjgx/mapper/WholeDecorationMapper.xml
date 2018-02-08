@@ -10,6 +10,7 @@
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
   </resultMap>
 
   <resultMap id="BaseResultMapExtend" type="cn.hjgx.entity.pagedto.WholeDecorationResultDto" >
@@ -23,13 +24,15 @@
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
   </resultMap>
 
   <sql id="Base_Column_List" >
-    id, name, code, style_id, banner_img_url, description, create_time, update_time
+    id, name, code, style_id, banner_img_url, description, create_time, update_time,
+    preview_img_url
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_portal_whole_decoration
     where id = #{id,jdbcType=INTEGER}
@@ -39,14 +42,16 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="cn.hjgx.entity.WholeDecoration" >
-    insert into t_portal_whole_decoration (id, name, code, 
-      style_id, banner_img_url, description, 
-      create_time, update_time)
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
-      #{styleId,jdbcType=INTEGER}, #{bannerImgUrl,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+    insert into t_portal_whole_decoration (id, name, code,
+    style_id, banner_img_url, description,
+    create_time, update_time, preview_img_url
+    )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR},
+    #{styleId,jdbcType=INTEGER}, #{bannerImgUrl,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR},
+    #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{previewImgUrl,jdbcType=VARCHAR}
+    )
   </insert>
-  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecoration" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecoration" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
     insert into t_portal_whole_decoration
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -72,6 +77,9 @@
       </if>
       <if test="updateTime != null" >
         update_time,
+      </if>
+      <if test="previewImgUrl != null" >
+        preview_img_url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -99,6 +107,9 @@
       <if test="updateTime != null" >
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="previewImgUrl != null" >
+        #{previewImgUrl,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecoration" >
@@ -125,21 +136,24 @@
       <if test="updateTime != null" >
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="previewImgUrl != null" >
+        preview_img_url = #{previewImgUrl,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecoration" >
     update t_portal_whole_decoration
     set name = #{name,jdbcType=VARCHAR},
-      code = #{code,jdbcType=VARCHAR},
-      style_id = #{styleId,jdbcType=INTEGER},
-      banner_img_url = #{bannerImgUrl,jdbcType=VARCHAR},
-      description = #{description,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    code = #{code,jdbcType=VARCHAR},
+    style_id = #{styleId,jdbcType=INTEGER},
+    banner_img_url = #{bannerImgUrl,jdbcType=VARCHAR},
+    description = #{description,jdbcType=VARCHAR},
+    create_time = #{createTime,jdbcType=TIMESTAMP},
+    update_time = #{updateTime,jdbcType=TIMESTAMP},
+    preview_img_url = #{previewImgUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
 
   <!-- 工具外自定义添加内容 -->
   <select id="selectByPageParam" parameterType="cn.hjgx.entity.pagedto.WholeDecorationResultDto"
@@ -153,7 +167,7 @@
     where 1 = 1
     <if test="name != null">
       AND (wd.name ilike '%' || #{name,jdbcType=VARCHAR} || '%' OR
-           wd.code ilike '%' || #{name,jdbcType=VARCHAR} || '%')
+      wd.code ilike '%' || #{name,jdbcType=VARCHAR} || '%')
     </if>
 
     <if test="styleId != null">
@@ -161,5 +175,4 @@
     </if>
 
   </select>
-
 </mapper>

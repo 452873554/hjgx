@@ -37,7 +37,7 @@ public class SystemController {
 				dbuser.setLastLoginTime(new Date());
 				iUserAdministratorService.updateByPrimaryKeySelective(dbuser);
 				request.getSession().setAttribute(AuthorityFilter.LOGIN_ADMIN,dbuser);
-				return "redirect:/backstage/product/list.html";
+				return "redirect:/backstage/whole-decoration-order/list.html";
 			}else{
 				//用户名或者密码不通过
 				m.addAttribute("msg","用户名或密码不正确");

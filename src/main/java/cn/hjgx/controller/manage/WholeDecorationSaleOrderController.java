@@ -5,6 +5,7 @@ import cn.hjgx.Utils.ParamUtil;
 import cn.hjgx.entity.ProductSpace;
 import cn.hjgx.entity.ProductStyle;
 import cn.hjgx.entity.WholeDecoration;
+import cn.hjgx.entity.WholeDecorationOrder;
 import cn.hjgx.entity.page.Pager;
 import cn.hjgx.entity.pagedto.WholeDecorationResultDto;
 import cn.hjgx.entity.paramDto.ResultDto;
@@ -42,7 +43,7 @@ public class WholeDecorationSaleOrderController {
     private IWholeDecorationService iWholeDecorationService;
 
     @Autowired
-    private IWholeDecorationSpaceService iWholeDecorationSpaceService;
+    private IWholeDecorationOrderService iWholeDecorationOrderService;
 
     @Autowired
     private IWholeDecorationItemService iWholeDecorationItemService;
@@ -54,16 +55,27 @@ public class WholeDecorationSaleOrderController {
     private Environment env;
 
     @GetMapping("/whole-decoration-order/list.html*")
-    public String to_bg_whole_decoration_order_list(Model m,WholeDecorationResultDto wholeDecoration) {
+    public String to_bg_whole_decoration_order_list(Model m, WholeDecorationOrder wholeDecorationOrder) {
 
         try {
+
+            Pager<WholeDecorationOrder> pager = iWholeDecorationOrderService.getWholeDecorationOrderPaged(wholeDecorationOrder);
+
+            m.addAttribute("pager", pager);
+
+            String pathParam = ParamUtil.parseBeanToPathParam(wholeDecorationOrder);
+            m.addAttribute("page_title", "整装订单管理");//标题
+            m.addAttribute("current_menu", "whole_decoration_order_list");//当前菜单高亮
+            m.addAttribute("curUrl", "/backstage/whole-decoration-order/list.html");//分页片段url
+            m.addAttribute("wholeDecorationOrder", wholeDecorationOrder);//查询参数保存
+            m.addAttribute("pathParam", pathParam);
 
         } catch (Exception e) {
             e.printStackTrace();
             //TODO 跳转至错误页面
         }
 
-        return "manage/whole_decoration/whole_decoration_list";
+        return "manage/whole_decoration_sale_order/sale_order_list";
 
     }
 }

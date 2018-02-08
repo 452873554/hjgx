@@ -1,8 +1,10 @@
 package cn.hjgx.entity;
 
+import cn.hjgx.entity.pagedto.PageDto;
+
 import java.util.Date;
 
-public class WholeDecorationOrder {
+public class WholeDecorationOrder extends PageDto {
     private Integer id;
 
     private String orderNo;

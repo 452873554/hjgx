@@ -16,6 +16,14 @@ $(function () {
         showUpload: false, //是否显示上传按钮
         fileActionSettings: {showUpload: false}
     });
+    $("#whole-decoration-banner-img").fileinput({
+        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
+        maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
+        maxFileSize: 1024,
+        language: 'zh',
+        showUpload: false, //是否显示上传按钮
+        fileActionSettings: {showUpload: false}
+    });
 
     //每个项目的预览图上传控件初始化
     $(".space-preview-img").fileinput({
@@ -203,7 +211,10 @@ $(function () {
         wholeDecoration.description = $('#whole-decoration-description').summernote('code');
         requestParam.append("wholeDecoration", JSON.stringify(wholeDecoration));
 
-        var bannerImg = $("#whole-decoration-preview-img")[0].files[0]
+        var previewImg = $("#whole-decoration-preview-img")[0].files[0]
+        requestParam.append("previewImg", previewImg);
+
+        var bannerImg = $("#whole-decoration-banner-img")[0].files[0]
         requestParam.append("bannerImg", bannerImg);
 
         //整装空间信息

@@ -4,7 +4,7 @@
 <head th:include="manage/header :: bgcommonheader">
 </head>
 <head>
-    <title>皇家共享 - 整装订单管理</title>
+    <title th:text="'皇家共享 - ' + ${page_title} "></title>
 </head>
 
 <body>
@@ -20,18 +20,18 @@
             <h2 class="sub-header" th:text="${page_title}"></h2>
 
             <div class="row search-bar">
-                <form method="get" action="/backstage/brand/list.html">
+                <form method="get" action="/backstage/whole-decoration-order/list.html">
                     <div class="col-lg-8">
-                        <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-success" data-toggle="modal"
-                                    data-target="#save-or-update">新增品牌
-                            </button>
-                        </div>
+                        <!--<div class="btn-group" role="group" aria-label="...">-->
+                            <!--<button type="button" class="btn btn-success" data-toggle="modal"-->
+                                    <!--data-target="#save-or-update">新增品牌-->
+                            <!--</button>-->
+                        <!--</div>-->
                     </div>
 
                     <div class="col-lg-4">
                         <div class="input-group">
-                            <input type="text" name="brandName" class="form-control" placeholder="品牌名" th:value="${brand.brandName}">
+                            <input type="text" name="orderNo" class="form-control" placeholder="订单号" th:value="${wholeDecorationOrder.orderNo}">
                             <span class="input-group-btn">
                             <button class="btn btn-default" type="submit">查找</button>
                         </span>
@@ -45,8 +45,9 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>品牌名称</th>
-                        <th>排序标识</th>
+                        <th>整装订单号</th>
+                        <th>状态</th>
+                        <th>下单账户</th>
                         <th>创建时间</th>
                         <th>可用操作</th>
                     </tr>
@@ -54,12 +55,13 @@
                     <tbody>
 
                     <tr th:each="item : ${pager.datas}">
-                        <td th:text="${item.brandName}"></td>
-                        <td th:text="${item.identifyOrder}"></td>
+                        <td th:text="${item.orderNo}"></td>
+                        <td th:text="${item.status} == 0?'待付款':'其他'"></td>
+                        <td th:text="${item.username}"></td>
                         <td th:text="${#calendars.format(item.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
                         <td>
                             <button th:id="${item.id}" type="button" class="btn btn-danger btn-xs" data-toggle="modal"
-                                    data-target="#delete-brand">删除
+                                    data-target="#change-status">修改状态
                             </button>
                         <td/>
                     </tr>
@@ -73,7 +75,6 @@
 </div>
 
 <div th:include="manage/footer :: commonjs"></div>
-<script th:src="@{/static/js/manage/brand.js}"></script>
 
 </body>
 </html>

@@ -59,6 +59,7 @@ public class WholeDecorationController {
     public JsonNode bg_whole_decoration_save_or_update(Model m,
                                                        MultipartHttpServletRequest request,
                                                        @RequestParam(value = "bannerImg", required = false) MultipartFile bannerImg,
+                                                       @RequestParam(value = "previewImg", required = false) MultipartFile previewImg,
                                                        @RequestParam(value = "spaceImgs", required = false) MultipartFile[] spaceImgs) throws IOException {
         ResultDto resultDto = new ResultDto();
         try {
@@ -75,15 +76,20 @@ public class WholeDecorationController {
             WholeDecoration wd = JsonUtil.toPOJO(request.getParameter("wholeDecoration"), new TypeReference<WholeDecoration>() {
             });
 
-            //保存整装图片
+            //保存整装预览图片
             String previewPath = env.getProperty("image.preview.path", String.class);
             String previewRequestPath = env.getProperty("image.preview.reqRoute", String.class);
+
             String previewName = UUID.randomUUID().toString();
-            FileUtils.copyToFile(bannerImg.getInputStream(), new File(previewPath + File.separator + previewName));
-            wd.setBannerImgUrl(previewRequestPath + File.separator + previewName);
+            FileUtils.copyToFile(previewImg.getInputStream(), new File(previewPath + File.separator + previewName));
+            wd.setPreviewImgUrl(previewRequestPath + File.separator + previewName);
+
+            //保存整装banner图片
+            String bannerName = UUID.randomUUID().toString();
+            FileUtils.copyToFile(bannerImg.getInputStream(), new File(previewPath + File.separator + bannerName));
+            wd.setBannerImgUrl(previewRequestPath + File.separator + bannerName);
 
             iWholeDecorationService.insertSelective(wd);
-
 
             //逐个保存整装空间信息
             String spacePreviewName = "";
