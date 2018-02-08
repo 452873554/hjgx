@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="manage/header :: bgcommonheader">
+</head>
+<head>
+    <title>皇家共享 - 企业用户管理</title>
+</head>
+
+<body>
+
+<nav th:replace="manage/nav :: navbar"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <nav th:replace="manage/menu :: menulist"></nav>
+
+        <!-- 重置密码模态框 -->
+        <div class="modal fade" id="reset-pwd" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="new-password-tip"><span id="user-new-password"></span>密码已经重置为：<span id="new-password"></span></h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">好的</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 删除模态框 -->
+        <div class="modal fade" id="delete-userBusiness" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">确定要删除该企业用户信息吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default confirm-delete" id="">确认</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增/修改模态框 -->
+        <div class="modal fade" id="save-or-update" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">新增/保存用户信息</h4>
+                    </div>
+
+                    <form method="post" action="/backstage/userbusiness/save-or-update">
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-nickname">用户昵称</span>
+                                <input type="text" name="nickname" class="form-control" placeholder="请填写用户昵称"
+                                       aria-describedby="basic-nickname">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-username">用户账号</span>
+                                <input type="text" name="username" class="form-control" placeholder="请填写用户账号名称"
+                                       aria-describedby="basic-username">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-password">初始密码</span>
+                                <input type="text" name="password" class="form-control" placeholder="用户密码，系统会自动生成，也可以自己指定"
+                                       aria-describedby="basic-password">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+                            <button type="submit" class="btn btn-primary">保存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header" th:text="${page_title}"></h2>
+
+            <div class="row search-bar">
+                <form method="get" action="/backstage/userbusiness/list.html">
+                    <div class="col-lg-8">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#save-or-update">新增企业用户
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input type="text" name="username" class="form-control" placeholder="账户名" th:value="${userBusiness.username}">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">查找</button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>用户昵称</th>
+                        <th>账户名</th>
+                        <th>创建时间</th>
+                        <th>可用操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr th:each="item : ${pager.datas}">
+                        <td th:text="${item.nickname}"></td>
+                        <td th:text="${item.username}"></td>
+                        <td th:text="${#calendars.format(item.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                        <td>
+                            <button th:id="${item.id}" type="button" class="btn btn-danger btn-xs" data-toggle="modal"
+                                    data-target="#delete-userBusiness">删除
+                            </button>
+                            <button th:id="${item.id}" th:name="${item.username}" type="button" class="btn btn-success btn-xs" data-toggle="modal"
+                                    data-target="#reset-pwd">重置密码
+                            </button>
+                        <td/>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div th:replace="pager :: pagerbar"></div>
+        </div>
+    </div>
+</div>
+
+<div th:include="manage/footer :: commonjs"></div>
+<script th:src="@{/static/js/manage/user_business.js}"></script>
+
+</body>
+</html>

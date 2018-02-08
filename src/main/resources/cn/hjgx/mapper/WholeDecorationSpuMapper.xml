@@ -4,9 +4,31 @@
   <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecorationSpu" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="spu" property="spu" jdbcType="VARCHAR" />
-    <result column="item_id" property="itemId" jdbcType="INTEGER" />
-    <result column="qty" property="qty" jdbcType="INTEGER" />
+
   </resultMap>
+
+  <resultMap id="ProductSpuResultMap" type="cn.hjgx.entity.paramDto.WholeDecorationSpuDto">
+    <id column="id" property="id" jdbcType="INTEGER"/>
+    <result column="product_name" property="productName" jdbcType="VARCHAR"/>
+    <result column="spu" property="spu" jdbcType="VARCHAR"/>
+    <result column="category_id" property="categoryId" jdbcType="INTEGER"/>
+    <result column="style_id" property="styleId" jdbcType="INTEGER"/>
+    <result column="cost_price" property="costPrice" jdbcType="DOUBLE"/>
+    <result column="retail_price" property="retailPrice" jdbcType="DOUBLE"/>
+    <result column="market_price" property="marketPrice" jdbcType="DOUBLE"/>
+    <result column="stock" property="stock" jdbcType="INTEGER"/>
+    <result column="identify_order" property="identifyOrder" jdbcType="INTEGER"/>
+    <result column="status" property="status" jdbcType="INTEGER"/>
+    <result column="supplier_id" property="supplierId" jdbcType="INTEGER"/>
+    <result column="unit" property="unit" jdbcType="VARCHAR"/>
+    <result column="description" property="description" jdbcType="VARCHAR"/>
+    <result column="space_ids" property="spaceIds" jdbcType="VARCHAR"/>
+    <result column="brand_id" property="brandId" jdbcType="INTEGER"/>
+    <result column="image_url" property="imageUrl" jdbcType="VARCHAR"/>
+
+  </resultMap>
+
+
   <sql id="Base_Column_List" >
     id, spu, item_id, qty
   </sql>
@@ -79,4 +101,18 @@
       qty = #{qty,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByItemId" resultMap="ProductSpuResultMap" parameterType="java.lang.Integer" >
+    select
+      pspu.*,
+      pimg.image_url
+    from t_portal_whole_decoration_spus dspu
+    LEFT JOIN t_portal_product_spu pspu
+    ON dspu.spu = pspu.spu
+    LEFT JOIN t_portal_product_spu_imgs pimg
+    ON dspu.spu = pimg.spu
+    WHERE item_id = #{id,jdbcType=INTEGER}
+    AND pimg.is_thumbnail = 1
+  </select>
+
 </mapper>

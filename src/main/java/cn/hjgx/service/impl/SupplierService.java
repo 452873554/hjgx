@@ -1,6 +1,5 @@
 package cn.hjgx.service.impl;
 
-import cn.hjgx.entity.Site;
 import cn.hjgx.entity.Supplier;
 import cn.hjgx.entity.page.Pager;
 import cn.hjgx.mapper.SupplierMapper;

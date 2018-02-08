@@ -1,10 +1,8 @@
 package cn.hjgx.controller.manage;
 
 import cn.hjgx.Utils.ParamUtil;
-import cn.hjgx.entity.Site;
 import cn.hjgx.entity.Supplier;
 import cn.hjgx.entity.page.Pager;
-import cn.hjgx.service.ICommonService;
 import cn.hjgx.service.ISupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

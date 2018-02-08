@@ -1,7 +1,7 @@
 package cn.hjgx.component;
 
 
-import cn.hjgx.entity.User;
+import cn.hjgx.entity.UserAdministrator;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -18,9 +18,9 @@ import java.io.IOException;
 public class AuthorityFilter implements Filter {
 
     /**
-     * 保存/取得登录用户键
+     * 保存/取得管理员登录用户键
      */
-    public static final String LOGIN_USER = "login_user";
+    public static final String LOGIN_ADMIN = "login_admin";
 
 
     @Override
@@ -34,7 +34,7 @@ public class AuthorityFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute(LOGIN_USER);
+        UserAdministrator user = (UserAdministrator) session.getAttribute(LOGIN_ADMIN);
         if(user == null){
             //TODO 用户未登录，跳转至登陆页面
             response.sendRedirect("/manage/login");

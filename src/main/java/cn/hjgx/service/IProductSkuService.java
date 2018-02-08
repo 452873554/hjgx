@@ -1,6 +1,7 @@
 package cn.hjgx.service;
 
 import cn.hjgx.entity.ProductSku;
+import cn.hjgx.entity.paramDto.ProductSpuDto;
 
 import java.util.List;
 
@@ -12,5 +13,9 @@ public interface IProductSkuService {
     int insertSelective(ProductSku record);
 
     int batchInsert(List<ProductSku> records);
+
+    List<ProductSku> selectBySpu(String spu);
+
+
 
 }

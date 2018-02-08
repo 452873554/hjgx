@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::newheader"></head>
+<head>
+    <title>全屋整装</title>
+    <!--特有-->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/whole/whole.css}">
+</head>
+
+<body>
+
+<!--顶部导航栏-->
+<nav th:replace="navigator::navbar"></nav>
+
+<img style="width:100%" th:src="@{/static/images/innersrc/zheng-banner.jpg}" alt="">
+<div class="wrap">
+
+    <div class="product-list">
+
+        <!-- 风格导航栏 -->
+        <div class="styleclass wid36">
+            <ul class="nav">
+
+                <!-- 所有风格 -->
+                <li class="navbar-line"><span>/</span></li>
+                <li>
+                    <a href="/decoration.html" th:style="${wholeDecoration.styleId} == null?'color: #b4a176;':''">所有风格</a>
+                </li>
+                <li class="navbar-line"><span>/</span></li>
+
+                <!-- 动态数据 -->
+                <th:block th:if="${styles.size()}>0" th:each="item : ${styles}">
+                    <li>
+                        <a th:href="'/decoration.html?styleId=' + ${item.id}" th:text="${item.styleName}" th:style="${wholeDecoration.styleId == item.id}?'color: #b4a176;':''"></a>
+                    </li>
+                    <li class="navbar-line"><span>/</span></li>
+                </th:block>
+
+                <th:block th:if="${styles.size()} <= 0">
+                    没有任何风格数据
+                </th:block>
+
+            </ul>
+        </div>
+
+        <th:block th:if="${pager.datas.size()}>0">
+            <div  th:each="item : ${pager.datas}" class="cmeili"
+                  style="margin-left:11px;margin-right:11px;width:576px;border:none;">
+                <img th:src="${item.bannerImgUrl}" style=" width: 100%;
+               height: 88%;"/>
+                <div style="width:576px;height:42px;border:1px solid #cccccc;overflow:hidden;border-top:0;">
+                    <h5 th:text="${item.name}"></h5>
+                </div>
+                <div class="imgShadow"></div>
+                <div class="imgs">
+                    <a href='http://"+item.Dimg' target="view_window">
+                        <img th:src="@{/static/images/innersrc/btt-icon-3d.png}" alt="3d效果图">
+                    </a>
+                    <a th:href="'/decoration/detail.html?id=' + ${item.id}">
+                        <img th:src="@{/static/images/innersrc/btt-icon-detail.png}" alt="查看详情" style="margin-left:100px;">
+                    </a>
+                </div>
+            </div>
+        </th:block>
+
+        <th:block th:if="${pager.datas.size()} <=0">
+            所选风格下没有整装商品
+        </th:block>
+
+    </div>
+</div>
+
+<footer th:include="footer :: copy"></footer>
+
+</body>
+</html>

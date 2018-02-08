@@ -11,6 +11,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.collect.Lists;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
@@ -29,6 +31,8 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/backstage")
 public class ProductController {
+
+    Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     private IBrandService brandService;
@@ -95,10 +99,13 @@ public class ProductController {
                     productSpuImg.setImageName(previewName);
                     productSpuImg.setSpu(productSpu.getSpu());
                     productSpuImg.setImageUrl(previewRequestPath + File.separator + previewName);
-
+                    productSpuImg.setIsThumbnail(0);
                     productSpuImgses.add(productSpuImg);
 
                 }
+
+                //设置第一个图片为缩略图
+                productSpuImgses.get(0).setIsThumbnail(1);
                 iProductSpuImgsService.batchInsert(productSpuImgses);
 
             }else{
@@ -106,9 +113,6 @@ public class ProductController {
                 resultDto.setMessage("必须上传预览图");
                 return JsonUtil.toJson(resultDto);
             }
-
-
-
 
             int i = iProductSpuService.insertSelective(productSpu);
             if (i == 0){
@@ -124,8 +128,9 @@ public class ProductController {
             //保存商品属性
             int y =iProductSpuAttrsService.insertSelective(productSpuAttrs);
 
+
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("商品信息添加异常:",e);
             resultDto.setFlag(0);
             resultDto.setMessage("商品信息添加异常");
         }
@@ -158,6 +163,7 @@ public class ProductController {
 
     @GetMapping("/product/list.html*")
     public String to_bg_product_list(Model m, ProductSpuResultDto productSpu) {
+
 
         try {
 

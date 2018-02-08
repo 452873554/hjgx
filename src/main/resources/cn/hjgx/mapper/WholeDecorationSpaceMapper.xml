@@ -7,6 +7,14 @@
     <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
     <result column="whole_decoration_id" property="wholeDecorationId" jdbcType="INTEGER" />
   </resultMap>
+
+  <resultMap id="BaseResultMapExtended" type="cn.hjgx.entity.paramDto.WholeDecorationSpaceDto" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
+    <result column="whole_decoration_id" property="wholeDecorationId" jdbcType="INTEGER" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     id, name, preview_img_url, whole_decoration_id
   </sql>
@@ -79,4 +87,13 @@
       whole_decoration_id = #{wholeDecorationId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+  <select id="selectByWholeDecorationId" resultMap="BaseResultMapExtended" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_whole_decoration_spaces
+    where whole_decoration_id = #{id,jdbcType=INTEGER}
+  </select>
+
 </mapper>

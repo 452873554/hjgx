@@ -20,6 +20,14 @@
     id, sku, spu, code, stock, stock_warning, cost_price, retail_price, market_price, 
     volume, create_time, update_time, specification
   </sql>
+
+  <select id="selectBySpu" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_product_sku
+    where spu = #{spu,jdbcType=INTEGER}
+  </select>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

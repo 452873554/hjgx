@@ -6,6 +6,7 @@
 
         <div th:fragment="menulist" class="col-sm-3 col-md-2 sidebar">
 
+            <!--商品部分-->
             <ul class="nav nav-sidebar">
                 <li th:class="*{current_menu == 'product_list'}? 'active':''"><a href="/backstage/product/list.html">商品管理</a></li>
                 <li th:class="*{current_menu == 'supplier_list'}? 'active':''"><a href="/backstage/supplier/list.html">供应商管理</a></li>
@@ -16,10 +17,16 @@
 
             <hr>
 
+            <!--整装部分-->
             <ul class="nav nav-sidebar">
                 <li th:class="*{current_menu == 'whole_decoration_list'}? 'active':''"><a href="/backstage/whole-decoration/list.html">全屋整装管理</a></li>
                 <li th:class="*{current_menu == 'style_list'}? 'active':''"><a href="/backstage/style/list.html">风格管理</a></li>
                 <li th:class="*{current_menu == 'space_list'}? 'active':''"><a href="/backstage/space/list.html">空间管理</a></li>
+            </ul>
+
+            <!--用户部分-->
+            <ul class="nav nav-sidebar">
+                <li th:class="*{current_menu == 'user_business_list'}? 'active':''"><a href="/backstage/userbusiness/list.html">企业用户管理</a></li>
             </ul>
 
             <hr>

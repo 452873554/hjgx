@@ -1,0 +1,168 @@
+li {
+    list-style: none;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部标题 */
+.product-list {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 auto;
+}
+
+.wid36 {
+    font-size: 16px;
+    margin: 40px auto;
+    width: 475px;
+}
+
+.product_ls {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+    padding-top: 48px;
+}
+
+.styleclass li {
+    float: left;
+    width: 70px;
+    text-align: center;
+}
+
+li.sec {
+    margin-right: 0px;
+}
+
+.active{
+    color: #b4a176;
+    background: transparent;
+}
+
+.styleclass .nav > li > a {
+    color: #808080;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.styleclass .nav > li > a:hover {
+    color: #b4a176;
+    background: transparent;
+}
+
+.styleclass .nav > li > a:focus {
+    color: #b4a176;
+    background: transparent;
+
+}
+
+/* 全屋图片组 */
+.cmeili {
+    display: block;
+    border: 1px solid #ccc;
+    height: 26em;
+    margin-bottom: 48px;
+    float: left;
+    margin-right: 10px;
+    width: 49%;
+    position: relative;
+}
+
+/* .cmeili img{border:1px solid #333;} */
+.cmeili h5 {
+    font-size: 18px;
+    display: inherit;
+    line-height: 42px;
+    margin-left: 1.5em;
+    float: left;
+    color: #333;
+    margin-top: 3px;
+}
+
+.cmeili span {
+    float: left;
+    margin-left: 1em;
+    line-height: 42px;
+    margin-right: 0.3em;
+    color: #333;
+}
+
+.cmeili span.sr {
+    float: right;
+    margin-right: 1em;
+    line-height: 42px;
+    font-size: 0.9em;
+    color: #808080;
+}
+
+.cmeili span.sr img {
+    margin-right: 0.5em;
+    margin-left: 2em;
+    border: none;
+    line-height: 2rem;
+}
+
+.w:hover {
+    color: #2f318b;
+}
+
+.wordcolor {
+    color: #2f318b;
+    border-bottom: 0;
+}
+
+.styleclass span {
+    cursor: pointer;
+}
+
+.styleclass li {
+    margin-right: 0px;
+    color: #808080;
+}
+
+.styleclass .navbar-line {
+    padding-top: 10px;
+    width: 20px;
+}
+
+.imgShadow {
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+}
+
+.imgs {
+    position: absolute;
+    width: 78%;
+    height: 40%;
+    top: 110px;
+    left: 64px;
+}
+
+/* 修改图片样式 */
+.span4 {
+    width: 48%;
+    float: left;
+    margin-right: 20px;
+}
+
+.thumbnail > img {
+    height: 320px;
+}
+
+/* .line{
+   width:1200px;
+   height: 10px;
+   border-bottom: 1px solid #e6e6e6;
+   margin-bottom: 30px;
+} */

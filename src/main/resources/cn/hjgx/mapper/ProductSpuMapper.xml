@@ -39,6 +39,26 @@
         <result column="brand_id" property="brandId" jdbcType="INTEGER"/>
     </resultMap>
 
+    <resultMap id="ProductSpuDtoMap" type="cn.hjgx.entity.paramDto.ProductSpuDto">
+        <result column="product_name" property="productName" jdbcType="VARCHAR"/>
+        <result column="spu" property="spu" jdbcType="VARCHAR"/>
+        <result column="category_id" property="categoryId" jdbcType="INTEGER"/>
+        <result column="style_id" property="styleId" jdbcType="INTEGER"/>
+        <result column="cost_price" property="costPrice" jdbcType="DOUBLE"/>
+        <result column="retail_price" property="retailPrice" jdbcType="DOUBLE"/>
+        <result column="market_price" property="marketPrice" jdbcType="DOUBLE"/>
+        <result column="stock" property="stock" jdbcType="INTEGER"/>
+        <result column="identify_order" property="identifyOrder" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="supplier_id" property="supplierId" jdbcType="INTEGER"/>
+        <result column="unit" property="unit" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+        <result column="space_ids" property="spaceIds" jdbcType="VARCHAR"/>
+        <result column="brand_id" property="brandId" jdbcType="INTEGER"/>
+        <result column="attrs" property="attrs" jdbcType="VARCHAR"/>
+        <result column="image_url" property="imageUrl" jdbcType="VARCHAR"/>
+    </resultMap>
+
     <sql id="Base_Column_List">
         id, product_name, spu, category_id, style_id, cost_price, retail_price, market_price,
         stock, identify_order, status, supplier_id, unit, description, space_ids, brand_id
@@ -300,6 +320,22 @@
             AND (spu.product_name ilike '%' || #{productName,jdbcType=VARCHAR} || '%' OR spu.spu ilike '%' || #{productName,jdbcType=VARCHAR} || '%')
         </if>
 
+    </select>
+
+    <select id="getProductSpuDetail" resultMap="ProductSpuDtoMap" parameterType="java.lang.String" >
+        select
+        pspu.id,
+        pspu.product_name,
+        pspu.spu,
+        pattrs.attrs,
+        pimgs.image_url
+        from t_portal_product_spu pspu
+        LEFT JOIN t_portal_product_spu_attrs pattrs
+        ON pspu.spu = pattrs.spu
+        LEFT JOIN t_portal_product_spu_imgs pimgs
+        ON pspu.spu = pimgs.spu
+        WHERE pspu.spu = #{spu,jdbcType=VARCHAR}
+        AND pimgs.is_thumbnail = 1;
     </select>
 
 

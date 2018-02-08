@@ -9,6 +9,8 @@ public class ProductSpuImgs {
 
     private String imageUrl;
 
+    private Integer isThumbnail;
+
     public Integer getId() {
         return id;
     }
@@ -39,5 +41,13 @@ public class ProductSpuImgs {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public Integer getIsThumbnail() {
+        return isThumbnail;
+    }
+
+    public void setIsThumbnail(Integer isThumbnail) {
+        this.isThumbnail = isThumbnail;
     }
 }

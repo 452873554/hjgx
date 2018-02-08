@@ -4,6 +4,7 @@ package cn.hjgx.service.impl;
 import cn.hjgx.entity.ProductSpu;
 import cn.hjgx.entity.page.Pager;
 import cn.hjgx.entity.pagedto.ProductSpuResultDto;
+import cn.hjgx.entity.paramDto.ProductSpuDto;
 import cn.hjgx.mapper.ProductSpuMapper;
 import cn.hjgx.service.IProductSpuService;
 import com.github.pagehelper.PageHelper;
@@ -21,6 +22,11 @@ public class ProductSpuService implements IProductSpuService {
     @Override
     public int insertSelective(ProductSpu record) {
         return productSpuMapper.insertSelective(record);
+    }
+
+    @Override
+    public ProductSpuDto getProductSpuDetail(String spu) {
+        return productSpuMapper.getProductSpuDetail(spu);
     }
 
     @Override

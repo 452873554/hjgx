@@ -261,10 +261,16 @@
                     </div>
                 </div>
 
-                <div class="form-group">
 
-                    <label for="previewImages" class="col-sm-1 control-label">商品相册</label>
+
+                <div class="form-group">
+                    <label for="preview-img" class="col-sm-1 control-label">商品相册</label>
                     <div class="col-sm-11">
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <span><strong>第一张图</strong>将作为SPU的缩略图</span>
+                        </div>
                         <input id="preview-img" type="file" name="previewImages" multiple>
                     </div>
                 </div>

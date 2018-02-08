@@ -2,6 +2,8 @@ package cn.hjgx.mapper;
 
 import cn.hjgx.entity.WholeDecorationSpu;
 
+import java.util.List;
+
 public interface WholeDecorationSpuMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,7 @@ public interface WholeDecorationSpuMapper {
     int updateByPrimaryKeySelective(WholeDecorationSpu record);
 
     int updateByPrimaryKey(WholeDecorationSpu record);
+
+    List<WholeDecorationSpu> selectByItemId(int id);
+
 }

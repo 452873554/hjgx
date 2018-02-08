@@ -26,4 +26,9 @@ public class ProductSkuService implements IProductSkuService {
     public int batchInsert(List<ProductSku> records) {
         return productSkuMapper.batchInsert(records);
     }
+
+    @Override
+    public List<ProductSku> selectBySpu(String spu) {
+        return productSkuMapper.selectBySpu(spu);
+    }
 }

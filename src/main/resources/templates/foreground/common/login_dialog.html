@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+<!-- 新增/修改模态框 -->
+<div th:fragment="login_dialog"  class="modal fade" id="login_dialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">你需要登录才能进行该操作</h4>
+            </div>
+
+            <div class="modal-body" id="user-login-form-body">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-user-name">账号</span>
+                    <input type="text" name="username" id="user-name" class="form-control" placeholder="请填写用户名称"
+                           aria-describedby="basic-user-name">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-user-password">密码</span>
+                    <input type="password" name="password" id="user-password" class="form-control"
+                           placeholder="请填写用户密码"
+                           aria-describedby="basic-user-password">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" id="user-login">登录</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

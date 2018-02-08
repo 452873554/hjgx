@@ -1,0 +1,402 @@
+.selected {
+    position: relative;
+    border: 1px solid #b4a176 !important;
+    box-shadow: 0 0 0 1px #b4a176 inset;
+}
+
+.selected:after {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 14px;
+    background-image: url('./static/img/chooselist/nike.png');
+    /* background-position: -160px -60px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.ChooseMain {
+    width: 1200px;
+
+    margin: 60px auto;
+}
+
+.Ctitle {
+    width: 1200px;
+    height: 20px;
+    border-left: 6px solid #b4a176;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.CbtnGroup {
+    width: 500px;
+    height: 30px;
+
+    margin-top: 22px;
+    /* display: flex; */
+}
+
+.Cbtn {
+    float: left;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    line-height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.doubleList {
+    width: 1200px;
+    float: left;
+    margin: 24px auto;
+}
+
+.leftShow {
+    width: 500px;
+
+    float: left;
+}
+
+.LgreyB {
+    height: 48px;
+    background: #4d4d4d;
+    padding-left: 16px;
+    font-size: 21px;
+    line-height: 48px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.leftList {
+    padding: 15px;
+}
+
+.computeTotal {
+    width: 100%;
+    height: 57px;
+    border: 1px #e6e6e6 solid;
+    text-align: center;
+    line-height: 57px;
+    font-size: 16px;
+}
+
+.design {
+    border: 1px solid #e6e6e6;
+    width: 500px;
+    height: 260px;
+    padding-left: 24px;
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+.design input {
+    width: 363px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.design img {
+    float: left;
+    margin-top: 15px;
+}
+
+.goCart {
+    width: 250px;
+    height: 40px;
+    /* border: 1px solid #b4a176;
+    color: #b4a176; */
+    text-align: center;
+    margin-left: 90px;
+    line-height: 25px;
+    margin-top: 20px;
+
+}
+
+.levelOne {
+    width: 100%;
+    height: 48px;
+
+    line-height: 48px;
+    padding-left: 16px;
+    border: 1px solid #e6e6e6;
+    border-left: 6px solid #b4a176;
+}
+
+.levelOne div, .levelTwo div {
+    float: left;
+    margin-right: 35px;
+}
+
+.levelOne .L1img {
+    margin-left: 220px;
+    margin-right: 0;
+}
+
+.levelTwo {
+    width: 460px;
+    height: 68px;
+    margin: 0 auto;
+    line-height: 68px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.levelTwo .L2add {
+    color: #b4a176;
+    /* margin-left: 280px; */
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.levelTwo .L2del {
+    color: #b4a176;
+    margin-right: 0;
+}
+
+.levelThree {
+    width: 100%;
+    height: 68px;
+    background-color: #f2f2f2;
+    line-height: 68px;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.L3name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 36px;
+    /* margin-right: 16px; */
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.computeNum {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.comPrc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80px;
+}
+
+.levelThree div {
+    float: left;
+}
+
+.L3number {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.L3X {
+    width: 10px;
+    margin-left: 86px;
+    cursor: pointer;
+}
+
+.rightShow {
+    width: 59%;
+    float: right;
+}
+
+.RgreyB {
+    width: 100%;
+    height: 48px;
+    background: #4d4d4d;
+    padding-left: 24px;
+    font-size: 21px;
+    line-height: 48px;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.RgreyB div {
+    float: left;
+}
+
+.RgreyB .totalP {
+    font-size: 15px;
+    float: right;
+    margin-right: 24px;
+}
+
+.rightShow .rightList {
+    width: 100%;
+    color: #808080;
+    padding: 24px 24px;
+
+}
+
+.RLinner {
+    width: 100%;
+
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 24px;
+
+}
+
+.RItop, .RIbottom, .RImiddle {
+    float: left;
+
+}
+
+.RItop img {
+    width: 150px;
+    height: 150px;
+
+}
+
+.caizhi {
+
+    margin-bottom: 15px;
+}
+
+.RImiddle {
+    width: 350px;
+    height: 100%;
+    margin-left: 24px;
+}
+
+.RImiddle .t {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.Rsize {
+
+    position: relative;
+    max-width: 250px;
+    /* width: 200px; */
+    /* height: 30px; */
+    border: 1px solid #b4a176;
+    line-height: 30px;
+    margin-right: 5px;
+    border-radius: 1px;
+    float: left;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.p-color {
+
+}
+
+.RImiddle .s div {
+    float: left;
+}
+
+.RColor {
+    width: 50px;
+    height: 50px;
+
+    line-height: 30px;
+}
+
+.Rcolor {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #b4a176;
+    line-height: 30px;
+    border-radius: 2px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.RcolorGroup div {
+    float: left;
+
+}
+
+.Rprice {
+    color: #ff0000;
+    font-weight: 700;
+    margin-left: 33px;
+    font-size: 16px;
+}
+
+.Rbb {
+
+    margin-top: 118px;
+
+}
+.item-container{}
+
+.item-sku-selected{
+    float: left;
+    width: 40%;
+}
+
+* {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.CbtnGroup .nav li {
+    float: left;
+}
+
+.CbtnGroup .nav > li > a {
+    color: #b4a176;
+    border: #b4a176 1px solid;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.CbtnGroup .nav > li > a:hover {
+    color: #cfbd92;
+    background: transparent;
+
+}
+
+.CbtnGroup .nav > li > a:focus {
+    color: #ffffff;
+    background: #b4a176;
+}
+
+.spu-img{
+    max-width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.tip{
+    color: #b4a176;
+}

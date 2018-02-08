@@ -11,6 +11,8 @@ public interface IWholeDecorationService {
 
     int insertSelective(WholeDecoration record);
 
+    WholeDecoration selectByPrimaryKey(Integer id);
+
     Pager<WholeDecorationResultDto> getWholeDecorationPaged(WholeDecorationResultDto wholeDecorationResultDto);
 
 

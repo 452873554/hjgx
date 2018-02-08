@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::newheader"></head>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +19,6 @@
     <meta name="twitter:image" content=""/>
     <meta name="twitter:url" content=""/>
     <meta name="twitter:card" content=""/>
-
-    <!-- 公共 -->
-    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/static/css/foreground/common/header.css}">
-    <link rel="stylesheet" th:href="@{/static/css/foreground/common/footer.css}">
 
     <!-- 特有 -->
     <link rel="stylesheet" th:href="@{/static/css/foreground/index/index.css}">
@@ -63,49 +61,8 @@
 
 <div class="fixback clearfix"></div>
 
-<header v-if="back">
-
-    <div class="topheader" style="position:fixed;z-index:998;">
-        <ul>
-            <li><a href="#">登录</a></li>
-            <!-- <li><router-link to="/Register">注册</router-link></li> -->
-            <!-- <li><router-link to="/SalesCenter">商家中心</router-link></li> -->
-            <!-- <li><router-link to="/Backcall">意见反馈</router-link></li> -->
-            <li><a href="#">商家中心</a></li>
-            <li class="last"><a><img th:src="@{/static/images/innersrc/phone.png}"/> 客服热线：4008-099-931</a></li>
-        </ul>
-    </div>
-    <div class="wrapfix">
-        <img th:src="@{/static/images/innersrc/index-logo.png}" class="header-logo"/>
-        <div class="kouhao">皇家品质<br/>共享资源</div>
-        <div class="welLine" style="display:none;"></div>
-        <div class="welcome" style="display:none;"><span>欢迎登录</span></div>
-        <div class="header-menu">
-            <!-- <ul class="menu-list" >
-              <li>首页</li>
-              <li><span>全屋整装</span></li>
-
-              <li><span>新闻公告</span></li>
-              <li><span>关于我们</span></li>
-              <li class="down_apk"></li> 关注公众号 <img src="./static/img/downloadAPP.png" />></li>
-            </ul> -->
-            <ul class="nav">
-                <li class="active">
-                    <a href="/">首页</a>
-                </li>
-                <!--<li><a href="#">全屋整装</a></li>-->
-                <!--<li><a href="#">新闻公告</a></li>-->
-                <!--<li><a href="#">关于我们</a></li>-->
-                <li><a href="#">关注公众号</a></li>
-            </ul>
-            <div class="erweima" style="display:none;"><img th:src="@{/static/images/innersrc/erweima1.png}"
-                                                            alt="加入我们"/></div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-
-</header>
-
+<!--顶部导航栏-->
+<nav th:replace="navigator::navbar"></nav>
 
 <div id="myCarousel" class="carousel slide">
     <ol class="carousel-indicators">
@@ -127,70 +84,16 @@
 <div class="together">整装推荐</div>
 <div class="tuijian clearfix" style="border-bottom:0px;">
 
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
-    </div>
-
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
-    </div>
-
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
-    </div>
-
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
-    </div>
-
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
-    </div>
-
-    <div class="all_room_mouse s_img allRoom">
-        <img style="width:380px;height:260px;" th:src="@{/static/images/innersrc/keting.jpg}"/>
-        <div class="zhezhao"></div>
-        <div class="zheword">
-            <p class="mouse_01">都市</p>
-            <p class="mouse_02">三室两厅</p>
-            <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
-        </div>
-
+    <div class="all_room_mouse s_img allRoom" th:each="item : ${pager.datas}">
+        <a th:href="'/decoration/detail.html?id=' + ${item.id}">
+            <img style="width:380px;height:260px;" th:src="${item.bannerImgUrl}"/>
+            <div class="zhezhao"></div>
+            <div class="zheword">
+                <p class="mouse_01" th:text="${item.name}"></p>
+                <p class="mouse_02">三室两厅</p>
+                <p class="mouse_03">客厅+餐厅+主卧+次卧+书房</p>
+            </div>
+        </a>
     </div>
 
 </div>
@@ -278,25 +181,8 @@
 
 
     </div>
-    <!-- <div class="loginbox">
-        <img class="box-close" src="./static/img/chooselist/x.png" alt="" @click="zhenghid"/>
-        <div class="boxtitle">预约整装服务</div>
-
-
-       <div ><input class="loginipt" type="text" placeholder="请输入手机号"></div>
-        <div><input style="background-image:url('./static/img/Password-img.png');background-
-
-position:10px 5px;" class="loginipt" type="text" placeholder="请输入密码"></div>
-
-        <div class="clearfix"></div>
-       <div class="loginbtn">免费预约</div>
-
-      </div> -->
     <div class="clearfix"></div>
     <footer th:include="footer :: copy"></footer>
-    <!-- <div class="footchange">
-      <div class="haoma"> ©深圳市深装总家居科技有限公司</div>
-    </div> -->
 </footer>
 
 <script>

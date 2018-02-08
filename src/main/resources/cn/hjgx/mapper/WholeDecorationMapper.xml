@@ -11,6 +11,20 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+
+  <resultMap id="BaseResultMapExtend" type="cn.hjgx.entity.pagedto.WholeDecorationResultDto" >
+    <id column="style_name" property="styleName" jdbcType="VARCHAR" />
+
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="style_id" property="styleId" jdbcType="INTEGER" />
+    <result column="banner_img_url" property="bannerImgUrl" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     id, name, code, style_id, banner_img_url, description, create_time, update_time
   </sql>
@@ -129,12 +143,10 @@
 
   <!-- 工具外自定义添加内容 -->
   <select id="selectByPageParam" parameterType="cn.hjgx.entity.pagedto.WholeDecorationResultDto"
-          resultType="cn.hjgx.entity.pagedto.WholeDecorationResultDto">
+          resultMap="BaseResultMapExtend">
     select
-    wd.name,
-    wd.code,
-    wd.create_time as createTime,
-    s.style_name AS styleName
+    wd.*,
+    s.style_name
     from t_portal_whole_decoration wd
     LEFT JOIN t_portal_style s ON wd.style_id = s.id
 
@@ -142,6 +154,10 @@
     <if test="name != null">
       AND (wd.name ilike '%' || #{name,jdbcType=VARCHAR} || '%' OR
            wd.code ilike '%' || #{name,jdbcType=VARCHAR} || '%')
+    </if>
+
+    <if test="styleId != null">
+      AND wd.style_id = #{styleId,jdbcType=INTEGER}
     </if>
 
   </select>

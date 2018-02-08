@@ -1,8 +1,8 @@
 package cn.hjgx.controller;
 
-import cn.hjgx.service.ICommonService;
+import cn.hjgx.entity.UserAdministrator;
 import cn.hjgx.component.AuthorityFilter;
-import cn.hjgx.entity.User;
+import cn.hjgx.service.IUserAdministratorService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -22,21 +22,21 @@ import java.util.Date;
 public class SystemController {
 
 	@Autowired
-	private ICommonService commonService;
+	private IUserAdministratorService iUserAdministratorService;
 
 	@PostMapping("/dologin")
-	public String dologin(HttpServletRequest request, User user, Model m) {
+	public String dologin(HttpServletRequest request, UserAdministrator user, Model m) {
 
 		//TODO 验证码通过
 		if(true){
 
-			User dbuser = commonService.validateUser(user);
+			UserAdministrator dbuser = iUserAdministratorService.validateUser(user);
 			//用户名密码校验通过,保存会话信息，登录到管理首页
 			if(dbuser != null){
 				//更新最后登录时间
 				dbuser.setLastLoginTime(new Date());
-				commonService.updateByPrimaryKeySelective(dbuser);
-				request.getSession().setAttribute(AuthorityFilter.LOGIN_USER,dbuser);
+				iUserAdministratorService.updateByPrimaryKeySelective(dbuser);
+				request.getSession().setAttribute(AuthorityFilter.LOGIN_ADMIN,dbuser);
 				return "redirect:/backstage/product/list.html";
 			}else{
 				//用户名或者密码不通过
@@ -52,7 +52,7 @@ public class SystemController {
 	}
 
 	@GetMapping("/dologout")
-	public String dologout(HttpServletRequest request, User user, Model m) {
+	public String dologout(HttpServletRequest request, UserAdministrator user, Model m) {
 
 		request.getSession().invalidate();
 		return "manage/login";

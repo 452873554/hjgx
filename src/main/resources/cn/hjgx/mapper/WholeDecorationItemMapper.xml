@@ -6,6 +6,13 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="space_id" property="spaceId" jdbcType="INTEGER" />
   </resultMap>
+
+  <resultMap id="BaseResultMapExtended" type="cn.hjgx.entity.paramDto.WholeDecorationItemDto" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="space_id" property="spaceId" jdbcType="INTEGER" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     id, name, space_id
   </sql>
@@ -68,4 +75,12 @@
       space_id = #{spaceId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectBySpaceId" resultMap="BaseResultMapExtended" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_whole_decoration_items
+    where space_id = #{id,jdbcType=INTEGER}
+  </select>
+
 </mapper>

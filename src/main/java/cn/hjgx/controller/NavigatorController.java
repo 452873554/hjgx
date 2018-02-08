@@ -1,13 +1,22 @@
 package cn.hjgx.controller;
 
+import cn.hjgx.Utils.ParamUtil;
+import cn.hjgx.entity.ProductStyle;
+import cn.hjgx.entity.WholeDecoration;
+import cn.hjgx.entity.WholeDecorationSpace;
 import cn.hjgx.entity.page.Pager;
-import cn.hjgx.service.ICommonService;
-import cn.hjgx.entity.Advertisment;
+import cn.hjgx.entity.pagedto.WholeDecorationResultDto;
+import cn.hjgx.entity.paramDto.WholeDecorationSpaceDto;
+import cn.hjgx.service.IProductStyleService;
+import cn.hjgx.service.IWholeDecorationService;
+import cn.hjgx.service.IWholeDecorationSpaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 /**
  * 前台导航控制器
@@ -17,8 +26,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NavigatorController {
 
     @Autowired
-    private ICommonService iCommonService;
+    private IWholeDecorationService iWholeDecorationService;
 
+    @Autowired
+    private IProductStyleService iProductStyleService;
+
+    @Autowired
+    private IWholeDecorationSpaceService iWholeDecorationSpaceService;
 
     /**
      * 首页
@@ -26,9 +40,21 @@ public class NavigatorController {
      * @return
      */
     @GetMapping("/")
-    public String index(Model m) {
+    public String index(Model m,WholeDecorationResultDto wholeDecoration) {
+
+        try {
+            //首页固定查询6个
+            wholeDecoration.setPageSize(6);
+            Pager<WholeDecorationResultDto> pager = iWholeDecorationService.getWholeDecorationPaged(wholeDecoration);
+            m.addAttribute("pager", pager);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            //TODO 跳转至错误页面
+        }
         return "index";
     }
+
 
     /**
      * 系统管理员登录页面

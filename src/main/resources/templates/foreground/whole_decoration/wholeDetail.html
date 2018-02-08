@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::newheader"></head>
+<head>
+    <title th:text="'整装 - ' + ${wholeDecoration.name}"></title>
+    <link rel="stylesheet" th:href="@{/static/css/foreground/whole/wholedetail.css}">
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/swiper/swiper.min.css}">
+
+
+    <style>
+        .swiper-container {
+            width: 1200px;
+            height: 900px;
+            margin: 0 auto;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #ffffff;
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets {
+            bottom: 235px;
+            display: flex;
+            border: #b4a176 1px solid;
+            border-right: 0;
+        }
+
+        .swiper-pagination-bullet {
+            width: 80px;
+            height: 80px;
+            border-radius: 0;
+            border-right: #b4a176 1px solid;
+            flex: 1;
+            margin: 0 !important;
+            height: 45px;
+            line-height: 45px;
+            background-color: transparent;
+            opacity: 1;
+            font-size: 20px;
+            color: #808080;
+        }
+
+        .swiper-pagination-bullet-active {
+
+            background: #b4a176;
+            color: #ffffff;
+        }
+
+        /* 表格 */
+        .ul_down tr {
+            border: 1px dashed #e6e6e6;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+<!--顶部导航栏-->
+<nav th:replace="navigator::navbar"></nav>
+
+<div>
+    <img style="width:100%;" th:src="${wholeDecoration.bannerImgUrl}"/>
+    <div class="clearfix"></div>
+    <div class="spaceTitle">空间设置</div>
+
+
+    <div class="lbtnG clearfix">
+        <a th:href="'/decoration/order.html?id=' + ${wholeDecoration.id}">
+            <div class="listBtn">查看配置单</div>
+        </a>
+        <div class="listBtn" style="margin-left:30px;">720°全景图展示</div>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide" th:each="space,iterStat : ${wholeDecorationSpaces}">
+                <div style="position:relative;">
+                    <img style="height:600px;" th:src="${space.previewImgUrl}" th:alt="${space.name}">
+                </div>
+
+                <div class="item-container">
+
+                    <table class="ul_down">
+                        <tr class="firstTr">
+                            <th>包含项目</th>
+                            <th>型号</th>
+                            <th>商品选择</th>
+                        </tr>
+                        <tr class="item-skus" th:each="item,iterStat : ${space.wholeDecorationItemDtos}">
+                            <td style="width:33%;" th:text="${item.name}">项目名称</td>
+                            <td style="width:33%;" th:text="${item.wholeDecorationSpus.get(0).spu}">SKU</td>
+                            <td style="width:33%;">
+                                <a th:href="'/decoration/order.html?id=' + ${wholeDecoration.id}"><span
+                                        style="cursor:pointer;">升级</span></a>
+                                <img th:src="@{/static/images/innersrc/sheng.png}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <div class="clearfix"></div>
+
+
+    <div class="wrap">
+        <div class="spaceL"></div>
+        <div class="bigTitles">
+            <span>产品详情展示</span>
+            <span class="minT">皇家共享，为您提供最优选材</span>
+        </div>
+
+        <!--整装详细说明-->
+        <div th:utext="${wholeDecoration.description}">
+        </div>
+
+    </div>
+
+
+</div>
+<footer th:include="footer :: copy"></footer>
+<div th:include="footer :: commonjs"></div>
+<!-- 轮播 -->
+<script th:src="@{/static/js/utility/swiper/swiper.min.js}"></script>
+<script th:src="@{/static/js/foreground/wholeDetail.js}"></script>
+
+</body>
+</html>
+

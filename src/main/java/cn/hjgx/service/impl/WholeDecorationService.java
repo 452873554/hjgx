@@ -26,6 +26,11 @@ public class WholeDecorationService implements IWholeDecorationService
     }
 
     @Override
+    public WholeDecoration selectByPrimaryKey(Integer id) {
+        return wholeDecorationMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
     public Pager<WholeDecorationResultDto> getWholeDecorationPaged(WholeDecorationResultDto wholeDecoration) {
 
         PageHelper.startPage(wholeDecoration.getPageOffSet(), wholeDecoration.getPageSize());

@@ -1,6 +1,5 @@
 package cn.hjgx.mapper;
 
-import cn.hjgx.entity.Site;
 import cn.hjgx.entity.Supplier;
 
 import java.util.List;

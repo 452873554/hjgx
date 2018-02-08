@@ -6,44 +6,82 @@
 <body>
 
 <!-- FOOTER -->
-<footer th:fragment="copy">
+<div th:fragment="copy">
+    <footer>
+        <!--<div class="toTop">-->
+        <!--<router-link to="/login">-->
+        <!--<div class="to">-->
+        <!--<img src="./static/img/top1.png" alt="">-->
+        <!--<div>订单管理</div>-->
+        <!--</div>-->
+        <!--</router-link>-->
 
-    <div class="pfooter" v-if="f">
-        <div class="footwrap clearfix">
-            <div class="footleft">
-                <div class="footleft-t">
-                    <div>公司新闻</div>
-                    <div>|</div>
-                    <div>行业动态</div>
-                    <div>|</div>
-                    <div>关于我们</div>
-                    <div>|</div>
-                    <div>加入我们</div>
-                    <div>|</div>
-                    <div>售后服务</div>
-                </div>
-                <div class="footleft-b">
-                    <div>&copy; 深圳市深装总家居科技有限公司</div>
-                    <div>咨询热线：4008-099-931</div>
-                </div>
-            </div>
-            <div class="footright">
-                <div class="ftl">
-                    <img th:src="@{/static/images/innersrc/erweima1.png}" alt="">
-                    <div style="padding-left:12px;">皇家共享</div>
-                </div>
-                <div class="ftr">
-                    <img th:src="@{/static/images/innersrc/erweima2.png}" alt="">
-                    <div style="padding-left:5px;">深装总家居</div>
-                </div>
+        <!--<div class="to" style="border-top:1px solid #808080;border-bottom:1px solid #808080;" >-->
+        <!--<img src="./static/img/top2.png" alt="">-->
+        <!--<div>预约整装</div>-->
+        <!--</div>-->
 
-            </div>
-        </div>
+        <!--<div class="to" @click="goTop">-->
+        <!--<img src="./static/img/top3.png" alt="">-->
+        <!--<div>回到顶部</div>-->
+        <!--</div>-->
 
+
+        <!--</div>-->
+        <!-- <div class="loginbox">
+            <img class="box-close" src="./static/img/chooselist/x.png" alt="" @click="zhenghid"/>
+            <div class="boxtitle">预约整装服务</div>
+
+
+           <div ><input class="loginipt" type="text" placeholder="请输入手机号"></div>
+            <div><input style="background-image:url('./static/img/Password-img.png');background-
+
+    position:10px 5px;" class="loginipt" type="text" placeholder="请输入密码"></div>
+
+            <div class="clearfix"></div>
+           <div class="loginbtn">免费预约</div>
+
+          </div> -->
         <div class="clearfix"></div>
-    </div>
+        <div class="pfooter" v-if="f">
+            <div class="footwrap clearfix">
+                <div class="footleft">
+                    <div class="footleft-t">
+                        <div>公司新闻</div>
+                        <div>|</div>
+                        <div>行业动态</div>
+                        <div>|</div>
+                        <div>关于我们</div>
+                        <div>|</div>
+                        <div>加入我们</div>
+                        <div>|</div>
+                        <div>售后服务</div>
+                    </div>
+                    <div class="footleft-b">
+                        <div>&copy; 深圳市深装总家居科技有限公司</div>
+                        <div>咨询热线：4008-099-931</div>
+                    </div>
 
-</footer>
+                </div>
+                <div class="footright">
+                    <div class="ftl">
+                        <img th:src="@{/static/images/innersrc/erweima2.png}" alt="">
+                        <div style="padding-left:12px;">皇家共享</div>
+                    </div>
+                    <div class="ftr">
+                        <img th:src="@{/static/images/innersrc/erweima1.png}" alt="">
+                        <div style="padding-left:5px;">深装总家居</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+
+</div>
 
 
 <div th:fragment="commonjs">

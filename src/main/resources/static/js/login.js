@@ -1,9 +1,0 @@
-$(function(){
-
-    $("#dologin").click(function(){
-
-
-
-    });
-
-});
