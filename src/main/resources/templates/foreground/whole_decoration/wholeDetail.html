@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:include="header::newheader"></head>
+<head th:include="header::common-foreground-header"></head>
 <head>
     <title th:text="'整装 - ' + ${wholeDecoration.name}"></title>
     <link rel="stylesheet" th:href="@{/static/css/foreground/whole/wholedetail.css}">
@@ -77,13 +77,33 @@
 
     <div class="clearfix"></div>
 
+    <!--<div class="swiper-container">-->
+        <!--<div class="swiper-wrapper">-->
+            <!--<div class="swiper-slide">Slide 1</div>-->
+            <!--<div class="swiper-slide">Slide 2</div>-->
+            <!--<div class="swiper-slide">Slide 3</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; 如果需要分页器 &ndash;&gt;-->
+        <!--<div class="swiper-pagination"></div>-->
+
+        <!--&lt;!&ndash; 如果需要导航按钮 &ndash;&gt;-->
+        <!--<div class="swiper-button-prev"></div>-->
+        <!--<div class="swiper-button-next"></div>-->
+
+        <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;-->
+        <!--<div class="swiper-scrollbar"></div>-->
+    <!--</div>-->
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
 
+
+            <input style="display: none" class="space-name" th:value="${space.name}" th:each="space,iterStat : ${wholeDecorationSpaces}"/>
+
             <div class="swiper-slide" th:each="space,iterStat : ${wholeDecorationSpaces}">
+
                 <div style="position:relative;">
-                    <img style="height:600px;" th:src="${space.previewImgUrl}" th:alt="${space.name}">
+                    <img  style="height:600px;" th:src="${space.previewImgUrl}" th:alt="${space.name}">
                 </div>
 
                 <div class="item-container">

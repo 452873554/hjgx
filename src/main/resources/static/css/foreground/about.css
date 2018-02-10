@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header {
+    height: 115px
+}
+
+.wordcolor {
+    color: #b4a176;
+}
+
+.headChoice {
+    width: 100%;
+    height: 59px;
+    background: white;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.headChoice .aboutnav {
+    width: 340px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.headChoice .aboutnav li {
+    float: left;
+}
+
+.headChoice .aboutnav .navline {
+    width: 1px;
+    height: 20px;
+    border-right: 2px solid #cccccc;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.listFather {
+    width: 588px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.menu-list {
+    width: 800px;
+    line-height: 59px;
+    float: left;
+    font-size: 16px;
+    margin: 0 auto;
+    color: #808080;
+}
+
+.menu-list li {
+    float: left;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.menu-list .first {
+    margin-left: 83px;
+}
+
+.main {
+    width: 1200px;
+    height: 500px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+}
+
+.words {
+    font-size: 20px;
+    width: 80px;
+    border-bottom: 1px solid #b4a176;
+    margin-bottom: 40px;
+}
+
+.left {
+    width: 650px;
+    height: 100%;
+
+    float: left;
+}
+
+.left span {
+    font-size: 16px;
+    color: #616161;
+    line-height: 30px;
+}
+
+.right {
+    width: 350px;
+    height: 100%;
+    float: left;
+    margin-left: 60px;
+    font-size: 16px;
+    padding-top: 72px;
+}
+
+.floor {
+    margin-top: 30px;
+}
+
+.zong {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.tu {
+    width: 1020px;
+    height: 300px;
+    margin-top: 32px;
+}
+
+.tu img {
+    width: 1020px;
+    height: 300px;
+}
+
+.video {
+    width: 800px;
+    height: 500px;
+}
+
+.smallbtn {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #989898;
+    color: #989898;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+.Usword {
+    margin-top: 45px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 30px;
+}
+
+.Usgroup div {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.AbWords div {
+    color: #666666;
+    margin-top: 12px;
+}
+

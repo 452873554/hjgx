@@ -30,6 +30,11 @@ public class ProductSpuService implements IProductSpuService {
     }
 
     @Override
+    public ProductSpu getProductSpu(String spu) {
+        return productSpuMapper.getProductSpu(spu);
+    }
+
+    @Override
     public Pager<ProductSpuResultDto> getProductSpuPaged(ProductSpuResultDto productSpu) {
         PageHelper.startPage(productSpu.getPageOffSet(), productSpu.getPageSize());
         PageHelper.orderBy("identify_order desc");

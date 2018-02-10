@@ -19,6 +19,30 @@ $(function () {
         fileActionSettings: {showUpload: false}
     });
 
+    //SPU输入框失去焦点，重复校验
+    $("#spu").blur(function () {
+        var $this = $(this);
+
+        if ($this.val()) {
+            $.ajax({
+                url: '/backstage/api/product/detail?spu=' + this.value,
+                type: "get",
+                success: function (data) {
+                    if (data) {
+                        $this.parent().parent().addClass("has-error");
+                        $this.val($this.val() + '已经存在，不可重复添加')
+                        $this.focus();
+                    } else {
+                        $this.parent().parent().removeClass("has-error");
+                    }
+                },
+                error: function () {
+                    alert("SPU是否重复校验失败");
+                }
+            });
+        }
+    });
+
     //模板变动，重新填充
     $("#template-list").change(function () {
         //清空原有值

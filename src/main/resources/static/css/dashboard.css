@@ -23,6 +23,7 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+  background-color: #333;
 }
 
 /*
@@ -63,7 +64,11 @@ body {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
   color: #fff;
-  background-color: #428bca;
+  background-color: #333;
+}
+
+a {
+  color: #333;
 }
 
 
@@ -90,8 +95,9 @@ body {
  */
 
 .placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+  margin: 0 0 20px 0;
+  text-align: left;
+  width: 100%;
 }
 .placeholders h4 {
   margin-bottom: 0;
@@ -103,16 +109,11 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
-.input-group{
-  width: 100%;
-}
-.input-group-addon{
-  text-align: right;
-  width: 20%;
-}
-.search-bar {
-  margin-right: 0;
-  margin-left: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+
+/*.text-muted{*/
+  /*color:#de5230;*/
+/*}*/
+
+.list-group-item-heading{
+  margin-bottom: 10px;
 }

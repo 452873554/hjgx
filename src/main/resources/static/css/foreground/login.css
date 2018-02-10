@@ -1,0 +1,113 @@
+
+/* 头部样式 */
+header{height:90px;width:1200px; margin:0 auto;padding-top: 15px;}
+header .kouhao{ font-size: 14px;color:#808080; display: inline-table;margin-left:24px;
+  margin-top:10px; font-style: normal; font-family: "Microsoft YaHei"; float:left;} 
+.head img{
+  float: left;
+  margin-top: 10px;
+}
+  .welLine{
+    width: 20px;
+    height: 30px;
+    border-right:1px solid #989898;
+    float: left;
+    margin-top: 15px;
+    margin-right: 20px; 
+  }
+  .welcome{
+    margin-top: 16px;
+    float:left;
+    font-size:21px;
+  }
+
+  /* 登陆 */
+.logincenter{
+  width: 100%;
+  padding-top: 164px;
+  background: #8ebfce;
+  
+}
+.loginwrap{
+  width: 1200px;
+   height: 650px;
+  margin: 0 auto;
+}
+
+.loginImg{
+  width: 555px;
+ float: left;
+}
+.loginImg img{
+  width: 500px;
+}
+.loginbox{
+  width: 353px;
+  height: 388px;
+  background: white;
+  float: left;
+  margin-left: 250px;
+  border-radius:5px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);  
+  padding:0  30px;
+  color: #989898;
+}
+
+.boxtitle{
+  width: 100px;
+  font-size: 20px;
+  margin: 30px auto;
+  color: #333;
+}
+.loginbtn{
+  width: 300px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #ffffff;
+  background: #ffa411;
+  font-size: 20px;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.loginipt{
+  
+  font-size: 15px;
+  padding-left: 50px;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 30px;
+ border: 1px solid #808080;
+}
+
+.loginbot{
+  width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+  float: left;
+  padding-right: 80px;
+}
+
+
+/* 底部样式 */
+footer .footchange{
+  width: 100%;
+  height: 70px;
+  background: #333;
+}
+
+footer .haoma{
+  width: 350px;
+  margin: 0 auto;
+  color: #808080;
+  font-size: 12px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+/* 
+header{
+  height: 90px!important;
+  padding-top: 20px;
+} */

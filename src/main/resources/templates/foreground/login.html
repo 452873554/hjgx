@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::common-foreground-header"></head>
+<head>
+    <title>皇家共享 - 登录</title>
+    <!--特有-->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/login.css}">
+
+    <style type="text/css" th:inline="text">
+        .account {
+            background: url([[@{/static/images/innersrc/account.jpg}]]) no-repeat 5px;
+        }
+        .pwd{
+            background:url([[@{/static/images/innersrc/Password-img.png}]]) no-repeat;background-position:10px 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="head">
+        <a href="/"><img th:src="@{/static/images/innersrc/index-logo.png}" class="header-logo"/></a>
+        <div class="kouhao">皇家品质<br/>共享资源</div>
+        <div class="welLine"></div>
+        <div class="welcome"><span>欢迎登录</span></div>
+    </div>
+</header>
+
+<div class="logincenter">
+    <div class="loginwrap clearfix">
+        <div class="loginImg">
+            <img th:src="@{/static/images/innersrc/loginback.png}" alt="">
+        </div>
+        <div class="loginbox">
+            <div class="boxtitle">欢迎登录</div>
+
+
+            <div><input class="loginipt account" id="user-name" type="text" placeholder="请输入账号"></div>
+            <div><input class="loginipt pwd" id="user-password" type="password" placeholder="请输入密码"></div>
+
+            <!--<div>-->
+                <!--<input type="checkbox"/>下次自动登录-->
+                <!--<div style="float:right;"><span>忘记密码？</span></div>-->
+            <!--</div>-->
+
+            <div class="clearfix"></div>
+
+            <router-link to='/'>
+                <div class="loginbtn" id="user-login">登&nbsp&nbsp录</div>
+            </router-link>
+        </div>
+        <div class="loginbot clearfix">
+            <div style="width:100px;height:100px;float:right;">
+                <img style="width:100%;margin-right:50px;" th:src="@{/static/images/innersrc/erweima2.png}" alt="">
+                <div style="float:right;font-size:12px;color:#ffffff;margin-top:20px;">扫码关注官方微信</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footchange">
+        <div class="haoma"> ©深圳市深装总家居科技有限公司</div>
+    </div>
+</footer>
+
+<div th:include="footer :: commonjs"></div>
+<script th:src="@{/static/js/foreground/login.js}"></script>
+
+</body>
+</html>

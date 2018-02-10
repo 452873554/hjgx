@@ -61,9 +61,29 @@ public class NavigatorController {
      * @param m
      * @return
      */
-    @GetMapping("/manage/login")
-    public String manageLogin(Model m) {
+    @GetMapping("/manage/login.html")
+    public String to_manage_login(Model m) {
         return "manage/login";
+    }
+
+    /**
+     * 企业用户
+     * @param m
+     * @return
+     */
+    @GetMapping("/user/login.html")
+    public String to_usercenter_login(Model m) {
+        return "foreground/login";
+    }
+
+    /**
+     * 联系我们
+     * @param m
+     * @return
+     */
+    @GetMapping("/contract.html")
+    public String to_contract(Model m) {
+        return "foreground/contact";
     }
 
 

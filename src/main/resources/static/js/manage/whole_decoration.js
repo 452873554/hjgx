@@ -1,5 +1,14 @@
 $(function () {
 
+    var fileinputSettings = {
+        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
+        maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
+        maxFileSize: 1024,
+        language: 'zh',
+        showUpload: false, //是否显示上传按钮
+        fileActionSettings: {showUpload: false}
+    };
+
     //富文本编辑器初始化
     $('.summernote').summernote({
         height: 150,
@@ -8,32 +17,11 @@ $(function () {
     });
 
     //上传插件初始化
-    $("#whole-decoration-preview-img").fileinput({
-        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
-        maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
-        maxFileSize: 1024,
-        language: 'zh',
-        showUpload: false, //是否显示上传按钮
-        fileActionSettings: {showUpload: false}
-    });
-    $("#whole-decoration-banner-img").fileinput({
-        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
-        maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
-        maxFileSize: 1024,
-        language: 'zh',
-        showUpload: false, //是否显示上传按钮
-        fileActionSettings: {showUpload: false}
-    });
+    $("#whole-decoration-preview-img").fileinput(fileinputSettings);
+    $("#whole-decoration-banner-img").fileinput(fileinputSettings);
 
     //每个项目的预览图上传控件初始化
-    $(".space-preview-img").fileinput({
-        allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
-        maxFilePreviewSize: 10240,//KB单位，此处限制预览文件大小为10M
-        maxFileSize: 1024,
-        language: 'zh',
-        showUpload: false, //是否显示上传按钮
-        fileActionSettings: {showUpload: false}
-    });
+    $("#tab-content").find(".space-preview-img").fileinput(fileinputSettings);
 
     //弹出spu选择框
     //设定一个全局变量，保存要添加到的目标对象
@@ -116,6 +104,9 @@ $(function () {
         //填充内容
         $("#nav-tabs").append($("#space-tab-Template").html());
         $("#tab-content").append($("#space-content-Template").html());
+
+        //初始化
+        $("#tab-content").find(".space-preview-img:last").fileinput(fileinputSettings);
 
         //修改新填充内容的ID
         $("#nav-tabs").find("a.tab-btn").each(function (i, e) {
@@ -209,6 +200,7 @@ $(function () {
         wholeDecoration.code = $("#whole-decoration-code").val();
         wholeDecoration.styleId = $("#style-list").val();
         wholeDecoration.description = $('#whole-decoration-description').summernote('code');
+        wholeDecoration.fullViewUrl = $("#full-view-url").val();
         requestParam.append("wholeDecoration", JSON.stringify(wholeDecoration));
 
         var previewImg = $("#whole-decoration-preview-img")[0].files[0]

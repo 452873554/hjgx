@@ -12,6 +12,8 @@ public interface IProductSpuService {
 
     ProductSpuDto getProductSpuDetail(String spu);
 
+    ProductSpu getProductSpu(String spu);
+
     Pager<ProductSpuResultDto> getProductSpuPaged(ProductSpuResultDto productSpu);
 
     Pager<ProductSpuResultDto> getProductSpuWithOutPageHelper(ProductSpuResultDto productSpu);

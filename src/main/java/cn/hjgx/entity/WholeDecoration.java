@@ -23,6 +23,8 @@ public class WholeDecoration extends PageDto{
 
     private String previewImgUrl;
 
+    private String fullViewUrl;
+
     public Integer getId() {
         return id;
     }
@@ -93,5 +95,13 @@ public class WholeDecoration extends PageDto{
 
     public void setPreviewImgUrl(String previewImgUrl) {
         this.previewImgUrl = previewImgUrl;
+    }
+
+    public String getFullViewUrl() {
+        return fullViewUrl;
+    }
+
+    public void setFullViewUrl(String fullViewUrl) {
+        this.fullViewUrl = fullViewUrl;
     }
 }

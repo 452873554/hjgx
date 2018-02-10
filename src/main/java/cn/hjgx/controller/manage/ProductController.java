@@ -67,6 +67,8 @@ public class ProductController {
     @Autowired
     private Environment env;
 
+
+
     @PostMapping("/product/save-or-update")
     @ResponseBody
     public JsonNode bg_product_save_or_update(Model m,
@@ -79,6 +81,14 @@ public class ProductController {
             ProductSpu productSpu = JsonUtil.toPOJO(request.getParameter("productSpu"), new TypeReference<ProductSpu>() {});
             List<ProductSku> productSkus = JsonUtil.toPOJO(request.getParameter("specifications"), new TypeReference<List<ProductSku>>() {});
             ProductSpuAttrs productSpuAttrs = JsonUtil.toPOJO(request.getParameter("attr"), new TypeReference<ProductSpuAttrs>() {});
+
+            ProductSpu spu = iProductSpuService.getProductSpu(productSpu.getSpu());
+
+            if(spu != null){
+                resultDto.setFlag(0);
+                resultDto.setMessage("SPU已存在");
+                return JsonUtil.toJson(resultDto);
+            }
 
             //先校验上传的文件
             if (!ObjectUtils.isEmpty(previewImages)) {

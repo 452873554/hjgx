@@ -2,6 +2,7 @@ package cn.hjgx.component;
 
 
 import cn.hjgx.entity.UserAdministrator;
+import cn.hjgx.entity.UserBusiness;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -11,15 +12,10 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * 管理后台权限校验
+ * 商家后台权限校验
  */
-@WebFilter(filterName="AuthorityFilter",urlPatterns="/backstage/*")
-public class AuthorityFilter implements Filter {
-
-    /**
-     * 保存/取得管理员登录用户键
-     */
-    public static final String LOGIN_ADMIN = "login_admin";
+@WebFilter(filterName="ForeGroundAuthorityFilter",urlPatterns="/usercenter/*")
+public class ForeGroundAuthorityFilter implements Filter {
 
 
     @Override
@@ -33,10 +29,10 @@ public class AuthorityFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         HttpSession session = request.getSession();
-        UserAdministrator user = (UserAdministrator) session.getAttribute(LOGIN_ADMIN);
+        UserBusiness user = (UserBusiness) session.getAttribute(LoginInterceptor.LOGIN_USER);
         if(user == null){
             //TODO 用户未登录，跳转至登陆页面
-            response.sendRedirect("/manage/login.html");
+            response.sendRedirect("/user/login.html");
         }else{
             filterChain.doFilter(request,servletResponse);
         }

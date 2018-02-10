@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 
-<head th:include="header::newheader"></head>
+<head th:include="header::common-foreground-header"></head>
 <head>
     <title>全屋整装</title>
     <!--特有-->
@@ -193,9 +193,8 @@
 <div th:include="footer :: commonjs"></div>
 
 <!--登录模态框-->
-<div th:replace="foreground/common/login_dialog :: login_dialog"></div>
+<div th:replace="foreground/login_dialog :: login_dialog"></div>
 <script type="text/javascript" th:src="@{/static/js/utility/login-dialog.js}"></script>
-
 <script type="text/javascript" th:src="@{/static/js/foreground/wholeOrder.js}"></script>
 
 

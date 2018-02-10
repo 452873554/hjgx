@@ -63,6 +63,14 @@
         id, product_name, spu, category_id, style_id, cost_price, retail_price, market_price,
         stock, identify_order, status, supplier_id, unit, description, space_ids, brand_id
     </sql>
+
+    <select id="getProductSpu" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_product_spu
+        where spu = #{spu,jdbcType=INTEGER}
+    </select>
+
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::common-usercenter-header"></head>
+<head>
+    <title>商家中心</title>
+    <!--特有-->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/usercenter/whole_decoration_order.css}">
+</head>
+
+<body>
+
+<!--顶部导航栏-->
+<nav th:replace="navigator::navbar"></nav>
+
+<div>
+
+    <div class="ACenter clearfix">
+
+        <div th:replace="/foreground/menu::leftmenu"></div>
+
+        <div class="rightBoth clearfix">
+
+            <div class="rightTop">
+                <span>订单列表</span>
+            </div>
+
+            <div class="LCbox clearfix">
+                <div class="LCsmall" style="width:80px;">全部订单</div>
+                <div class="LCsmall">代付款（<span style="color:#ffa410;">0</span>）</div>
+                <div class="LCsmall">已付定金（<span style="color:#ffa410;">0</span>）</div>
+                <div class="LCsmall">已付尾款（<span style="color:#ffa410;">0</span>）</div>
+                <div class="LCsmall">待发货（<span style="color:#ffa410;">0</span>）</div>
+                <div class="LCsmall">待收货（<span style="color:#ffa410;">0</span>）</div>
+                <div class="LCsmall">已完成（<span style="color:#ffa410;">1</span>）</div>
+            </div>
+
+            <div class="BgreyB clearfix">
+                <div class="BS"><span>商品</span></div>
+                <div class="BD"><span>单价（元）</span></div>
+                <div class="BN"><span>数量</span></div>
+                <div class="BN"><span>状态</span></div>
+                <div class="BN1"><span>操作</span></div>
+            </div>
+
+
+            <div class="BackList">
+                <div class="tableTitle">
+                    <div class="tTStyle">现代轻奢整装</div>
+                    <div>订单编号：201810150006</div>
+                    <div class="tTPrice"><span style="font-weight:700;font-size:15px;">总计</span>：<span
+                            style="color:#ff0000;font-weight:700;">8204元</span></div>
+                </div>
+
+                <table style="width:1020px;" class="clearfix">
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/malls3.jpg" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div class='small-tcolor'><span class='txt'>沙发</span></div>
+                                <div><span>颜色：白色</span></div>
+                                <div><span>尺寸：1780*1040*920</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥4941</td>
+                        <td class="BL2">1</td>
+                        <td class="BL2" rowspan="100">
+                            <div><span>已完成</span></div>
+                        </td>
+                        <td class="BL4" rowspan="100">
+                            <router-link to="/orderDetail">
+                                <div><span>查看详情</span></div>
+                            </router-link>
+                            <div><span>追踪物流</span></div>
+                            <router-link to="/BackMoney">
+                                <div><span>申请售后</span></div>
+                            </router-link>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/malls3.jpg" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div class='small-tcolor'><span class='txt'>茶几</span></div>
+                                <div><span>颜色：茶青色</span></div>
+                                <div><span>尺寸：1300*700*355</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥1164</td>
+                        <td class="BL2">1</td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/malls3.jpg" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div class='small-tcolor'><span>地柜</span></div>
+                                <div><span>颜色：茶青色</span></div>
+                                <div><span>尺寸：2000*400*435</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥1265</td>
+                        <td class="BL2">1</td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/malls3.jpg" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div class='small-tcolor'><span>餐桌</span></div>
+                                <div><span>颜色：白色</span></div>
+                                <div><span>尺寸：1400*800*760</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥834</td>
+                        <td class="BL2">1</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:include="footer :: copy"></footer>
+<div th:include="footer :: commonjs"></div>
+
+</body>
+</html>

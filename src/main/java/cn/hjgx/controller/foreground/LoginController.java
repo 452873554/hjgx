@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * 用户登陆管理
+ * 用户登录管理
  */
 @Controller
 @RequestMapping("/userlogin")
@@ -83,7 +83,7 @@ public class LoginController {
 	public String dologout(HttpServletRequest request, UserAdministrator user, Model m) {
 
 		request.getSession().invalidate();
-		return "manage/login";
+		return "redirect:/";
 
 	}
 	

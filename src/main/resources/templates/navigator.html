@@ -8,41 +8,37 @@
     <header>
         <div class="topheader" style="position:fixed;z-index:998;">
             <ul>
-                <li><a href="/xampp/hjgx/login.html">登录</a></li>
-                <!-- <li><router-link to="/Register">注册</router-link></li> -->
-                <!-- <li><router-link to="/SalesCenter">商家中心</router-link></li> -->
-                <!-- <li><router-link to="/Backcall">意见反馈</router-link></li> -->
-                <li><a href="#">商家中心</a></li>
+                <li th:if="${session.login_user != null} ">
+                    <span th:text="'欢迎回来[' + ${session.login_user.nickname}+']'"></span>
+                    <a href="/userlogin/dologout">退出登录</a>
+                </li>
+
+                <li th:if="${session.login_user == null} ">
+                    <a href="/user/login.html">登录</a>
+                </li>
+
+                <li><a href="/usercenter/dashboard.html">商家中心</a></li>
+
                 <li class="last"><a><img th:src="@{/static/images/innersrc/phone.png}"/> 客服热线：4008-099-931</a></li>
             </ul>
         </div>
         <div class="wrapfix">
-            <img th:src="@{/static/images/innersrc/index-logo.png}" class="header-logo"/>
+            <a href="/"><img th:src="@{/static/images/innersrc/index-logo.png}" class="header-logo"/></a>
             <div class="kouhao">皇家品质<br/>共享资源</div>
-            <div class="welLine" style="display:none;"></div>
-            <div class="welcome" style="display:none;"><span>欢迎登录</span></div>
             <div class="header-menu">
-                <!-- <ul class="menu-list" >
-                  <li>首页</li>
-                  <li><span>全屋整装</span></li>
-
-                  <li><span>新闻公告</span></li>
-                  <li><span>关于我们</span></li>
-                  <li class="down_apk"></li> 关注公众号 <img src="./static/img/downloadAPP.png" />></li>
-                </ul> -->
                 <div class="navbar">
                     <div class="navbar-inner">
 
                         <ul class="nav">
                             <li><a href="/">首页</a></li>
                             <li><a href="/decoration.html">全屋整装</a></li>
-                            <!--<li><a href="#">新闻公告</a></li>-->
-                            <!--<li><a href="#">关于我们</a></li>-->
+                            <li><a href="/contract.html">关于我们</a></li>
                             <li class="active"><a href="#">关注公众号</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="erweima" style="display:none;"><img th:src="@{/static/images/innersrc/erweima1.png}" alt="加入我们"/></div>
+                <div class="erweima" style="display:none;"><img th:src="@{/static/images/innersrc/erweima1.png}"
+                                                                alt="加入我们"/></div>
             </div>
         </div>
         <div class="clearfix"></div>

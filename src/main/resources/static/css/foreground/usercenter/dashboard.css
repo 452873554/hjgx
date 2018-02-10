@@ -1,0 +1,215 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.myCenter {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.numMax {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.darrow {
+    position: absolute;
+    left: 107px;
+    top: 675px;
+}
+
+.listBtn {
+    color: #6081cc;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;;
+    border: 1px solid #6081cc;
+    margin: 30px auto;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    float: left;
+}
+
+.listBtn:hover {
+    background: #6081cc;
+    color: #ffffff;
+}
+
+a {
+    color: #333;
+}
+
+.fly {
+    width: 380px;
+    height: 398px;
+    background: white;
+    position: absolute;
+    right: 15px;
+    top: 80px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #b3b3b3;
+}
+
+.flyIptO {
+    width: 260px;
+    height: 35px;
+    margin: 40px auto;
+}
+
+.fly input {
+
+    margin-bottom: 35px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.flyT {
+    width: 100%;
+    height: 58px;
+    font-size: 30px;
+    text-align: center;
+    color: #29348E;
+    padding-top: 40px;
+}
+
+.flyBtn {
+    width: 260px;
+    height: 45px;
+    background: orange;
+    margin: 0 auto;
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.rightList table {
+    width: 100%;
+    text-align: center;
+}
+
+.rightList tr {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    color: #808080;
+}
+
+.firstTr {
+    width: 100%;
+    height: 50px;
+
+    font-size: 16px;
+    color: #333;
+}
+
+.spaceL {
+    border-bottom: 1px solid #e6e6e6;
+
+    width: 1200px;
+}
+
+.bigTitles {
+    width: 1200px;
+
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+.bigTitles span {
+    display: block;
+}
+
+.minT {
+    font-size: 16px;
+    color: #808080;
+}
+
+.serviseP {
+    margin-top: 60px;
+}
+
+.rightBoth {
+    width: 800px;
+    float: left;
+    margin-left: 30px;
+}
+
+.rightMain {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.rightImg {
+    width: 100px;
+    height: 100px;
+    margin-right: 47px;
+    float: left;
+}
+
+.rightWord {
+    font-size: 16px;
+}
+
+.safeGroup {
+    /* display: flex; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.safeGroup div {
+    float: left;
+}
+
+.low {
+    width: 40px;
+    height: 20px;
+    background-color: olivedrab;
+    text-align: center;
+    margin-right: 10px;
+    color: white;
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.orderGroup {
+    width: 600px;
+    float: left;
+    margin-top: 20px;
+}
+
+.orderGroup div {
+    float: left;
+}
+
+.rw {
+    margin-left: 70px;
+}
+
+.rightTop {
+    width: 1020px;
+    height: 52px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 3px solid #b4a176;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #333;
+    line-height: 52px;
+    margin-top: 46px;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+}

@@ -37,7 +37,13 @@
                                placeholder="请填写整装产品编号">
                     </div>
                 </div>
-
+                <div class="form-group">
+                    <label for="full-view-url" class="col-sm-1 control-label">全景链接</label>
+                    <div class="col-sm-11">
+                        <input type="text" name="fullViewUrl" class="form-control" id="full-view-url"
+                               placeholder="请填写全景链接，形如http://720yun.com/t/xxx">
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label for="style-list" class="col-sm-1 control-label">整装风格</label>
@@ -159,7 +165,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-1 control-label">空间项目</label>
+                                    <label class="col-sm-1 control-label">项目</label>
                                     <div class="col-sm-11">
                                         <div>
 
@@ -183,6 +189,9 @@
                                                     <div class="form-group">
                                                         <div class="col-sm-offset-2 col-sm-10 text-right">
                                                             <button type="button"
+                                                                    class="btn btn-primary btn-sm add-sku-to-item">
+                                                                &nbsp;关联SPU&nbsp;</button>
+                                                            <button type="button"
                                                                     class="btn btn-danger btn-sm delete-item">
                                                                 &nbsp;移除本项目&nbsp;</button>
                                                         </div>
@@ -194,6 +203,29 @@
                                                             <input type="text" name="item-name"
                                                                    class="form-control item-name"
                                                                    placeholder="请填写项目名称">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-1 control-label">已选SPU</label>
+                                                        <div class="col-sm-11">
+
+                                                            <!--SPU表格-->
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>商品名称</th>
+                                                                    <th>SPU</th>
+                                                                    <th>类目</th>
+                                                                    <th>品牌</th>
+                                                                    <th>风格</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody class="spu-selected">
+
+                                                                </tbody>
+                                                            </table>
+
                                                         </div>
                                                     </div>
 
@@ -254,6 +286,7 @@
                             </div>
                         </div>
 
+                        <!--默认空间列表-->
                         <ul id="nav-tabs" class="nav nav-tabs" role="tablist">
 
                             <li>

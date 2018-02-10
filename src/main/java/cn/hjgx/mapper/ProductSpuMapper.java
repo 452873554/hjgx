@@ -10,6 +10,8 @@ public interface ProductSpuMapper {
 
     ProductSpuDto getProductSpuDetail(String spu);
 
+    ProductSpu getProductSpu(String spu);
+
     List<ProductSpuResultDto> selectByPageParam(ProductSpuResultDto productSpu);
 
     List<ProductSpuResultDto> selectByPageParamWithOutPageHelper(ProductSpuResultDto productSpu);

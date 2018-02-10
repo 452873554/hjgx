@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 0;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.ACenter {
+    width: 1200px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+
+}
+
+.rightBoth {
+    width: 1020px;
+    float: left;
+    margin-left: 30px;
+}
+
+.LCbox {
+    width: 1020px;
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    margin-top: 15px;
+
+    padding-left: 45px;
+
+}
+
+.LCsmall {
+    width: 110px;
+    height: 20px;
+    float: left;
+    border-right: #333 1px solid;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.LCsmall:hover {
+    color: #b4a176;
+}
+
+.liucheng {
+
+    margin: 15px auto;
+    width: 400px;
+    height: 50px;
+    float: left;
+
+}
+
+.small-tcolor {
+    color: #333;
+}
+
+.txt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rightTop {
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 3px solid #b4a176;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #333;
+    line-height: 52px;
+    margin-bottom: 30px;
+    margin-top: 46px;
+}
+
+.BgreyB {
+
+    width: 1020px;
+    height: 30px;
+    background: #e6e6e6;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.BS {
+    width: 510px;
+    float: left;
+    height: 30px;
+}
+
+.BD {
+    width: 115px;
+    float: left;
+    height: 30px;
+
+}
+
+.BN {
+    width: 113px;
+    float: left;
+    height: 30px;
+
+}
+
+.BN1 {
+    width: 160px;
+    float: left;
+    height: 30px;
+
+}
+
+.tlistImg {
+    margin-left: 17px;
+    width: 151px;
+    height: 85px;
+}
+
+.tableTitle {
+    width: 1020px;
+    background: #EBEDF0;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 34px;
+}
+
+.tableTitle div {
+    float: left;
+}
+
+.tTStyle {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 38px;
+}
+
+.tableTitle .tTPrice {
+    float: right;
+}
+
+.tTPrice {
+    width: 150px;
+}
+
+.BackList {
+    margin-top: 20px;
+}
+
+.BackList td {
+    border: 1px solid #e6e6e6;
+    padding: 0;
+}
+
+.BL1group {
+    width: 520px;
+    height: 100px;
+    font-size: 15px;
+}
+
+.BLwordG {
+    width: 300px;
+    color: #808080;
+    float: left;
+}
+
+.BLwordG div {
+    line-height: 25px;
+}
+
+.BL1img {
+    margin: 0 16px;
+    float: left;
+}
+
+.BL2 {
+    line-height: 100px;
+    text-align: center;
+    width: 124px;
+
+}
+
+.BL4 {
+    font-size: 15px;
+    text-align: center;
+    width: 178px;
+    line-height: 25px;
+}

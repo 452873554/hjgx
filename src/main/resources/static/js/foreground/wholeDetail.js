@@ -13,9 +13,12 @@ $(function () {
             prevEl: '.swiper-button-prev',
         },
     });
-    // 点击按妞
-    var n = document.getElementsByClassName('swiper-pagination-bullet')
-    $(n).html('客厅')
+
+    //分页器内容填充
+    var items = swiper.pagination.bullets;
+    for (i = 0; i < items.length; i++) {
+        $(items[i]).html($(".space-name")[i].value);
+    }
 
 });
 

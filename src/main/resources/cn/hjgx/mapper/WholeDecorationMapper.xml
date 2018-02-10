@@ -11,6 +11,7 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
+    <result column="full_view_url" property="fullViewUrl" jdbcType="VARCHAR" />
   </resultMap>
 
   <resultMap id="BaseResultMapExtend" type="cn.hjgx.entity.pagedto.WholeDecorationResultDto" >
@@ -29,8 +30,9 @@
 
   <sql id="Base_Column_List" >
     id, name, code, style_id, banner_img_url, description, create_time, update_time,
-    preview_img_url
+    preview_img_url, full_view_url
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />
@@ -41,17 +43,17 @@
     delete from t_portal_whole_decoration
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="cn.hjgx.entity.WholeDecoration" >
+  <insert id="insert" parameterType="cn.hjgx.entity.WholeDecoration" keyProperty="id" keyColumn="id" useGeneratedKeys="true">
     insert into t_portal_whole_decoration (id, name, code,
     style_id, banner_img_url, description,
-    create_time, update_time, preview_img_url
-    )
+    create_time, update_time, preview_img_url,
+    full_view_url)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR},
     #{styleId,jdbcType=INTEGER}, #{bannerImgUrl,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR},
-    #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{previewImgUrl,jdbcType=VARCHAR}
-    )
+    #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{previewImgUrl,jdbcType=VARCHAR},
+    #{fullViewUrl,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecoration" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecoration" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
     insert into t_portal_whole_decoration
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -80,6 +82,9 @@
       </if>
       <if test="previewImgUrl != null" >
         preview_img_url,
+      </if>
+      <if test="fullViewUrl != null" >
+        full_view_url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -110,6 +115,9 @@
       <if test="previewImgUrl != null" >
         #{previewImgUrl,jdbcType=VARCHAR},
       </if>
+      <if test="fullViewUrl != null" >
+        #{fullViewUrl,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecoration" >
@@ -139,6 +147,9 @@
       <if test="previewImgUrl != null" >
         preview_img_url = #{previewImgUrl,jdbcType=VARCHAR},
       </if>
+      <if test="fullViewUrl != null" >
+        full_view_url = #{fullViewUrl,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -151,7 +162,8 @@
     description = #{description,jdbcType=VARCHAR},
     create_time = #{createTime,jdbcType=TIMESTAMP},
     update_time = #{updateTime,jdbcType=TIMESTAMP},
-    preview_img_url = #{previewImgUrl,jdbcType=VARCHAR}
+    preview_img_url = #{previewImgUrl,jdbcType=VARCHAR},
+    full_view_url = #{fullViewUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 

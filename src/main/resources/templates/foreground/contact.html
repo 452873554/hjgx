@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::common-foreground-header"></head>
+<head>
+    <title>皇家共享 - 联系我们</title>
+    <!--特有-->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/about.css}">
+</head>
+
+<body>
+
+<nav th:replace="navigator::navbar"></nav>
+
+<div class="main">
+    <div class="left">
+        <div class="words" style="width:80px;">联系我们</div>
+         <img th:src="@{/static/images/innersrc/map.jpg}"/>
+        <div id="container2"></div>
+    </div>
+    <div class="right" style="margin-left:30px;padding-top:140px;">
+
+        <div style="font-weight:700;font-size:20px;color:#333333;margin-bottom:24px;"><span>深圳市深装总家居科技有限公司</span></div>
+        <div class="AbWords">
+            <div><span>官方网址：www.hjgx.cn</span></div>
+            <div><span>电话：4008-099-931</span>&nbsp&nbsp&nbsp&nbsp<span>0755-23946693</span></div>
+            <div><span>地址：深圳市福田保税区广兰道6号深装总大厦A座2楼223</span></div>
+        </div>
+
+    </div>
+</div>
+<footer th:include="footer :: copy"></footer>
+
+</body>
+</html>

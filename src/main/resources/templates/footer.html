@@ -8,40 +8,6 @@
 <!-- FOOTER -->
 <div th:fragment="copy">
     <footer>
-        <!--<div class="toTop">-->
-        <!--<router-link to="/login">-->
-        <!--<div class="to">-->
-        <!--<img src="./static/img/top1.png" alt="">-->
-        <!--<div>订单管理</div>-->
-        <!--</div>-->
-        <!--</router-link>-->
-
-        <!--<div class="to" style="border-top:1px solid #808080;border-bottom:1px solid #808080;" >-->
-        <!--<img src="./static/img/top2.png" alt="">-->
-        <!--<div>预约整装</div>-->
-        <!--</div>-->
-
-        <!--<div class="to" @click="goTop">-->
-        <!--<img src="./static/img/top3.png" alt="">-->
-        <!--<div>回到顶部</div>-->
-        <!--</div>-->
-
-
-        <!--</div>-->
-        <!-- <div class="loginbox">
-            <img class="box-close" src="./static/img/chooselist/x.png" alt="" @click="zhenghid"/>
-            <div class="boxtitle">预约整装服务</div>
-
-
-           <div ><input class="loginipt" type="text" placeholder="请输入手机号"></div>
-            <div><input style="background-image:url('./static/img/Password-img.png');background-
-
-    position:10px 5px;" class="loginipt" type="text" placeholder="请输入密码"></div>
-
-            <div class="clearfix"></div>
-           <div class="loginbtn">免费预约</div>
-
-          </div> -->
         <div class="clearfix"></div>
         <div class="pfooter" v-if="f">
             <div class="footwrap clearfix">
@@ -51,7 +17,7 @@
                         <div>|</div>
                         <div>行业动态</div>
                         <div>|</div>
-                        <div>关于我们</div>
+                        <div><a href="/contract.html" style="color: #ffffff;text-decoration: none">关于我们</a></div>
                         <div>|</div>
                         <div>加入我们</div>
                         <div>|</div>

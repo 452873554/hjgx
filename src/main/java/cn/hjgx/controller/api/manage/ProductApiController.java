@@ -65,6 +65,12 @@ public class ProductApiController {
     @Autowired
     private Environment env;
 
+    @GetMapping("/product/detail*")
+    @ResponseBody
+    public JsonNode get_product_spu(Model m,String spu) throws IOException {
+        ProductSpu productSpu = iProductSpuService.getProductSpu(spu);
+        return JsonUtil.toJson(productSpu);
+    }
 
     @GetMapping("/product/list*")
     public JsonNode to_bg_product_list(ProductSpuResultDto productSpu) throws IOException {

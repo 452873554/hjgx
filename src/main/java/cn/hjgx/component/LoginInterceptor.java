@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * 提供一些零碎的，但是需要权限认证的操作，更多是为异步登录准备
+ */
 @Component
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 

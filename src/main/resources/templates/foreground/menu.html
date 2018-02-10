@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="leftmenu" class="leftnav">
+        <ul class="nav nav-list" style="float:left;">
+            <li class="nav-header nav-title" style="color:#ffffff;font-size:21px;font-weight:normal;">商家中心</li>
+            <li class="nav-header">订单中心</li>
+            <!--<li class="active"><a href="#">我的购物车</a></li>-->
+            <li><a href="/usercenter/decoration-order/list.html">我的订单</a></li>
+
+            <li>
+                <div class="dashline"></div>
+            </li>
+
+            <li class="nav-header">账号中心</li>
+            <!--<li><a href="#">账号管理</a></li>-->
+
+            <li>
+                <div class="dashline"></div>
+            </li>
+
+            <li class="nav-header">设置</li>
+            <!--<li><a href="#">收货地址</a></li>-->
+        </ul>
+    </div>
+
+</body>
+</html>
