@@ -1,167 +1,203 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.hjgx.mapper.WholeDecorationOrderDetailMapper" >
-  <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecorationOrderDetail" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="wd_space_id" property="wdSpaceId" jdbcType="INTEGER" />
-    <result column="wd_item_id" property="wdItemId" jdbcType="INTEGER" />
-    <result column="spu" property="spu" jdbcType="VARCHAR" />
-    <result column="sku" property="sku" jdbcType="VARCHAR" />
-    <result column="qty" property="qty" jdbcType="INTEGER" />
-    <result column="product_name" property="productName" jdbcType="VARCHAR" />
-    <result column="product_attrs" property="productAttrs" jdbcType="VARCHAR" />
-    <result column="order_id" property="orderId" jdbcType="INTEGER" />
-    <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    id, wd_space_id, wd_item_id, spu, sku, qty, product_name, product_attrs, order_id, 
-    order_no
+<mapper namespace="cn.hjgx.mapper.WholeDecorationOrderDetailMapper">
+    <resultMap id="BaseResultMap" type="cn.hjgx.entity.pagedto.WholeDecorationOrderDetailDto">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="wd_space_id" property="wdSpaceId" jdbcType="INTEGER"/>
+        <result column="wd_item_id" property="wdItemId" jdbcType="INTEGER"/>
+        <result column="spu" property="spu" jdbcType="VARCHAR"/>
+        <result column="sku" property="sku" jdbcType="VARCHAR"/>
+        <result column="qty" property="qty" jdbcType="INTEGER"/>
+        <result column="product_name" property="productName" jdbcType="VARCHAR"/>
+        <result column="product_attrs" property="productAttrs" jdbcType="VARCHAR"/>
+        <result column="order_id" property="orderId" jdbcType="INTEGER"/>
+        <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="price" property="price" jdbcType="DOUBLE"/>
+        <result column="image_url" property="previewImgUrl" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, wd_space_id, wd_item_id, spu, sku, qty, product_name, product_attrs, order_id,
+    order_no, price
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from t_portal_whole_decoration_order_detail
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+
+
+    <select id="selectByOrderId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+            d.id,
+            d.wd_space_id,
+            d.wd_item_id,
+            d.spu,
+            d.sku,
+            d.qty,
+            d.product_name,
+            d.product_attrs,
+            d.order_id,
+            d.order_no,
+            d.price,
+            i.image_url
+        from t_portal_whole_decoration_order_detail d
+        LEFT JOIN t_portal_product_spu_imgs i
+        ON d.spu = i.spu
+        WHERE i.is_thumbnail = 1
+        AND order_id = #{id,jdbcType=INTEGER}
+    </select>
+
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_portal_whole_decoration_order_detail
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_portal_whole_decoration_order_detail
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail" >
-    insert into t_portal_whole_decoration_order_detail (id, wd_space_id, wd_item_id, 
-      spu, sku, qty, product_name, 
-      product_attrs, order_id, order_no
-      )
-    values (#{id,jdbcType=INTEGER}, #{wdSpaceId,jdbcType=INTEGER}, #{wdItemId,jdbcType=INTEGER}, 
-      #{spu,jdbcType=VARCHAR}, #{sku,jdbcType=VARCHAR}, #{qty,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, 
-      #{productAttrs,jdbcType=VARCHAR}, #{orderId,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR}
-      )
+    <insert id="insert" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail">
+    insert into t_portal_whole_decoration_order_detail (id, wd_space_id, wd_item_id,
+    spu, sku, qty, product_name,
+    product_attrs, order_id, order_no,
+    price)
+    values (#{id,jdbcType=INTEGER}, #{wdSpaceId,jdbcType=INTEGER}, #{wdItemId,jdbcType=INTEGER},
+    #{spu,jdbcType=VARCHAR}, #{sku,jdbcType=VARCHAR}, #{qty,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR},
+    #{productAttrs,jdbcType=VARCHAR}, #{orderId,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR},
+    #{price,jdbcType=DOUBLE})
   </insert>
-  <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail" >
-    insert into t_portal_whole_decoration_order_detail
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="wdSpaceId != null" >
-        wd_space_id,
-      </if>
-      <if test="wdItemId != null" >
-        wd_item_id,
-      </if>
-      <if test="spu != null" >
-        spu,
-      </if>
-      <if test="sku != null" >
-        sku,
-      </if>
-      <if test="qty != null" >
-        qty,
-      </if>
-      <if test="productName != null" >
-        product_name,
-      </if>
-      <if test="productAttrs != null" >
-        product_attrs,
-      </if>
-      <if test="orderId != null" >
-        order_id,
-      </if>
-      <if test="orderNo != null" >
-        order_no,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="wdSpaceId != null" >
-        #{wdSpaceId,jdbcType=INTEGER},
-      </if>
-      <if test="wdItemId != null" >
-        #{wdItemId,jdbcType=INTEGER},
-      </if>
-      <if test="spu != null" >
-        #{spu,jdbcType=VARCHAR},
-      </if>
-      <if test="sku != null" >
-        #{sku,jdbcType=VARCHAR},
-      </if>
-      <if test="qty != null" >
-        #{qty,jdbcType=INTEGER},
-      </if>
-      <if test="productName != null" >
-        #{productName,jdbcType=VARCHAR},
-      </if>
-      <if test="productAttrs != null" >
-        #{productAttrs,jdbcType=VARCHAR},
-      </if>
-      <if test="orderId != null" >
-        #{orderId,jdbcType=INTEGER},
-      </if>
-      <if test="orderNo != null" >
-        #{orderNo,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail" >
-    update t_portal_whole_decoration_order_detail
-    <set >
-      <if test="wdSpaceId != null" >
-        wd_space_id = #{wdSpaceId,jdbcType=INTEGER},
-      </if>
-      <if test="wdItemId != null" >
-        wd_item_id = #{wdItemId,jdbcType=INTEGER},
-      </if>
-      <if test="spu != null" >
-        spu = #{spu,jdbcType=VARCHAR},
-      </if>
-      <if test="sku != null" >
-        sku = #{sku,jdbcType=VARCHAR},
-      </if>
-      <if test="qty != null" >
-        qty = #{qty,jdbcType=INTEGER},
-      </if>
-      <if test="productName != null" >
-        product_name = #{productName,jdbcType=VARCHAR},
-      </if>
-      <if test="productAttrs != null" >
-        product_attrs = #{productAttrs,jdbcType=VARCHAR},
-      </if>
-      <if test="orderId != null" >
-        order_id = #{orderId,jdbcType=INTEGER},
-      </if>
-      <if test="orderNo != null" >
-        order_no = #{orderNo,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail" >
+    <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail">
+        insert into t_portal_whole_decoration_order_detail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="wdSpaceId != null">
+                wd_space_id,
+            </if>
+            <if test="wdItemId != null">
+                wd_item_id,
+            </if>
+            <if test="spu != null">
+                spu,
+            </if>
+            <if test="sku != null">
+                sku,
+            </if>
+            <if test="qty != null">
+                qty,
+            </if>
+            <if test="productName != null">
+                product_name,
+            </if>
+            <if test="productAttrs != null">
+                product_attrs,
+            </if>
+            <if test="orderId != null">
+                order_id,
+            </if>
+            <if test="orderNo != null">
+                order_no,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="wdSpaceId != null">
+                #{wdSpaceId,jdbcType=INTEGER},
+            </if>
+            <if test="wdItemId != null">
+                #{wdItemId,jdbcType=INTEGER},
+            </if>
+            <if test="spu != null">
+                #{spu,jdbcType=VARCHAR},
+            </if>
+            <if test="sku != null">
+                #{sku,jdbcType=VARCHAR},
+            </if>
+            <if test="qty != null">
+                #{qty,jdbcType=INTEGER},
+            </if>
+            <if test="productName != null">
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productAttrs != null">
+                #{productAttrs,jdbcType=VARCHAR},
+            </if>
+            <if test="orderId != null">
+                #{orderId,jdbcType=INTEGER},
+            </if>
+            <if test="orderNo != null">
+                #{orderNo,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail">
+        update t_portal_whole_decoration_order_detail
+        <set>
+            <if test="wdSpaceId != null">
+                wd_space_id = #{wdSpaceId,jdbcType=INTEGER},
+            </if>
+            <if test="wdItemId != null">
+                wd_item_id = #{wdItemId,jdbcType=INTEGER},
+            </if>
+            <if test="spu != null">
+                spu = #{spu,jdbcType=VARCHAR},
+            </if>
+            <if test="sku != null">
+                sku = #{sku,jdbcType=VARCHAR},
+            </if>
+            <if test="qty != null">
+                qty = #{qty,jdbcType=INTEGER},
+            </if>
+            <if test="productName != null">
+                product_name = #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productAttrs != null">
+                product_attrs = #{productAttrs,jdbcType=VARCHAR},
+            </if>
+            <if test="orderId != null">
+                order_id = #{orderId,jdbcType=INTEGER},
+            </if>
+            <if test="orderNo != null">
+                order_no = #{orderNo,jdbcType=VARCHAR},
+            </if>
+            <if test="price != null">
+                price = #{price,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecorationOrderDetail">
     update t_portal_whole_decoration_order_detail
     set wd_space_id = #{wdSpaceId,jdbcType=INTEGER},
-      wd_item_id = #{wdItemId,jdbcType=INTEGER},
-      spu = #{spu,jdbcType=VARCHAR},
-      sku = #{sku,jdbcType=VARCHAR},
-      qty = #{qty,jdbcType=INTEGER},
-      product_name = #{productName,jdbcType=VARCHAR},
-      product_attrs = #{productAttrs,jdbcType=VARCHAR},
-      order_id = #{orderId,jdbcType=INTEGER},
-      order_no = #{orderNo,jdbcType=VARCHAR}
+    wd_item_id = #{wdItemId,jdbcType=INTEGER},
+    spu = #{spu,jdbcType=VARCHAR},
+    sku = #{sku,jdbcType=VARCHAR},
+    qty = #{qty,jdbcType=INTEGER},
+    product_name = #{productName,jdbcType=VARCHAR},
+    product_attrs = #{productAttrs,jdbcType=VARCHAR},
+    order_id = #{orderId,jdbcType=INTEGER},
+    order_no = #{orderNo,jdbcType=VARCHAR},
+    price = #{price,jdbcType=DOUBLE}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <insert id="batchInsert" parameterType="java.util.List">
-    insert into t_portal_whole_decoration_order_detail (wd_space_id, wd_item_id,
-    spu, sku, qty, product_name,
-    product_attrs, order_id, order_no)
-    values
-    <foreach collection="list" item="item" index="index" separator=",">
-      (#{item.wdSpaceId,jdbcType=INTEGER}, #{item.wdItemId,jdbcType=INTEGER},
-      #{item.spu,jdbcType=VARCHAR}, #{item.sku,jdbcType=VARCHAR}, #{item.qty,jdbcType=INTEGER}, #{item.productName,jdbcType=VARCHAR},
-      #{item.productAttrs,jdbcType=VARCHAR}, #{item.orderId,jdbcType=INTEGER}, #{item.orderNo,jdbcType=VARCHAR})
-    </foreach>
-  </insert>
-
-
+    <insert id="batchInsert" parameterType="java.util.List">
+        insert into t_portal_whole_decoration_order_detail (wd_space_id, wd_item_id,
+        spu, sku, qty, product_name,
+        product_attrs, order_id, order_no,price)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.wdSpaceId,jdbcType=INTEGER}, #{item.wdItemId,jdbcType=INTEGER},
+            #{item.spu,jdbcType=VARCHAR}, #{item.sku,jdbcType=VARCHAR}, #{item.qty,jdbcType=INTEGER},
+            #{item.productName,jdbcType=VARCHAR},
+            #{item.productAttrs,jdbcType=VARCHAR}, #{item.orderId,jdbcType=INTEGER},
+            #{item.orderNo,jdbcType=VARCHAR},#{item.price,jdbcType=DOUBLE})
+        </foreach>
+    </insert>
 </mapper>

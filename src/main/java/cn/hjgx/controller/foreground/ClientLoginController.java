@@ -27,7 +27,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/userlogin")
-public class LoginController {
+public class ClientLoginController {
 
 	@Autowired
 	private IUserBusinessService iUserBusinessService;

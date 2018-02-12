@@ -33,6 +33,8 @@ $(function () {
             }
         }
 
+
+        requestParam.append("wholeDecorationId",$("#whole-decoration-id").val())
         requestParam.append("wholeDecorationOrderDetails", JSON.stringify(wholeDecorationDetails));
 
         $.ajax({

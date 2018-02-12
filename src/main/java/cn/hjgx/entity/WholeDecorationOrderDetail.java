@@ -21,6 +21,8 @@ public class WholeDecorationOrderDetail {
 
     private String orderNo;
 
+    private Double price;
+
     public Integer getId() {
         return id;
     }
@@ -99,5 +101,13 @@ public class WholeDecorationOrderDetail {
 
     public void setOrderNo(String orderNo) {
         this.orderNo = orderNo;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

@@ -1,30 +1,17 @@
 package cn.hjgx.controller.api.foreground;
 
 import cn.hjgx.Utils.JsonUtil;
-import cn.hjgx.Utils.ParamUtil;
-import cn.hjgx.entity.*;
-import cn.hjgx.entity.page.Pager;
-import cn.hjgx.entity.pagedto.ProductSpuResultDto;
+import cn.hjgx.entity.ProductSpu;
 import cn.hjgx.entity.paramDto.ProductSpuDto;
-import cn.hjgx.entity.paramDto.ResultDto;
 import cn.hjgx.service.*;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.google.common.collect.Lists;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.UUID;
 
 
 @RestController
@@ -34,18 +21,35 @@ public class ClientProductApiController {
 
     @Autowired
     private IProductSpuService iProductSpuService;
-
-
     @Autowired
     private IProductSkuService iProductSkuService;
+    @Autowired
+    private IProvinceService iProvinceService;
+    @Autowired
+    private ICityService iCityService;
+    @Autowired
+    private IDistrictService iDistrictService;
 
     @GetMapping("/product/detail*")
     public JsonNode get_product_detail(ProductSpu productSpu) throws IOException {
-
         ProductSpuDto spuDto = iProductSpuService.getProductSpuDetail(productSpu.getSpu());
         spuDto.setSkus(iProductSkuService.selectBySpu(productSpu.getSpu()));
-
         return JsonUtil.toJson(spuDto);
+    }
+
+    @GetMapping("/province/all")
+    public JsonNode get_all_provinces() throws IOException {
+        return JsonUtil.toJson(iProvinceService.getAllProvinces());
+    }
+
+    @GetMapping("/province/{province_id}/cities")
+    public JsonNode get_cities(@PathVariable int province_id) throws IOException {
+        return JsonUtil.toJson(iCityService.selectByProvenceId(province_id));
+    }
+
+    @GetMapping("/province/city/{city_id}/districts")
+    public JsonNode get_districts(@PathVariable int city_id) throws IOException {
+        return JsonUtil.toJson(iDistrictService.selectByCityId(city_id));
     }
 
 }

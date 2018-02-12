@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.ProvinceMapper" >
+  <resultMap id="BaseResultMap" type="cn.hjgx.entity.Province" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="district_name" property="districtName" jdbcType="VARCHAR" />
+    <result column="center" property="center" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, district_name, center
+  </sql>
+
+  <select id="getAllProvinces" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_districts_province
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_portal_districts_province
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_portal_districts_province
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.hjgx.entity.Province" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    insert into t_portal_districts_province (id, district_name, center
+      )
+    values (#{id,jdbcType=INTEGER}, #{districtName,jdbcType=VARCHAR}, #{center,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.hjgx.entity.Province" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    insert into t_portal_districts_province
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="districtName != null" >
+        district_name,
+      </if>
+      <if test="center != null" >
+        center,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="districtName != null" >
+        #{districtName,jdbcType=VARCHAR},
+      </if>
+      <if test="center != null" >
+        #{center,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.Province" >
+    update t_portal_districts_province
+    <set >
+      <if test="districtName != null" >
+        district_name = #{districtName,jdbcType=VARCHAR},
+      </if>
+      <if test="center != null" >
+        center = #{center,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.Province" >
+    update t_portal_districts_province
+    set district_name = #{districtName,jdbcType=VARCHAR},
+      center = #{center,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

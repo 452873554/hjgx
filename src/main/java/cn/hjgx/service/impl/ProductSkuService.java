@@ -31,4 +31,9 @@ public class ProductSkuService implements IProductSkuService {
     public List<ProductSku> selectBySpu(String spu) {
         return productSkuMapper.selectBySpu(spu);
     }
+
+    @Override
+    public ProductSku selectBySku(String sku) {
+        return productSkuMapper.selectBySku(sku);
+    }
 }

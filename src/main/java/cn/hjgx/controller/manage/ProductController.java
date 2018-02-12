@@ -140,7 +140,7 @@ public class ProductController {
 
 
         } catch (Exception e) {
-            logger.error("商品信息添加异常:",e);
+            logger.error("商品信息添加异常:{}",e);
             resultDto.setFlag(0);
             resultDto.setMessage("商品信息添加异常");
         }

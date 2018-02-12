@@ -2,6 +2,8 @@ package cn.hjgx.controller.foreground;
 
 import cn.hjgx.Annotation.Login;
 import cn.hjgx.Utils.ParamUtil;
+import cn.hjgx.component.LoginInterceptor;
+import cn.hjgx.entity.UserBusiness;
 import cn.hjgx.entity.WholeDecoration;
 import cn.hjgx.entity.WholeDecorationOrder;
 import cn.hjgx.entity.page.Pager;
@@ -14,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -37,18 +40,15 @@ public class ClientUserCenterController {
 
     @GetMapping("/decoration-order/list.html*")
     @Login
-    public String to_bg_whole_decoration_order_list(Model m, WholeDecorationOrder wholeDecorationOrder) {
+    public String to_bg_whole_decoration_order_list(Model m,
+                                                    WholeDecorationOrder wholeDecorationOrder,
+                                                    HttpServletRequest request) {
 
         try {
-
+            //只能查询自己的订单
+            wholeDecorationOrder.setUsername(((UserBusiness)request.getSession().getAttribute(LoginInterceptor.LOGIN_USER)).getUsername());
             Pager<WholeDecorationOrder> pager = iWholeDecorationOrderService.getWholeDecorationOrderPaged(wholeDecorationOrder);
             m.addAttribute("pager", pager);
-            String pathParam = ParamUtil.parseBeanToPathParam(wholeDecorationOrder);
-            m.addAttribute("page_title", "整装订单管理");//标题
-            m.addAttribute("current_menu", "whole_decoration_order_list");//当前菜单高亮
-            m.addAttribute("curUrl", "/backstage/whole-decoration-order/list.html");//分页片段url
-            m.addAttribute("wholeDecorationOrder", wholeDecorationOrder);//查询参数保存
-            m.addAttribute("pathParam", pathParam);
 
         } catch (Exception e) {
             e.printStackTrace();

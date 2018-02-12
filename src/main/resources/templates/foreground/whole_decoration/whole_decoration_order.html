@@ -7,6 +7,8 @@
     <title>全屋整装</title>
     <!--特有-->
     <link rel="stylesheet" th:href="@{/static/css/foreground/whole/whole_decoration_order.css}">
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap-select/bootstrap-select.min.css}">
+
 </head>
 
 <body>
@@ -68,15 +70,17 @@
         </div>
 
         <div class="Ctitle">
-
             <span>全屋整装方案</span>
             <button id="save-or-date-whole-decoration" style="float: right" type="button"
                     class="btn btn-success btn-lg">
                 &nbsp;确认整装订单&nbsp;</button>
 
+
         </div>
 
         <div class="CbtnGroup">
+
+            <input type="hidden" id="whole-decoration-id" th:value="${wholeDecoration.id}">
 
             <div class="navbar">
                 <div class="navbar-inner">
@@ -181,6 +185,9 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
+
+
+
                     <hr>
                 </div>
             </div>
@@ -194,8 +201,12 @@
 
 <!--登录模态框-->
 <div th:replace="foreground/login_dialog :: login_dialog"></div>
+<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-select/bootstrap-select.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-select/defaults-zh_CN.min.js}"></script>
+
 <script type="text/javascript" th:src="@{/static/js/utility/login-dialog.js}"></script>
 <script type="text/javascript" th:src="@{/static/js/foreground/wholeOrder.js}"></script>
+
 
 
 </body>

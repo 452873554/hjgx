@@ -1,10 +1,13 @@
 package cn.hjgx.entity;
 
 import cn.hjgx.entity.pagedto.PageDto;
+import cn.hjgx.entity.pagedto.WholeDecorationOrderDetailDto;
 
 import java.util.Date;
+import java.util.List;
 
 public class WholeDecorationOrder extends PageDto {
+
     private Integer id;
 
     private String orderNo;
@@ -18,6 +21,20 @@ public class WholeDecorationOrder extends PageDto {
     private Double paymentAmount;
 
     private String username;
+
+    private String wholeDecorationName;
+
+    private Integer wholeDecorationId;
+
+    private List<WholeDecorationOrderDetailDto> wholeDecorationOrderDetailDtos;
+
+    public List<WholeDecorationOrderDetailDto> getWholeDecorationOrderDetailDtos() {
+        return wholeDecorationOrderDetailDtos;
+    }
+
+    public void setWholeDecorationOrderDetailDtos(List<WholeDecorationOrderDetailDto> wholeDecorationOrderDetailDtos) {
+        this.wholeDecorationOrderDetailDtos = wholeDecorationOrderDetailDtos;
+    }
 
     public Integer getId() {
         return id;
@@ -73,5 +90,21 @@ public class WholeDecorationOrder extends PageDto {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getWholeDecorationName() {
+        return wholeDecorationName;
+    }
+
+    public void setWholeDecorationName(String wholeDecorationName) {
+        this.wholeDecorationName = wholeDecorationName;
+    }
+
+    public Integer getWholeDecorationId() {
+        return wholeDecorationId;
+    }
+
+    public void setWholeDecorationId(Integer wholeDecorationId) {
+        this.wholeDecorationId = wholeDecorationId;
     }
 }

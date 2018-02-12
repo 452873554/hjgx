@@ -28,6 +28,14 @@
     where spu = #{spu,jdbcType=INTEGER}
   </select>
 
+  <select id="selectBySku" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from t_portal_product_sku
+    where sku = #{sku,jdbcType=VARCHAR}
+  </select>
+
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />

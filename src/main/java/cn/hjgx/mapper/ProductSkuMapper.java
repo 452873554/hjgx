@@ -23,4 +23,6 @@ public interface ProductSkuMapper {
 
     List<ProductSku> selectBySpu(String spu);
 
+    ProductSku selectBySku(String sku);
+
 }

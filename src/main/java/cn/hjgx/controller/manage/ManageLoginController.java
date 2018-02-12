@@ -1,4 +1,4 @@
-package cn.hjgx.controller;
+package cn.hjgx.controller.manage;
 
 import cn.hjgx.entity.UserAdministrator;
 import cn.hjgx.component.AuthorityFilter;
@@ -19,7 +19,7 @@ import java.util.Date;
  */
 @Controller
 @RequestMapping("/manage")
-public class SystemController {
+public class ManageLoginController {
 
 	@Autowired
 	private IUserAdministratorService iUserAdministratorService;
@@ -28,25 +28,25 @@ public class SystemController {
 	public String dologin(HttpServletRequest request, UserAdministrator user, Model m) {
 
 		//TODO 验证码通过
-		if(true){
+		if (true) {
 
 			UserAdministrator dbuser = iUserAdministratorService.validateUser(user);
 			//用户名密码校验通过,保存会话信息，登录到管理首页
-			if(dbuser != null){
+			if (dbuser != null) {
 				//更新最后登录时间
 				dbuser.setLastLoginTime(new Date());
 				iUserAdministratorService.updateByPrimaryKeySelective(dbuser);
-				request.getSession().setAttribute(AuthorityFilter.LOGIN_ADMIN,dbuser);
+				request.getSession().setAttribute(AuthorityFilter.LOGIN_ADMIN, dbuser);
 				return "redirect:/backstage/whole-decoration-order/list.html";
-			}else{
+			} else {
 				//用户名或者密码不通过
-				m.addAttribute("msg","用户名或密码不正确");
+				m.addAttribute("msg", "用户名或密码不正确");
 				return "manage/login";
 			}
 
-		}else{
+		} else {
 			//验证码不通过
-			m.addAttribute("msg","验证码不正确");
+			m.addAttribute("msg", "验证码不正确");
 			return "manage/login";
 		}
 	}
@@ -56,28 +56,9 @@ public class SystemController {
 
 		request.getSession().invalidate();
 		return "manage/login";
-		//验证码通过
-//		if(true){
-//
-//			SystemAdmin temp = CacheService.SYSTEM_ADMIN.get(systemAdmin.getUsername());
-//
-//			//用户名密码校验通过,保存会话信息，登录到管理首页
-//			if(temp != null && MD5Util.MD5Encode(systemAdmin.getUsername() + systemAdmin.getPassword(),"UTF-8").equals(temp.getPassword())){
-//
-//				request.getSession().setAttribute(AuthorityFilter.LOGIN_USER,temp);
-//
-//				return "redirect:/systemManage/apply/list?hasRead=false";
-//			}else{
-//				//用户名或者密码不通过
-//				m.addAttribute("msg","用户名或密码不正确");
-//				return "/manage/login";
-//			}
-//
-//		}else{
-//			//验证码不通过
-//			m.addAttribute("msg","验证码不正确");
-//			return "/manage/login";
-//		}
+
 	}
-	
+
+
+
 }

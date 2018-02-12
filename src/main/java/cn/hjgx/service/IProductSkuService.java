@@ -16,6 +16,6 @@ public interface IProductSkuService {
 
     List<ProductSku> selectBySpu(String spu);
 
-
+    ProductSku selectBySku(String sku);
 
 }

@@ -1,6 +1,7 @@
 package cn.hjgx.mapper;
 
 import cn.hjgx.entity.WholeDecorationOrderDetail;
+import cn.hjgx.entity.pagedto.WholeDecorationOrderDetailDto;
 
 import java.util.List;
 
@@ -12,6 +13,8 @@ public interface WholeDecorationOrderDetailMapper {
     int insertSelective(WholeDecorationOrderDetail record);
 
     WholeDecorationOrderDetail selectByPrimaryKey(Integer id);
+
+    List<WholeDecorationOrderDetailDto> selectByOrderId(int id);
 
     int updateByPrimaryKeySelective(WholeDecorationOrderDetail record);
 
