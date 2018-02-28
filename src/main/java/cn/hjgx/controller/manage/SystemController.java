@@ -65,6 +65,12 @@ public class SystemController {
 
             //请求成功
             if (result.get("status").asInt() == 1) {
+
+                //清空现有数据
+                iProvinceService.truncateData();
+                iCityService.truncateData();
+                iDistrictService.truncateData();
+
                 //获取中国根节点
                 JsonNode china = result.get("districts").get(0);
 

@@ -18,4 +18,6 @@ public interface ProvinceMapper {
     int updateByPrimaryKey(Province record);
 
     List<Province> getAllProvinces();
+
+    void truncateData();
 }

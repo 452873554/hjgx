@@ -13,4 +13,6 @@ public interface IProvinceService {
 
     List<Province> getAllProvinces();
 
+    void truncateData();
+
 }

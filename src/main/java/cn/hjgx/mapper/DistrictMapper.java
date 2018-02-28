@@ -18,4 +18,6 @@ public interface DistrictMapper {
     int updateByPrimaryKey(District record);
 
     List<District> selectByCityId(int id);
+
+    void truncateData();
 }

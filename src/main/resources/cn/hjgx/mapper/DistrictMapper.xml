@@ -11,6 +11,10 @@
     id, district_name, center, city_id
   </sql>
 
+  <delete id="truncateData">
+    TRUNCATE t_portal_districts_district
+  </delete>
+
   <select id="selectByCityId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select
     <include refid="Base_Column_List" />

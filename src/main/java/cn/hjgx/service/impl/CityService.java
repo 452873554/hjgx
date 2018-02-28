@@ -26,4 +26,9 @@ public class CityService implements ICityService {
     public List<City> selectByProvenceId(int id) {
         return cityMapper.selectByProvenceId(id);
     }
+
+    @Override
+    public void truncateData() {
+        cityMapper.truncateData();
+    }
 }

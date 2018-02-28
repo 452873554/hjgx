@@ -10,6 +10,10 @@
     id, district_name, center
   </sql>
 
+  <delete id="truncateData">
+    TRUNCATE t_portal_districts_province
+  </delete>
+
   <select id="getAllProvinces" resultMap="BaseResultMap" >
     select
     <include refid="Base_Column_List" />

@@ -13,4 +13,6 @@ public interface IDistrictService {
 
     List<District> selectByCityId(int id);
 
+    void truncateData();
+
 }

@@ -137,6 +137,7 @@ li.sec {
     left: 0;
     background: #000000;
     opacity: 0.5;
+    display: none;
 }
 
 .imgs {
@@ -145,6 +146,7 @@ li.sec {
     height: 40%;
     top: 110px;
     left: 64px;
+    display: none;
 }
 
 /* 修改图片样式 */

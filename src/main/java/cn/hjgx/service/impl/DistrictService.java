@@ -26,4 +26,9 @@ public class DistrictService implements IDistrictService {
     public List<District> selectByCityId(int id) {
         return districtMapper.selectByCityId(id);
     }
+
+    @Override
+    public void truncateData() {
+        districtMapper.truncateData();
+    }
 }

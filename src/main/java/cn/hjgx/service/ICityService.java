@@ -13,4 +13,6 @@ public interface ICityService {
 
     List<City> selectByProvenceId(int id);
 
+    void truncateData();
+
 }

@@ -26,4 +26,9 @@ public class ProvinceService implements IProvinceService {
     public List<Province> getAllProvinces() {
         return provinceMapper.getAllProvinces();
     }
+
+    @Override
+    public void truncateData() {
+        provinceMapper.truncateData();
+    }
 }
