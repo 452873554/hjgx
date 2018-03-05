@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="header::common-foreground-header"></head>
+<head>
+    <title>整装配置单结算</title>
+    <!--特有-->
+    <link rel="stylesheet" th:href="@{/static/css/foreground/whole/address.css}">
+    <link rel="stylesheet" th:href="@{/static/css/foreground/whole/pay.css}">
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap-select/bootstrap-select.min.css}">
+
+</head>
+
+<body>
+<!--顶部导航栏-->
+<nav th:replace="navigator::navbar"></nav>
+
+<div>
+
+    <div class="maskwrap" style="display:none;"></div>
+    <div class="conterwrap" style="display:none;">
+        <div class="addbox">
+            <div class="cha"><img src="./static/img/chooselist/X.png" alt=""></div>
+            <div class="box-title">新建地址</div>
+
+            <div class="box-ipt-group clearfix">
+                <div style="left:68px;top:104px;" class="shortname">所在地区：</div>
+                <div data-toggle="distpicker"><!-- container -->
+                    <select></select><!-- 省 -->
+                    <select></select><!-- 市 -->
+                    <select></select><!-- 区 -->
+                </div>
+            </div>
+            <div class="ads-det clearfix">
+                <span class="shortname">详细地址：</span>
+                <textarea placeholder="详细地址，街道、门牌号等" name="address" id cols="30" rows="10" tabindex="6"></textarea>
+            </div>
+            <div class="person">
+                <span class="shortname">收货人：</span>
+                <input type="text" placeholder="请输入收货人">
+            </div>
+            <div class="phone">
+                <span class="shortname">手机号码：</span>
+                <input type="text" placeholder="请输入手机号">
+            </div>
+            <div class="index-check">
+                <!-- <input type="checkbox" name="" id="">
+                <span>设为默认</span> -->
+                <label class="checkbox">
+                    <input type="checkbox">设为默认
+                </label>
+            </div>
+            <div class="address-btn">
+                <button class="btn btn-true">确定</button>
+                <!-- <div class="btn-true">确认</div> -->
+                <button class="btn btn-false">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ACenter clearfix">
+        <!-- <LeftNav></LeftNav> -->
+
+        <div class="rightBoth">
+
+            <div class="rightTop">
+                <span>填写核对订单信息</span>
+            </div>
+
+            <div class="rightDown">
+                <div class="rightDtop">
+                    <div class="getAdress clearfix">
+                        <div class="title"><span>选择收货地址</span></div>
+
+                        <div id="add" style="margin-left:550px;"><img src="./static/img/small-add.png" alt=""><span>新增收货地址</span>
+                        </div>
+
+                        <router-link to="/AdressManage">
+                            <div style="margin-left:50px;"><img src="./static/img/small-set.png"
+                                                                alt=""><span>管理收货地址</span></div>
+                        </router-link>
+                    </div>
+                    <div class="getPerson">
+                        <div class="getNameBox">姓名</div>
+                        <div><span>姓名</span></div>
+                        <div><span>15744446555</span></div>
+                        <div><span>广东省-深圳市-福田区-广兰路6号-深装总大厦658</span></div>
+                        <div class="indexAdress"><span>默认地址</span></div>
+                    </div>
+                </div>
+                <div class="rightDbottom">
+                    <div class="bankTitle">支付方式</div>
+                    <div class="bankMation">线下支付</div>
+                </div>
+            </div>
+
+
+            <div class="BackList">
+                <div class="totalTitle">订单商品详情</div>
+                <div class="tableTitle">
+                    <div class="tTStyle">丹麦风情整装</div>
+                    <div style="width:400px;">商品</div>
+                    <div style="width:140px;">单价（元）</div>
+                    <div style="width:158px;">数量</div>
+                    <div style="width:165px;">小计</div>
+                </div>
+
+                <table class="dingdanTable clearfix">
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/manage/list-1.png" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div style="color:#333;"><span>现代风格 简约风格 别墅户型 进口头</span></div>
+                                <div><span>颜色：红色</span></div>
+                                <div><span>尺寸：1200*1050*500</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥1212</td>
+                        <td class="BL2">11</td>
+                        <td class="BL2">￥12313</td>
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/manage/list-1.png" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div><span>dasdsadsad</span></div>
+                                <div><span>颜色：红色</span></div>
+                                <div><span>尺寸：</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥1213</td>
+                        <td class="BL2">1212</td>
+                        <td class="BL2">￥1213</td>
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/manage/list-1.png" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div><span>韩国进口韩国计划哥几个</span></div>
+                                <div><span>颜色：红色</span></div>
+                                <div><span>尺寸：</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥12313</td>
+                        <td class="BL2">11</td>
+                        <td class="BL2">￥123</td>
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/manage/list-1.png" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div><span>觉得卡萨建档立卡</span></div>
+                                <div><span>颜色：红色</span></div>
+                                <div><span>尺寸：</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥1213</td>
+                        <td class="BL2">48468</td>
+                        <td class="BL2">￥4564</td>
+                    </tr>
+                    <tr>
+                        <td class="BL1group clearfix">
+
+                            <div class="BL1img"><img src="./static/img/manage/list-1.png" class="tlistImg"/></div>
+                            <div class="BLwordG clearfix">
+                                <div><span>1213</span></div>
+                                <div><span>颜色：红色</span></div>
+                                <div><span>尺寸：</span></div>
+                            </div>
+
+                        </td>
+
+                        <td class="BL2">￥12313</td>
+                        <td class="BL2">1231</td>
+                        <td class="BL2">￥1213</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="adminText">
+                <div style="width:75px;height:30px;float:left"><span>卖家留言：</span></div>
+                <textarea cols="30" rows="10" tabindex="6"></textarea>
+            </div>
+            <div class="wantDate clearfix">
+                <div style="margin-top:8px;"><span>期望收货日期:</span></div>
+                <!-- <div style="margin-left:15px;"><input type="text" style="padding:9px;"></div> -->
+                <input type="text" placeholder="期望收货日期" style="margin-left:15px;padding:9px;">
+            </div>
+
+            <div class="computeTotal clearfix">
+                <div class="CTcompute">
+                    <div><span class="ctname">商品总额：</span><span>￥    1232111</span></div>
+                    <div><span class="ctname">运费：</span><span>￥0</span></div>
+                    <div><span class="ctname">优惠金额：</span><span>￥0</span></div>
+                    <router-link to="/sendSuccess">
+                        <!-- <div class="sendBtn">提交订单</div> -->
+                        <a href="#" class="btn btn-danger sendBtn">提交订单</a>
+                    </router-link>
+                </div>
+                <div class="Tprice">
+                    <span>应付总额：</span><span style="color:#ff0000;">￥ 2132131</span>
+                </div>
+
+            </div>
+
+            <div class="newAdress"></div>
+
+        </div>
+
+
+    </div>
+</div>
+<footer th:include="footer :: copy"></footer>
+<div th:include="footer :: commonjs"></div>
+
+<script>
+    // 隐藏弹窗
+    $('.btn-false').click(function () {
+        $('.conterwrap').hide();
+        $('.maskwrap').hide();
+    })
+
+    $('.cha').click(function () {
+        $('.conterwrap').hide();
+        $('.maskwrap').hide();
+    })
+
+    // 显示弹窗
+    $('#add').click(function () {
+        $('.conterwrap').show();
+        $('.maskwrap').show();
+    })
+
+    //    地址选择
+    $('#target').distpicker({
+        province: '---- 所在省 ----',
+        city: '---- 所在市 ----',
+        district: '---- 所在区 ----'
+    });
+</script>
+</body>
+</html>

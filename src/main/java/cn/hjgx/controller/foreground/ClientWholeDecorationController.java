@@ -13,6 +13,7 @@ import cn.hjgx.entity.paramDto.WholeDecorationSpaceDto;
 import cn.hjgx.service.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
@@ -56,10 +59,17 @@ public class ClientWholeDecorationController {
     @Autowired
     private IProvinceService iProvinceService;
 
-    @PostMapping("/decoration/order/save")
+    /**
+     * 配置单页面，确认整装订单
+     * @param m
+     * @param request
+     * @return
+     * @throws IOException
+     */
+    @PostMapping("/decoration/order/confirm")
     @ResponseBody
     @Login
-    public JsonNode whole_decoration_order(Model m,
+    public JsonNode confirm_decoration_order(Model m,
                                            MultipartHttpServletRequest request) throws IOException {
 
         ResultDto resultDto = new ResultDto();
@@ -113,6 +123,10 @@ public class ClientWholeDecorationController {
             iWholeDecorationOrderDetailService.batchInsert(wholeDecorationOrderDetails);
             resultDto.setMessage("整装商品订单保存成功");
 
+            Map<String,Integer> params = Maps.newHashMap();
+            params.put("orderId",wholeDecorationOrder.getId());
+            resultDto.setMapData(params);
+
         } catch (Exception e) {
             logger.error("整装商品订单保存异常:", e);
 
@@ -126,7 +140,36 @@ public class ClientWholeDecorationController {
 
     /**
      * 跳转至整装下单页面
-     *
+     * @param m
+     * @return
+     */
+    @GetMapping("/decoration/order/pay")
+    @Login
+    public String save_and_pay_order(Model m,
+                                     int orderId,
+                                     HttpServletRequest request) {
+
+        try {
+
+            WholeDecorationOrder wholeDecorationOrder = iWholeDecorationOrderService.getWholeDecorationOrder(orderId);
+
+            //省信息
+            List<Province> provinces = iProvinceService.getAllProvinces();
+//            m.addAttribute("provinces", provinces);
+            m.addAttribute("wholeDecorationOrder", wholeDecorationOrder);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //TODO 跳转至pay页面
+        return "foreground/whole_decoration/whole_decoration_order_pay";
+    }
+
+
+    /**
+     * 跳转至整装下单页面
      * @param m
      * @return
      */
@@ -155,7 +198,6 @@ public class ClientWholeDecorationController {
 
     /**
      * 整装列表，默认查询最新的8个，不限风格
-     *
      * @param m
      * @return
      */
@@ -182,7 +224,6 @@ public class ClientWholeDecorationController {
 
     /**
      * 整装明细
-     *
      * @param m
      * @return
      */

@@ -26,6 +26,11 @@ public class ClientUserCenterController {
     @Autowired
     private IWholeDecorationOrderService iWholeDecorationOrderService;
 
+    /**
+     * 商家后台欢迎页
+     * @param m
+     * @return
+     */
     @GetMapping("/dashboard.html")
     public String to_usercenter_dashboard(Model m) {
 
@@ -38,6 +43,13 @@ public class ClientUserCenterController {
         return "foreground/usercenter/dashboard";
     }
 
+    /**
+     * 商家后台订单列表
+     * @param m
+     * @param wholeDecorationOrder
+     * @param request
+     * @return
+     */
     @GetMapping("/decoration-order/list.html*")
     @Login
     public String to_bg_whole_decoration_order_list(Model m,

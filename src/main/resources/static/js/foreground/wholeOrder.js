@@ -7,20 +7,21 @@ $(function () {
         var requestParam = new FormData();
         var wholeDecorationDetails = [];
         var wholeDecorationDetail = {};
+
         //遍历所有空间
-        $("#whole-decoration-sku-container").find("div.space-item-panel").each(function () {
+        $("#whole-decoration-sku-container").find("div.leftList").each(function () {
 
             var space_id = $(this).attr("space-id");
 
             //遍历空间下每一个项目
-            $(this).find(".item-sku-selected").each(function () {
+            $(this).find(".waiting-for-the-selection").each(function () {
                 wholeDecorationDetail = {};
                 wholeDecorationDetail.wdSpaceId = space_id;
                 wholeDecorationDetail.wdItemId = $(this).attr("item-id");
-                wholeDecorationDetail.productName = $($(this).find(".spu-name")[0]).text();
-                wholeDecorationDetail.spu = $($(this).find(".selected-spu")[0]).text();
-                wholeDecorationDetail.sku = $($(this).find(".selected-sku")[0]).text();
-                wholeDecorationDetail.qty = $($(this).find(".selected-sku-qty")[0]).text();
+                wholeDecorationDetail.productName = $(this).find(".spu-name").text();
+                wholeDecorationDetail.spu = $(this).find(".spu").val();
+                wholeDecorationDetail.sku = $(this).find(".sku").val();
+                wholeDecorationDetail.qty = $(this).find(".qty").val();
                 wholeDecorationDetails.push(wholeDecorationDetail);
             })
         });
@@ -38,16 +39,16 @@ $(function () {
         requestParam.append("wholeDecorationOrderDetails", JSON.stringify(wholeDecorationDetails));
 
         $.ajax({
-            url: "/decoration/order/save",
+            url: "/decoration/order/confirm",
             type: "post",
             data: requestParam,
             processData: false,
             contentType: false,
             success: function (data) {
                 if (data.flag == 1) {
-                    //TODO 添加订单待确认提示
-                    //TODO 添加商家前台登录拦截
                     alert(data.message);
+                    //跳转至订单支付页面
+                    window.location.href = "/decoration/order/pay?orderId="+data.mapData.orderId;
                 } else if(data.flag == -1) {
                     alert(data.message);
                     $('#login_dialog').modal('show')
@@ -62,117 +63,130 @@ $(function () {
 
     });
 
+    //spu数据保存
+    var $spuData = [];
+    var $target_item = {};
+
+    //属性值选中，取消选中
+    $(".attr-container").on("click",".attr-value",function () {
+        $(this).addClass("selected");
+        $(this).siblings().removeClass("selected");
+    });
+
+    //点击项目的“添加”按钮，列出所有的备选SPU
+    $(".add-sku-to-item").click(function () {
+
+        //保存“添加”对象，后续填充内容
+        $target_item = $(this);
+
+        //绑定标题
+        $(".alternative-spu-list").find(".item-title").text($(this).parent().prev().text());
+
+        //获取项目下所有备选的SPU
+        $spus = $(this).parent().next().find("input");
+
+        $(".attr-container").empty();
+        //加载每个SPU的属性信息
+        for(var i= 0;i<$spus.length;i++){
+            //获得spu的基本信息
+            $.ajax({
+                url: '/api/product/detail?spu=' + $spus[i].value,
+                type: "get",
+                success: function (data) {
+                    $spuData.push(data);
+
+                    //填充数据
+                    $("#standby-spus-title").html(data.spu);
+                    $("#spu-preview-img").attr("src", data.imageUrl);
+                    $("#product-name").html(data.productName);
+                    //属性填充
+
+                    var attrs = JSON.parse(data.attrs);
+                    var content = "";
+                    for (var i = 0; i < attrs.length; i++) {
+                        var attrValues = document.getElementById('attr-values').innerHTML;
+                        content = content + template(attrValues, {attrVals: attrs[i].value,
+                                                 attr:attrs[i].key,
+                                                 imgurl:data.imageUrl,
+                                                 spuName:data.productName});
+
+
+                    }
+
+                    var attrValuesContainer = document.getElementById('tpl').innerHTML;
+                    var spuAttr = template(attrValuesContainer, {attrValues:content,
+                        imgurl:data.imageUrl,
+                        spuName:data.productName});
+                    $(".attr-container").append(spuAttr);
+                },
+                error: function () {
+                    alert("获取SPU！请重试或联系系统管理员")
+                }
+            });
+        }
+    })
 
     //选定sku
-    $("#set-sku-to-item").click(function () {
+    $(".alternative-spu-list").on("click",".set-sku-to-item",function () {
 
         var selectedAttrs = []
         var attr = {};
 
         //查看每一组已选定的属性值
-        $("#attrs-container").find("div.form-group").each(function () {
-            //选取各个radio状态
-            $(this).find("input[type=radio]").each(function () {
-                attr = {};
-                if ($(this).prop("checked")) {
-                    attr.key = $(this).attr("name");
-                    attr.value = $(this).val();
-                    selectedAttrs.push(attr);
-                }
-            });
+        $(this).parent().prev().find(".attr-values-container").each(function () {
+            attr = {};
+            attr.key = $(this).find(".spu-attr-key").text();
+            attr.value = $(this).find(".selected").text();
+            selectedAttrs.push(attr);
         });
 
         //校验选择的属性是否有对应的sku相匹配
-        var skus = $spuData.skus;
-        var selectedSku = "";
+        var skus = [];//每个SPU所含的SKU
+        var selectedSku = "";//已选SKU
+        var selectedSpuName = "";//所选SPU名字
+        var selectedSpu = "";//所选SPU
         var flag = false;
-        for (var i = 0; i < skus.length; i++) {
-            var attr = JSON.parse(skus[i].specification);
 
-            //校验所选的属性是否和sku匹配，各个属性值完全匹配
-            for (var j = 0; j < selectedAttrs.length; j++) {
-                //查看sku中是否含有选定的属性值
-                if (attr.hasOwnProperty(selectedAttrs[j].key)) {
-                    if (attr[selectedAttrs[j].key] == selectedAttrs[j].value) {
-                        flag = true;
-                    } else {
-                        flag = false;
-                        break;
+        //遍历已保存的SPU
+        for (var i = 0; i < $spuData.length; i++) {
+            skus = $spuData[i].skus;
+            //遍历SPU的每个SKU
+            for(var j = 0;j < skus.length;j++){
+                var attr = JSON.parse(skus[j].specification);
+
+                //校验所选的属性是否和sku匹配，各个属性值完全匹配
+                for (var y = 0; y < selectedAttrs.length; y++) {
+                    //查看sku中是否含有选定的属性值
+                    if (attr.hasOwnProperty(selectedAttrs[y].key)) {
+                        if (attr[selectedAttrs[y].key] == selectedAttrs[y].value) {
+                            flag = true;
+                        } else {
+                            flag = false;
+                            break;
+                        }
                     }
                 }
+                if (flag) {
+                    selectedSku = skus[j].sku;
+                    selectedSpuName = $spuData[i].productName;
+                    selectedSpu = $spuData[i].spu;
+                    break;
+                }
             }
-            if (flag) {
-                selectedSku = skus[i].sku;
-                break;
-            }
         }
 
-        if (!selectedSku) {
-            alert("请选择SPU的属性");
-            return;
-        }
+        //将已选的sku进行绑定
+        var $dynamicDataHolder = $($target_item).parent().parent().next();
+        $dynamicDataHolder.find(".spu-name").text(selectedSpuName);
+        $dynamicDataHolder.find(".sku").val(selectedSku);
+        $dynamicDataHolder.find(".spu").val(selectedSpu);
 
-        //将选择的SKU绑定到已选栏目
-        var $spuContainer = $($($originELement).parents(".rightShow")[0]).prev()
-        $spuContainer.find(".spu-img").attr("src", $spuData.imageUrl);
-        $spuContainer.find(".spu-name").html($spuData.productName);
-        $spuContainer.find(".selected-sku").html(selectedSku);
-        $spuContainer.find(".selected-spu").html($spuData.spu);
-        $spuContainer.find(".selected-sku-qty").html($("#attrs-container").find(".qty")[0].value);
+        $dynamicDataHolder.find(".qty").val(1);
 
-        // $spuContainer.find(".media-body").html(JSON.stringify(selectedAttrs));
-        var $body = $spuContainer.find(".attrs-container");
-        $body.empty();
-        for (var i = 0; i < selectedAttrs.length; i++) {
-            $body.append("<p><span>" + selectedAttrs[i].key + ": </span><span class='tip'>" + selectedAttrs[i].value + "</span></p>");
-        }
-
-        //关闭模态框
-        $('#standby-spus').modal('hide');
     });
 
-    //设置一个全局变量，保存触发显示模态框的按钮
-    var $originELement = {};
-    //spu数据保存
-    var $spuData = {};
 
-    //加载SKU属性模态框
-    $('#standby-spus').on('show.bs.modal', function (e) {
-        $originELement = e.relatedTarget;
 
-        var spu = e.relatedTarget.id;
-        //获得spu的基本信息
-        $.ajax({
-            url: '/api/product/detail?spu=' + spu,
-            type: "get",
-            success: function (data) {
-                $spuData = data;
-
-                //填充数据
-                $("#standby-spus-title").html(data.spu);
-                $("#spu-preview-img").attr("src", data.imageUrl);
-                $("#product-name").html(data.productName);
-                //属性填充
-
-                var attrs = JSON.parse(data.attrs);
-                var content = "";
-                for (var i = 0; i < attrs.length; i++) {
-                    content = content + "<div class='form-group'><label>" + attrs[i].key + "：</label><div class='btn-group' data-toggle='buttons'>";
-                    //循环添加radio值
-                    var values = attrs[i].value;
-                    for (var j = 0; j < values.length; j++) {
-                        content = content + "<label class='btn btn-default'><input type='radio' name='" + attrs[i].key + "' value='" + values[j] + "'>" + values[j] + "</label>";
-                    }
-                    content = content + "</div></div>";
-                }
-
-                $("#attrs-container").empty().append(content + "<div class='form-group'><label>数量：</label><div class='btn-group' data-toggle='buttons'><input class='form-control qty'/></div></div>");
-            },
-            error: function () {
-                alert("删除失败！请重试或联系系统管理员")
-            }
-        });
-    })
 
 });
 

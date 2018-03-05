@@ -10,6 +10,8 @@ public interface IWholeDecorationOrderService {
 
     int insertSelective(WholeDecorationOrder record);
 
-    public Pager<WholeDecorationOrder> getWholeDecorationOrderPaged(WholeDecorationOrder brand);
+    Pager<WholeDecorationOrder> getWholeDecorationOrderPaged(WholeDecorationOrder wholeDecorationOrder);
+
+    WholeDecorationOrder getWholeDecorationOrder(int orderId);
 
 }

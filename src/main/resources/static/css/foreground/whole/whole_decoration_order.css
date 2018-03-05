@@ -12,8 +12,7 @@
     display: block;
     width: 15px;
     height: 14px;
-    background-image: url('./static/img/chooselist/nike.png');
-    /* background-position: -160px -60px; */
+    background-image: url('/static/images/innersrc/nike.png');
     background-repeat: no-repeat;
     background-size: auto;
 }
@@ -30,8 +29,7 @@
 
 .ChooseMain {
     width: 1200px;
-
-    margin: 40px auto;
+    margin: 15px auto;
 }
 
 .Ctitle {
@@ -69,8 +67,7 @@
 }
 
 .leftShow {
-    width: 500px;
-
+    width: 40%;
     float: left;
 }
 
@@ -78,14 +75,13 @@
     height: 48px;
     background: #4d4d4d;
     padding-left: 16px;
-    font-size: 21px;
     line-height: 48px;
     color: white;
     box-sizing: border-box;
 }
 
 .leftList {
-    padding: 15px;
+    padding: 0 15px;
 }
 
 .computeTotal {
@@ -129,14 +125,17 @@
 
 }
 
-.levelOne {
-    width: 100%;
+.space-info {
     height: 48px;
-
     line-height: 48px;
-    padding-left: 16px;
+    font-size: 18px;
     border: 1px solid #e6e6e6;
     border-left: 6px solid #b4a176;
+}
+
+.space-item {
+    height: 48px;
+    line-height: 48px;
 }
 
 .levelOne div, .levelTwo div {
@@ -157,40 +156,9 @@
     border-bottom: 1px solid #e6e6e6;
 }
 
-.levelTwo .L2add {
+.add-sku-to-item {
     color: #b4a176;
-    /* margin-left: 280px; */
-    margin-right: 10px;
-    float: right;
     cursor: pointer;
-}
-
-.levelTwo .L2del {
-    color: #b4a176;
-    margin-right: 0;
-}
-
-.levelThree {
-    width: 100%;
-    height: 68px;
-    background-color: #f2f2f2;
-    line-height: 68px;
-    padding-left: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.L3name {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-left: 36px;
-    /* margin-right: 16px; */
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .computeNum {
@@ -220,7 +188,7 @@
     cursor: pointer;
 }
 
-.rightShow {
+.alternative-spu-list {
     width: 59%;
     float: right;
 }
@@ -230,11 +198,9 @@
     height: 48px;
     background: #4d4d4d;
     padding-left: 24px;
-    font-size: 21px;
     line-height: 48px;
     color: white;
     box-sizing: border-box;
-    margin-bottom: 20px;
 }
 
 .RgreyB div {
@@ -242,7 +208,6 @@
 }
 
 .RgreyB .totalP {
-    font-size: 15px;
     float: right;
     margin-right: 24px;
 }
@@ -254,107 +219,56 @@
 
 }
 
-.RLinner {
+.spu-container {
     width: 100%;
-
     border-bottom: 1px solid #e6e6e6;
-    margin-bottom: 24px;
-
+    margin: 10px 0;
 }
 
-.RItop, .RIbottom, .RImiddle {
+.spu-info-img {
     float: left;
-
-}
-
-.RItop img {
     width: 150px;
-    height: 150px;
-
 }
 
-.caizhi {
-
-    margin-bottom: 15px;
+.RcolorGroup {
+    width: 100%;
+    height: 30px;
 }
 
-.RImiddle {
-    width: 350px;
-    height: 100%;
-    margin-left: 24px;
+.attr-values-container {
+    margin: 5px 0 0 -10px;
 }
 
-.RImiddle .t {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #333333;
-}
-
-.Rsize {
-
-    position: relative;
-    max-width: 250px;
-    /* width: 200px; */
-    /* height: 30px; */
-    border: 1px solid #b4a176;
+.attr-values-container div {
+    border: 1px solid #ffffff;
     line-height: 30px;
-    margin-right: 5px;
     border-radius: 1px;
     float: left;
-    margin-bottom: 10px;
-    padding: 0 8px;
+    padding: 0 10px;
     cursor: pointer;
 }
 
-.p-color {
-
+.spu-attr-key {
+    margin-left: 0;
+    color: #000;
+    font-size: 14px;
 }
 
-.RImiddle .s div {
-    float: left;
+.add-to-order {
+    margin: 10px;
+    float: right;
 }
-
-.RColor {
-    width: 50px;
-    height: 50px;
-
-    line-height: 30px;
-}
-
-.Rcolor {
-    width: 50px;
-    height: 30px;
-    border: 1px solid #b4a176;
-    line-height: 30px;
-    border-radius: 2px;
-    margin-right: 5px;
+.qty{
+    width: 50%;
+    height: 100%;
     text-align: center;
 }
 
-.RcolorGroup div {
-    float: left;
-
+.item-spu-container {
+    border-bottom: 1px solid #e6e6e6
 }
 
-.Rprice {
-    color: #ff0000;
-    font-weight: 700;
-    margin-left: 33px;
-    font-size: 16px;
-}
-
-.Rbb {
-
-    margin-top: 118px;
-
-}
-.item-container{}
-
-.item-sku-selected{
+.item-sku-selected {
     float: left;
     width: 40%;
 }
@@ -390,13 +304,13 @@ ul {
     background: #b4a176;
 }
 
-.spu-img{
+.spu-img {
     max-width: 200px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.tip{
+.tip {
     color: #b4a176;
 }

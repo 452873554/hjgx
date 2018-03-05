@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.ACenter {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.rightBoth {
+    width: 1020px;
+    position: relative;
+    float: left;
+    margin-left: 90px;
+}
+
+.rightTop {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #e6e6e6;
+    border-left: 3px solid #b4a176;
+    box-sizing: border-box;
+    padding-left: 30px;
+    font-size: 20px;
+    color: #333;
+    line-height: 52px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.liucheng {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    margin-top: 32px;
+}
+
+.lcBtnGroup {
+    height: 25px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.lcBtnGroup div {
+    float: left;
+}
+
+.lcBtn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #808080;
+    color: white;
+    text-align: center;
+}
+
+.lcLine {
+    width: 100px;
+    border-top: 1px solid #808080;
+    margin: 10px 10px 0px 10px;
+
+}
+
+.lcWordGroup {
+    display: flex;
+}
+
+.lcWord {
+    font-size: 12px;
+    color: #808080;
+    flex: 1
+}
+
+.rightDown {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #e6e6e6;
+    padding: 40px 34px;
+    margin-bottom: 50px;
+}
+
+.rightDtop {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+.getAdress div {
+    float: left;
+    vertical-align: middle;
+}
+
+.getAdress img {
+    margin-right: 10px;
+}
+
+.getAdress .title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.getPerson .getNameBox {
+    width: 90px;
+    height: 30px;
+    border: 2px solid #b4a176;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.getPerson {
+    margin-top: 20px;
+}
+
+.getPerson div {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.getPerson span {
+    font-size: 13px;
+}
+
+.getPerson .indexAdress {
+    width: 68px;
+    height: 22px;
+    background: #b4a176;
+    text-align: center;
+    line-height: 22px;
+    color: white;
+
+}
+
+.wordSize {
+    font-size: 16px;
+    color: #ff0000;
+}
+
+.bankTitle {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bankMation {
+    width: 100px;
+    height: 28px;
+    border: 2px solid #b4a176;
+    text-align: center;
+    line-height: 28px;
+
+}
+
+.totalTitle {
+    width: 100%;
+    height: 56px;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 56px;
+    padding-left: 34px;
+}
+
+.tableTitle {
+    width: 1020px;
+    background: #EBEDF0;
+    height: 48px;
+    line-height: 48px;
+
+}
+
+.tableTitle div {
+    float: left;
+    text-align: center;
+}
+
+.tTStyle {
+    width: 155px;
+
+}
+
+.dingdanTable {
+    width: 1020px;
+    margin-bottom: 20px;
+}
+
+.BackList tr {
+    border: 1px solid #e6e6e6;
+
+}
+
+.BL1group {
+    width: 580px;
+    height: 100px;
+
+}
+
+.BLwordG {
+    width: 300px;
+    color: #808080;
+    float: left;
+}
+
+.BLwordG div {
+    line-height: 25px;
+}
+
+.BL1img {
+    margin-left: 31px;
+    margin-right: 44px;
+    float: left;
+}
+
+.BL2 {
+    line-height: 100px;
+    text-align: center;
+    width: 178px;
+}
+
+.btnGroup {
+    width: 500px;
+    height: 50px;
+    margin: 50px auto;
+}
+
+.setBtn1 {
+    width: 124px;
+    height: 40px;
+    background: #F5991c;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    margin-left: 90px;
+}
+
+.setBtn2 {
+    width: 124px;
+    height: 40px;
+    background: #cccccc;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    float: left;
+    margin-left: 28px;
+}
+
+.adminText {
+    padding-top: 20px;
+    padding-left: 34px;
+    width: 1020px;
+    height: 130px;
+    border: 1px solid #e6e6e6;
+
+}
+
+.adminText textarea {
+    width: 800px;
+    height: 90px;
+    background: #F2F2F2;
+    resize: none;
+    padding: 9px;
+}
+
+.wantDate {
+    width: 1020px;
+    height: 80px;
+    border-bottom: 2px solid #e6e6e6;
+    padding-left: 34px;
+    padding-top: 14px;
+}
+
+.wantDate span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.wantDate div {
+    float: left;
+}
+
+.wantDate input {
+    width: 166px;
+    height: 40px;
+    background-color: #e6e6e6;
+    border: none;
+}
+
+.computeTotal {
+    width: 1020px;
+    height: 175px;
+    padding-top: 20px;
+}
+
+.sendBtn {
+    width: 124px;
+    height: 50px;
+    background: #ff0000;
+    text-align: center;
+    line-height: 37px;
+    font-size: 16px;
+    color: white;
+    margin-left: 20px;
+}
+
+.Tprice {
+    float: right;
+    font-size: 20px;
+    margin-top: 118px;
+    margin-right: 50px;
+}
+
+.CTcompute {
+    float: right;
+    font-size: 16px;
+    width: 180px;
+}
+
+.CTcompute div {
+    margin: 0 auto;
+}
+
+.CTcompute .ctname {
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    text-align: right;
+}

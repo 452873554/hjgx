@@ -4,7 +4,7 @@
 
 <head th:include="header::common-foreground-header"></head>
 <head>
-    <title>全屋整装</title>
+    <title>整装配置单确认</title>
     <!--特有-->
     <link rel="stylesheet" th:href="@{/static/css/foreground/whole/whole_decoration_order.css}">
     <link rel="stylesheet" th:href="@{/static/css/bootstrap/bootstrap-select/bootstrap-select.min.css}">
@@ -12,61 +12,15 @@
 </head>
 
 <body>
-
 <!--顶部导航栏-->
 <nav th:replace="navigator::navbar"></nav>
-
-<!-- Modal -->
-<div class="modal fade" id="standby-spus" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="standby-spus-title"></h4>
-            </div>
-            <div class="modal-body" id="standby-spus-list">
-                <div class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img id="spu-preview-img" class="media-object spu-img">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <div class="form-group" style="font-size: 20px;" id="product-name"></div>
-                        <div id="attrs-container">
-
-                            <div class="form-group">
-                                <label>颜色：</label>
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="颜色"> 红色
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="颜色"> 黄色
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消操作</button>
-                <button type="button" class="btn btn-success" id="set-sku-to-item">保存所选</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="designwrap">
     <div class="ChooseMain">
         <div class="alert alert-warning alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                     aria-hidden="true">&times;</span></button>
-            <span>下单前，请确认每个项目的SKU</span>
+            <span>下单前，请<strong>添加</strong>配置单中的每一个项目</span>
         </div>
 
         <div class="Ctitle">
@@ -74,125 +28,101 @@
             <button id="save-or-date-whole-decoration" style="float: right" type="button"
                     class="btn btn-success btn-lg">
                 &nbsp;确认整装订单&nbsp;</button>
-
-
         </div>
 
         <div class="CbtnGroup">
-
             <input type="hidden" id="whole-decoration-id" th:value="${wholeDecoration.id}">
-
             <div class="navbar">
                 <div class="navbar-inner">
 
                     <!--整装下单时的空间限定-->
                     <ul class="nav">
-                        <li role="presentation" th:classappend="${iterStat.index} == 0?'active':''" th:each="space,iterStat : ${wholeDecorationSpaces}">
-                            <a role="tab" data-toggle="tab" th:href="'#space_' + ${space.id}" th:text="${space.name}"></a>
+                        <li th:classappend="${iterStat.index} == 0?'active':''"
+                            th:each="space,iterStat : ${wholeDecorationSpaces}">
+                            <a role="tab" data-toggle="tab" th:href="'#space_' + ${space.id}"
+                               th:text="${space.name}"></a>
                         </li>
                     </ul>
 
                 </div>
             </div>
-
-
         </div>
 
-        <div id="whole-decoration-sku-container" class="doubleList tab-content clearfix">
+        <div class="doubleList clearfix">
+            <div id="whole-decoration-sku-container" class="leftShow">
+                <div class="LgreyB">配置单</div>
 
-            <div role="tabpanel" class="tab-pane space-item-panel" th:classappend="${iterStat.index} == 0?' active':''" th:attr="space-id=${space.id}"
-                 th:id="'space_' + ${space.id}" th:each="space,iterStat : ${wholeDecorationSpaces}">
+                <div class="leftList" th:attrappend="space-id=${space.id}" th:each="space,iterStat : ${wholeDecorationSpaces}">
 
-                <div class="LgreyB"
-                     th:text="${space.name} + '项目配置清单,共' +  ${space.wholeDecorationItemDtos.size()} +  '项'">
-                    <div class="L1img" style="margin-left:150px;"><img
-                            th:src="@{/static/images/innersrc/open.png}"/></div>
-                </div>
-
-                <hr>
-
-                <div class="item-container" th:each="item,iterStat : ${space.wholeDecorationItemDtos}" >
-
-                    <div class="item-sku-selected" th:attr="item-id=${item.id}">
-                        <!--项目名称-->
-                        <div class="levelOne clearfix">
-                            <div style="font-size:18px;"><span th:text="${item.name}">项目名称</span></div>
+                    <!--空间名称-->
+                    <div class="row space-info">
+                        <div class="col-md-9">
+                            <span th:text="${space.name}">空间名称</span>
                         </div>
+                        <div class="col-md-3 ">
+                            <small>共<span>0</span>件</small>
+                        </div>
+                    </div>
 
-                        <div class="leftList">
+                    <!--空间下的每个项目-->
+                    <div class="row" th:each="item,iterStat : ${space.wholeDecorationItemDtos}">
 
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object spu-img">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h4 style="margin-top: 0">
-                                        <span>商品名:</span>
-                                        <span class="spu-name tip"></span>
-                                    </h4>
-                                    <p>
-                                        <span>SPU:</span>
-                                        <span class="selected-spu tip"></span>
-                                    </p>
-                                    <p>
-                                        <span>SKU:</span>
-                                        <span class="selected-sku tip"></span>
-                                    </p>
-                                    <p>
-                                        <span>数量:</span>
-                                        <span class="selected-sku-qty tip"></span>
-                                    </p>
-                                    <p class="attrs-container">
+                        <div class="row space-item" >
+                            <div class="col-md-1">
+                                <!--TODO img-->
+                            </div>
+                            <div class="col-md-8">
+                                <span th:text="${item.name}">项目</span>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="add-sku-to-item">添加</span>
+                            </div>
 
-                                    </p>
-
-                                </div>
+                            <!--每个项目所包含的spu-->
+                            <div class="item-spus">
+                                <input type="hidden" th:value="${spu.spu}"
+                                       th:each="spu,iterStat : ${item.wholeDecorationSpus}">
                             </div>
                         </div>
-                    </div>
 
-                    <div class="rightShow clearfix">
-                        <div class="RgreyB">
-                            <div>备选SPU</div>
-                            <div class="totalP" th:text="'共' + ${item.wholeDecorationSpus.size()} + '款商品'"></div>
+                        <div class="row space-item waiting-for-the-selection" th:attrappend="item-id=${space.id}">
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-8">
+                                <span class="spu-name">待添加商品</span>
+                            </div>
+                            <div class="col-md-3">
+                                <input class="sku" type="hidden" >
+                                <input class="spu" type="hidden" >
+                                <input class="qty" placeholder="0">
+                            </div>
                         </div>
-                        <div class="rightList clearfix">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>SPU</th>
-                                    <th>产品名称</th>
-                                    <th>选择</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr th:each="spu,iterStat : ${item.wholeDecorationSpus}">
-                                    <td th:text="${spu.spu}">spu</td>
-                                    <td th:text="${spu.productName}">商品名</td>
-                                    <td>
 
-                                        <button th:id="${spu.spu}" type="button" class="btn btn-success btn-xs"
-                                                data-toggle="modal"
-                                                data-target="#standby-spus">选择
-                                        </button>
+                        <!--打印分割线-->
+                        <div th:if="!${iterStat.last}" class="item-spu-container"></div>
 
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
-                    <div class="clearfix"></div>
-
-
-
-                    <hr>
                 </div>
             </div>
+
+            <!--spu备选框-->
+            <div class="alternative-spu-list">
+
+                <div class="RgreyB">
+                    <div>选择家具进行关联，当前项目<span class="item-title"> 无 </span></div>
+                    <div class="totalP">共<span class="backup-spus-qty"></span>款商品</div>
+                </div>
+
+                <!--每个spu的详细信息-->
+                <div class="attr-container">
+                    <h4 class="text-center">点击"添加"选择商品</h4>
+                </div>
+
+            </div>
         </div>
-        <div class="clearfix"></div>
+
+
     </div>
 </div>
 
@@ -201,13 +131,37 @@
 
 <!--登录模态框-->
 <div th:replace="foreground/login_dialog :: login_dialog"></div>
-<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-select/bootstrap-select.min.js}"></script>
-<script type="text/javascript" th:src="@{/static/js/utility/bootstrap-select/defaults-zh_CN.min.js}"></script>
 
+<script type="text/javascript" th:src="@{/static/js/utility/template/template.js}"></script>
 <script type="text/javascript" th:src="@{/static/js/utility/login-dialog.js}"></script>
 <script type="text/javascript" th:src="@{/static/js/foreground/wholeOrder.js}"></script>
 
+<script id="attr-values" type="text/html">
+    <div class="attr-values-container clearfix">
+        <div class="spu-attr-key"><%:=attr%></div>
+        <%for(var i = 0; i < attrVals.length; i++) {%>
+        <%if(i == 0){%>
+        <div class="attr-value selected"><%:=attrVals[i]%></div>
+        <%}%>
+        <%if(i != 0){%>
+        <div class="attr-value"><%:=attrVals[i]%></div>
+        <%}%>
+        <%}%>
+    </div>
+</script>
 
+<script id="tpl" type="text/html">
+    <div class="spu-container">
+        <div class="col-md-3"><img class="spu-info-img" src="<%:=imgurl%>" alt=""></div>
+        <div class="col-md-9">
+            <h4><%:=spuName%></h4>
+            <%:=attrValues%>
+        </div>
+        <p class="text-right clearfix">
+            <button type="button" class="btn btn-success set-sku-to-item" data-toggle="button">加入配置单</button>
+        </p>
+    </div>
+</script>
 
 </body>
 </html>

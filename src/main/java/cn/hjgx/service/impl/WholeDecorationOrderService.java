@@ -48,4 +48,11 @@ public class WholeDecorationOrderService implements IWholeDecorationOrderService
 
         return pager;
     }
+
+    @Override
+    public WholeDecorationOrder getWholeDecorationOrder(int orderId) {
+        WholeDecorationOrder order = wholeDecorationOrderMapper.selectByPrimaryKey(orderId);
+        order.setWholeDecorationOrderDetailDtos(wholeDecorationOrderDetailMapper.selectByOrderId(order.getId()));
+        return order;
+    }
 }

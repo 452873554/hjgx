@@ -36,7 +36,7 @@
         #{username,jdbcType=VARCHAR}, #{wholeDecorationName,jdbcType=VARCHAR}, #{wholeDecorationId,jdbcType=INTEGER}
         )
     </insert>
-    <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationOrder" useGeneratedKeys="true" keyColumn="id" keyProperty="">
+    <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationOrder" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into t_portal_whole_decoration_order
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
