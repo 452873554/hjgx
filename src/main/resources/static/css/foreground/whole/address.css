@@ -41,7 +41,7 @@
     z-index: 1111;
     top: 50%;
     left: 50%;
-    margin-top: -160px;
+    margin-top: -185px;
     margin-left: -350px;
 
 }
@@ -191,16 +191,10 @@
 .btn-true {
     width: 140px;
     margin-left: 132px;
-    height: 42px;
     line-height: 29px;
     font-size: 16px;
     color: #fff;
-    border: 1px solid #b4a176;
     background-color: #b4a176;
-    border-radius: 2px;
-    text-align: center;
-    float: left;
-    cursor: pointer;
 }
 
 .btn-true:hover {
@@ -211,25 +205,17 @@
 
 .btn-false {
     width: 140px;
-    float: left;
     margin-left: 25px;
-    height: 42px;
     line-height: 29px;
     font-size: 16px;
     color: #fff;
-    border: 1px solid #cccccc;
     background-color: #cccccc;
-    border-radius: 2px;
-    text-align: center;
-    cursor: pointer;
 }
 
-/* 页面内容 */
-.rightBoth {
-    width: 1020px;
-    /* height: 600px; */
-    float: left;
-    margin-left: 30px;
+.btn-false:hover {
+    color: #fff !important;
+    background: #b4a176;
+    opacity: 0.9;
 }
 
 .rightMain {

@@ -59,6 +59,9 @@ public class ClientWholeDecorationController {
     @Autowired
     private IProvinceService iProvinceService;
 
+    @Autowired
+    private IUserAddressService iUserAddressService;
+
     /**
      * 配置单页面，确认整装订单
      * @param m
@@ -143,7 +146,7 @@ public class ClientWholeDecorationController {
      * @param m
      * @return
      */
-    @GetMapping("/decoration/order/pay")
+    @GetMapping("/decoration/order/binding.html*")
     @Login
     public String save_and_pay_order(Model m,
                                      int orderId,
@@ -151,20 +154,63 @@ public class ClientWholeDecorationController {
 
         try {
 
+            //订单信息，只能是待补全信息的单才可以在支付页面进行操作 TODO
             WholeDecorationOrder wholeDecorationOrder = iWholeDecorationOrderService.getWholeDecorationOrder(orderId);
+            //售后地址信息
+            List<UserAddress> userAddresses = iUserAddressService.selectAllByUserName(((UserBusiness) request.getSession().getAttribute(LoginInterceptor.LOGIN_USER)).getUsername());
 
-            //省信息
-            List<Province> provinces = iProvinceService.getAllProvinces();
-//            m.addAttribute("provinces", provinces);
             m.addAttribute("wholeDecorationOrder", wholeDecorationOrder);
-
+            m.addAttribute("userAddresses", userAddresses);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        //TODO 跳转至pay页面
+        //TODO 跳转至pay页面pay
         return "foreground/whole_decoration/whole_decoration_order_pay";
+    }
+
+    /**
+     *
+     * @param m
+     * @return
+     */
+    @PostMapping("/decoration/order/pay")
+    @ResponseBody
+    @Login
+    public JsonNode save_and_pay_order(Model m,
+                                     HttpServletRequest request) throws IOException {
+
+        ResultDto resultDto = new ResultDto();
+        try {
+
+            int orderId = Integer.valueOf(request.getParameter("orderId"));
+            int addrId = Integer.valueOf(request.getParameter("addrId"));
+            String remark = request.getParameter("remark");
+
+            //绑定
+            WholeDecorationOrder wholeDecorationOrder = iWholeDecorationOrderService.getWholeDecorationOrder(orderId);
+            UserAddress userAddress = iUserAddressService.selectByPrimaryKey(addrId);
+
+            wholeDecorationOrder.setProvince(userAddress.getProvence());
+            wholeDecorationOrder.setCity(userAddress.getCity());
+            wholeDecorationOrder.setDistrict(userAddress.getDistrict());
+            wholeDecorationOrder.setAddress(userAddress.getAddress());
+            wholeDecorationOrder.setReceiver(userAddress.getReceiver());
+            wholeDecorationOrder.setReceiverCellPhone(userAddress.getReceiverCellPhone());
+            wholeDecorationOrder.setRemark(remark);
+
+            wholeDecorationOrder.setStatus(1);//待付款
+
+            iWholeDecorationOrderService.updateByPrimaryKeySelective(wholeDecorationOrder);
+
+        } catch (Exception e) {
+            resultDto.setFlag(0);
+            resultDto.setMessage("订单保存失败");
+            e.printStackTrace();
+        }
+
+        return JsonUtil.toJson(resultDto);
     }
 
 

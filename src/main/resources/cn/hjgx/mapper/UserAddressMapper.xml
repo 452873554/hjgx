@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.hjgx.mapper.UserAddressMapper">
+    <resultMap id="BaseResultMap" type="cn.hjgx.entity.UserAddress">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="provence" property="provence" jdbcType="VARCHAR"/>
+        <result column="city" property="city" jdbcType="VARCHAR"/>
+        <result column="district" property="district" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="receiver" property="receiver" jdbcType="VARCHAR"/>
+        <result column="receiver_cell_phone" property="receiverCellPhone" jdbcType="VARCHAR"/>
+        <result column="default_address" property="defaultAddress" jdbcType="BIT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, user_name, provence, city, district, address, receiver, receiver_cell_phone, 
+    default_address
+  </sql>
+
+
+    <select id="selectAllByUserName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from t_user_address
+        where user_name = #{userName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from t_user_address
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_user_address
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="cn.hjgx.entity.UserAddress">
+    insert into t_user_address (id, user_name, provence, 
+      city, district, address, 
+      receiver, receiver_cell_phone, default_address
+      )
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{provence,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{district,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{receiver,jdbcType=VARCHAR}, #{receiverCellPhone,jdbcType=VARCHAR}, #{defaultAddress,jdbcType=BIT}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="cn.hjgx.entity.UserAddress">
+        insert into t_user_address
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="provence != null">
+                provence,
+            </if>
+            <if test="city != null">
+                city,
+            </if>
+            <if test="district != null">
+                district,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="receiver != null">
+                receiver,
+            </if>
+            <if test="receiverCellPhone != null">
+                receiver_cell_phone,
+            </if>
+            <if test="defaultAddress != null">
+                default_address,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="provence != null">
+                #{provence,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null">
+                #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="district != null">
+                #{district,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="receiver != null">
+                #{receiver,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverCellPhone != null">
+                #{receiverCellPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="defaultAddress != null">
+                #{defaultAddress,jdbcType=BIT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.UserAddress">
+        update t_user_address
+        <set>
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="provence != null">
+                provence = #{provence,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null">
+                city = #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="district != null">
+                district = #{district,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="receiver != null">
+                receiver = #{receiver,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverCellPhone != null">
+                receiver_cell_phone = #{receiverCellPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="defaultAddress != null">
+                default_address = #{defaultAddress,jdbcType=BIT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="unsetDefaultToAll" parameterType="java.lang.String">
+        update t_user_address set default_address = false where user_name = #{userName,jdbcType=VARCHAR}
+    </update>
+
+    <update id="setDefault">
+        update t_user_address set default_address = false where user_name = #{0};
+        update t_user_address set default_address = true where user_name = #{0} AND id = #{1};
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.UserAddress">
+    update t_user_address
+    set user_name = #{userName,jdbcType=VARCHAR},
+      provence = #{provence,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      district = #{district,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      receiver = #{receiver,jdbcType=VARCHAR},
+      receiver_cell_phone = #{receiverCellPhone,jdbcType=VARCHAR},
+      default_address = #{defaultAddress,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

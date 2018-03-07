@@ -14,4 +14,7 @@ public interface IWholeDecorationOrderService {
 
     WholeDecorationOrder getWholeDecorationOrder(int orderId);
 
+    int updateByPrimaryKeySelective(WholeDecorationOrder record);
+
+
 }

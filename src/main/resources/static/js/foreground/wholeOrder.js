@@ -48,7 +48,7 @@ $(function () {
                 if (data.flag == 1) {
                     alert(data.message);
                     //跳转至订单支付页面
-                    window.location.href = "/decoration/order/pay?orderId="+data.mapData.orderId;
+                    window.location.href = "/decoration/order/binding.html?orderId="+data.mapData.orderId;
                 } else if(data.flag == -1) {
                     alert(data.message);
                     $('#login_dialog').modal('show')

@@ -32,7 +32,7 @@
                 <div class="LCsmall">已付尾款（<span style="color:#ffa410;">0</span>）</div>
                 <div class="LCsmall">待发货（<span style="color:#ffa410;">0</span>）</div>
                 <div class="LCsmall">待收货（<span style="color:#ffa410;">0</span>）</div>
-                <div class="LCsmall">已完成（<span style="color:#ffa410;">1</span>）</div>
+                <div class="LCsmall">已完成（<span style="color:#ffa410;">0</span>）</div>
             </div>
 
             <div class="BgreyB clearfix">
@@ -58,8 +58,11 @@
 
                             <div class="BL1img"><img th:src="${detail.previewImgUrl}" class="tlistImg"/></div>
                             <div class="BLwordG clearfix">
-                                <div class='small-tcolor'><span class='txt' th:text="${detail.productName}">sku名称</span></div>
-                                <div><span th:text="${detail.productAttrs}"></span></div>
+                                <div class='small-tcolor'><span class='txt' th:text="${detail.productName}">sku名称</span>
+                                </div>
+                                <div th:each="attr,iterStat : ${detail.attrsMap}"><span
+                                        th:text="${attr.key + ':' + attr.value}">颜色：红色</span></div>
+
                             </div>
 
                         </td>
@@ -67,18 +70,16 @@
                         <td class="BL2" th:text="'￥' + ${detail.price}"></td>
                         <td class="BL2" th:text="${detail.qty}"></td>
 
+
                         <th:block th:if="${iterStat.index == 0}">
                             <td class="BL2" rowspan="100">
-                                <div><span>已完成</span></div>
+                                <div th:if="${order.status == 0}"><span>待补全信息</span></div>
+                                <div th:if="${order.status == 1}"><span>待付款</span></div>
                             </td>
                             <td class="BL4" rowspan="100">
-                                <router-link to="/orderDetail">
-                                    <div><span>查看详情</span></div>
-                                </router-link>
+                                <div><span>查看详情</span></div>
                                 <div><span>追踪物流</span></div>
-                                <router-link to="/BackMoney">
-                                    <div><span>申请售后</span></div>
-                                </router-link>
+                                <div><span>申请售后</span></div>
                             </td>
 
                         </th:block>

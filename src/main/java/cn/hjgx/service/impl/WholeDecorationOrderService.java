@@ -55,4 +55,9 @@ public class WholeDecorationOrderService implements IWholeDecorationOrderService
         order.setWholeDecorationOrderDetailDtos(wholeDecorationOrderDetailMapper.selectByOrderId(order.getId()));
         return order;
     }
+
+    @Override
+    public int updateByPrimaryKeySelective(WholeDecorationOrder record) {
+        return wholeDecorationOrderMapper.updateByPrimaryKeySelective(record);
+    }
 }

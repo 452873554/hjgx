@@ -26,6 +26,8 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
     <result column="preview_img_url" property="previewImgUrl" jdbcType="VARCHAR" />
+    <result column="full_view_url" property="fullViewUrl" jdbcType="VARCHAR" />
+
   </resultMap>
 
   <sql id="Base_Column_List" >

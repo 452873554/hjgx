@@ -1,133 +1,208 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.hjgx.mapper.WholeDecorationOrderMapper">
-    <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecorationOrder">
-        <id column="id" property="id" jdbcType="INTEGER"/>
-        <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
-        <result column="status" property="status" jdbcType="INTEGER"/>
-        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
-        <result column="payment_amount" property="paymentAmount" jdbcType="DOUBLE"/>
-        <result column="username" property="username" jdbcType="VARCHAR"/>
-        <result column="whole_decoration_name" property="wholeDecorationName" jdbcType="VARCHAR"/>
-        <result column="whole_decoration_id" property="wholeDecorationId" jdbcType="INTEGER"/>
+<mapper namespace="cn.hjgx.mapper.WholeDecorationOrderMapper" >
+    <resultMap id="BaseResultMap" type="cn.hjgx.entity.WholeDecorationOrder" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        <result column="payment_amount" property="paymentAmount" jdbcType="DOUBLE" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
+        <result column="whole_decoration_name" property="wholeDecorationName" jdbcType="VARCHAR" />
+        <result column="whole_decoration_id" property="wholeDecorationId" jdbcType="INTEGER" />
+        <result column="province" property="province" jdbcType="VARCHAR" />
+        <result column="city" property="city" jdbcType="VARCHAR" />
+        <result column="district" property="district" jdbcType="VARCHAR" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+        <result column="receiver" property="receiver" jdbcType="VARCHAR" />
+        <result column="receiver_cell_phone" property="receiverCellPhone" jdbcType="VARCHAR" />
+        <result column="remark" property="remark" jdbcType="VARCHAR" />
     </resultMap>
-    <sql id="Base_Column_List">
+    <sql id="Base_Column_List" >
         id, order_no, status, create_time, update_time, payment_amount, username, whole_decoration_name,
-        whole_decoration_id
+        whole_decoration_id, province, city, district, address, receiver, receiver_cell_phone,
+        remark
     </sql>
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
         select
-        <include refid="Base_Column_List"/>
+        <include refid="Base_Column_List" />
         from t_portal_whole_decoration_order
         where id = #{id,jdbcType=INTEGER}
     </select>
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
         delete from t_portal_whole_decoration_order
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="cn.hjgx.entity.WholeDecorationOrder">
+    <insert id="insert" parameterType="cn.hjgx.entity.WholeDecorationOrder" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into t_portal_whole_decoration_order (id, order_no, status,
         create_time, update_time, payment_amount,
-        username, whole_decoration_name, whole_decoration_id
-        )
+        username, whole_decoration_name, whole_decoration_id,
+        province, city, district,
+        address, receiver, receiver_cell_phone,
+        remark)
         values (#{id,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
         #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{paymentAmount,jdbcType=DOUBLE},
-        #{username,jdbcType=VARCHAR}, #{wholeDecorationName,jdbcType=VARCHAR}, #{wholeDecorationId,jdbcType=INTEGER}
-        )
+        #{username,jdbcType=VARCHAR}, #{wholeDecorationName,jdbcType=VARCHAR}, #{wholeDecorationId,jdbcType=INTEGER},
+        #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{district,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR}, #{receiver,jdbcType=VARCHAR}, #{receiverCellPhone,jdbcType=VARCHAR},
+        #{remark,jdbcType=VARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="cn.hjgx.entity.WholeDecorationOrder" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into t_portal_whole_decoration_order
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
                 id,
             </if>
-            <if test="orderNo != null">
+            <if test="orderNo != null" >
                 order_no,
             </if>
-            <if test="status != null">
+            <if test="status != null" >
                 status,
             </if>
-            <if test="createTime != null">
+            <if test="createTime != null" >
                 create_time,
             </if>
-            <if test="updateTime != null">
+            <if test="updateTime != null" >
                 update_time,
             </if>
-            <if test="paymentAmount != null">
+            <if test="paymentAmount != null" >
                 payment_amount,
             </if>
-            <if test="username != null">
+            <if test="username != null" >
                 username,
             </if>
-            <if test="wholeDecorationName != null">
+            <if test="wholeDecorationName != null" >
                 whole_decoration_name,
             </if>
-            <if test="wholeDecorationId != null">
+            <if test="wholeDecorationId != null" >
                 whole_decoration_id,
             </if>
+            <if test="province != null" >
+                province,
+            </if>
+            <if test="city != null" >
+                city,
+            </if>
+            <if test="district != null" >
+                district,
+            </if>
+            <if test="address != null" >
+                address,
+            </if>
+            <if test="receiver != null" >
+                receiver,
+            </if>
+            <if test="receiverCellPhone != null" >
+                receiver_cell_phone,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
         </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
                 #{id,jdbcType=INTEGER},
             </if>
-            <if test="orderNo != null">
+            <if test="orderNo != null" >
                 #{orderNo,jdbcType=VARCHAR},
             </if>
-            <if test="status != null">
+            <if test="status != null" >
                 #{status,jdbcType=INTEGER},
             </if>
-            <if test="createTime != null">
+            <if test="createTime != null" >
                 #{createTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="updateTime != null">
+            <if test="updateTime != null" >
                 #{updateTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="paymentAmount != null">
+            <if test="paymentAmount != null" >
                 #{paymentAmount,jdbcType=DOUBLE},
             </if>
-            <if test="username != null">
+            <if test="username != null" >
                 #{username,jdbcType=VARCHAR},
             </if>
-            <if test="wholeDecorationName != null">
+            <if test="wholeDecorationName != null" >
                 #{wholeDecorationName,jdbcType=VARCHAR},
             </if>
-            <if test="wholeDecorationId != null">
+            <if test="wholeDecorationId != null" >
                 #{wholeDecorationId,jdbcType=INTEGER},
+            </if>
+            <if test="province != null" >
+                #{province,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null" >
+                #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="district != null" >
+                #{district,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null" >
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="receiver != null" >
+                #{receiver,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverCellPhone != null" >
+                #{receiverCellPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=VARCHAR},
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecorationOrder">
+    <update id="updateByPrimaryKeySelective" parameterType="cn.hjgx.entity.WholeDecorationOrder" >
         update t_portal_whole_decoration_order
-        <set>
-            <if test="orderNo != null">
+        <set >
+            <if test="orderNo != null" >
                 order_no = #{orderNo,jdbcType=VARCHAR},
             </if>
-            <if test="status != null">
+            <if test="status != null" >
                 status = #{status,jdbcType=INTEGER},
             </if>
-            <if test="createTime != null">
+            <if test="createTime != null" >
                 create_time = #{createTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="updateTime != null">
+            <if test="updateTime != null" >
                 update_time = #{updateTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="paymentAmount != null">
+            <if test="paymentAmount != null" >
                 payment_amount = #{paymentAmount,jdbcType=DOUBLE},
             </if>
-            <if test="username != null">
+            <if test="username != null" >
                 username = #{username,jdbcType=VARCHAR},
             </if>
-            <if test="wholeDecorationName != null">
+            <if test="wholeDecorationName != null" >
                 whole_decoration_name = #{wholeDecorationName,jdbcType=VARCHAR},
             </if>
-            <if test="wholeDecorationId != null">
+            <if test="wholeDecorationId != null" >
                 whole_decoration_id = #{wholeDecorationId,jdbcType=INTEGER},
+            </if>
+            <if test="province != null" >
+                province = #{province,jdbcType=VARCHAR},
+            </if>
+            <if test="city != null" >
+                city = #{city,jdbcType=VARCHAR},
+            </if>
+            <if test="district != null" >
+                district = #{district,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null" >
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="receiver != null" >
+                receiver = #{receiver,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverCellPhone != null" >
+                receiver_cell_phone = #{receiverCellPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                remark = #{remark,jdbcType=VARCHAR},
             </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecorationOrder">
+    <update id="updateByPrimaryKey" parameterType="cn.hjgx.entity.WholeDecorationOrder" >
         update t_portal_whole_decoration_order
         set order_no = #{orderNo,jdbcType=VARCHAR},
         status = #{status,jdbcType=INTEGER},
@@ -136,10 +211,16 @@
         payment_amount = #{paymentAmount,jdbcType=DOUBLE},
         username = #{username,jdbcType=VARCHAR},
         whole_decoration_name = #{wholeDecorationName,jdbcType=VARCHAR},
-        whole_decoration_id = #{wholeDecorationId,jdbcType=INTEGER}
+        whole_decoration_id = #{wholeDecorationId,jdbcType=INTEGER},
+        province = #{province,jdbcType=VARCHAR},
+        city = #{city,jdbcType=VARCHAR},
+        district = #{district,jdbcType=VARCHAR},
+        address = #{address,jdbcType=VARCHAR},
+        receiver = #{receiver,jdbcType=VARCHAR},
+        receiver_cell_phone = #{receiverCellPhone,jdbcType=VARCHAR},
+        remark = #{remark,jdbcType=VARCHAR}
         where id = #{id,jdbcType=INTEGER}
     </update>
-
 
     <select id="selectByPageParam" resultMap="BaseResultMap" parameterType="cn.hjgx.entity.WholeDecorationOrder">
         select
