@@ -25,6 +25,12 @@ tr {
     color: #b4a176;
 }
 
+/*顶部banner*/
+.wholedetail_img img{
+    width: 100%;
+    height: 400px;
+}
+
 /* 按钮组 */
 .lbtnG {
     width: 500px;

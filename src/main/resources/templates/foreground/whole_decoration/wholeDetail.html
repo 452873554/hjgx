@@ -9,6 +9,7 @@
 
 
     <style>
+        
         .swiper-container {
             width: 1200px;
             height: 900px;
@@ -46,7 +47,10 @@
             background: #b4a176;
             color: #ffffff;
         }
-
+        .swiper-slide div:nth-child(1) img{
+            width: 1200px;
+            height: 600px;
+        }
         /* 表格 */
         .ul_down tr {
             border: 1px dashed #e6e6e6;
@@ -63,7 +67,9 @@
 <nav th:replace="navigator::navbar"></nav>
 
 <div>
-    <img style="width:100%;" th:src="${wholeDecoration.bannerImgUrl}"/>
+    <div class="wholedetail_img">
+        <img th:src="${wholeDecoration.bannerImgUrl}"/>
+    </div>
     <div class="clearfix"></div>
     <div class="spaceTitle">空间设置</div>
 
@@ -143,7 +149,8 @@
             <span class="minT">皇家共享，为您提供最优选材</span>
         </div>
 
-        <!--整装详细说明-->
+        <!--整装详细说明-->                 0
+
         <div th:utext="${wholeDecoration.description}">
         </div>
 

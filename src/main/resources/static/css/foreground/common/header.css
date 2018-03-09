@@ -33,6 +33,7 @@
 .topheader a, .topheader a:hover, .topheader a:active, .topheader span {
     color: #b3b3b3;
     font-size: 12px;
+    text-decoration: none!important;
 }
 
 .topheader a {
@@ -70,7 +71,7 @@ header .kouhao {
     height: 1em;
 }
 
-/* .header-menu ul li img{margin-top:-0.3em;} */
+
 .header-menu ul li:first-child {
     margin-right: 22px;
     margin-left: 0;
@@ -127,6 +128,7 @@ header .kouhao {
     position: fixed;
     z-index: 997;
     top: 35px;
+    line-height: 20px;
 }
 
 .fixback {
@@ -142,9 +144,11 @@ header .kouhao {
 .header-menu .nav > li > a {
     color: #333;
     background: transparent;
+    padding: 15px 15px;
     padding-left: 0;
     padding-right: 0;
     font-size: 15px;
+    transition: 0s!important;
 }
 
 .header-menu .nav > li > a:hover {

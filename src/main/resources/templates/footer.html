@@ -57,6 +57,33 @@
     <script th:src="@{/static/js/bootstrap/jquery.min.js}"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script th:src="@{/static/js/bootstrap/bootstrap.min.js}"></script>
+    <script>
+        // 移入显示二维码
+        $(".header-menu #code").mouseover(function(){
+            $(".erweima").show();
+        })
+
+        $(".header-menu #code").mouseout(function(){
+            $(".erweima").hide();
+        })
+
+        // 保留头部导航高亮
+        // $(document).ready(function () {
+        //     $('ul.nav > li').click(function (e) {
+        //         e.preventDefault();
+        //         $('ul.nav > li').removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+        $(document).ready(function() {
+            $('ul.nav > li a').each(function() {
+                if ($($(this))[0].href == String(window.location)) {
+                    $('ul.nav > li').removeClass("active");
+                    $(this).parent().addClass('active');
+                };
+            });
+        });
+    </script>
 </div>
 
 </body>

@@ -43,8 +43,15 @@ header {
 
 .headChoice .aboutnav li {
     float: left;
-}
 
+}
+.headChoice .aboutnav a{
+    background: transparent!important;
+    color: #808080;
+}
+.headChoice .aboutnav a:hover{
+    color: #b4a176;
+}
 .headChoice .aboutnav .navline {
     width: 1px;
     height: 20px;
@@ -82,7 +89,7 @@ header {
 
 .main {
     width: 1200px;
-    height: 500px;
+    min-height: 570px;
     padding-top: 80px;
     padding-bottom: 80px;
     margin: 0 auto;

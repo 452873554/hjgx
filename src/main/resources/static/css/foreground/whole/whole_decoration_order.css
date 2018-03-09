@@ -1,3 +1,5 @@
+
+
 .selected {
     position: relative;
     border: 1px solid #b4a176 !important;
@@ -19,6 +21,7 @@
 
 * {
     box-sizing: border-box;
+    outline: none!important;
 }
 
 .clearfix:after {
@@ -78,6 +81,7 @@
     line-height: 48px;
     color: white;
     box-sizing: border-box;
+    font-size: 21px;
 }
 
 .leftList {
@@ -91,15 +95,19 @@
     text-align: center;
     line-height: 57px;
     font-size: 16px;
+    float: left;
+}
+.computeTotal span{
+    display: inline-block;
+    margin: 0 5px;
 }
 
 .design {
-    border: 1px solid #e6e6e6;
     width: 500px;
-    height: 260px;
-    padding-left: 24px;
-    padding-top: 50px;
+    text-align:center;
     font-size: 16px;
+    float: left;
+    margin-top: 20px;
 }
 
 .design input {
@@ -134,8 +142,28 @@
 }
 
 .space-item {
-    height: 48px;
-    line-height: 48px;
+    height: 68px;
+    line-height: 68px;
+    border-left: 1px solid #e6e6e6;
+    margin-left: 0px;
+    border-right: 1px solid #e6e6e6;
+    margin-right: 0;
+}
+
+.space-item:nth-child(2){
+    background: #F2F2F2;
+}
+.space-item:nth-child(2) .col-md-8{
+    width: 62%;
+}
+.space-item:nth-child(1) .col-md-3{
+    padding-left: 21px;
+}
+
+.space-item .col-md-3 input{
+    border: 0;
+    background: #F2F2F2;
+    outline: none;
 }
 
 .levelOne div, .levelTwo div {
@@ -189,7 +217,7 @@
 }
 
 .alternative-spu-list {
-    width: 59%;
+    width: 58%;
     float: right;
 }
 
@@ -201,15 +229,20 @@
     line-height: 48px;
     color: white;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .RgreyB div {
     float: left;
 }
+.RgreyB div:nth-child(1){
+font-size: 21px;
+}
 
 .RgreyB .totalP {
     float: right;
     margin-right: 24px;
+    font-size: 16px;
 }
 
 .rightShow .rightList {
@@ -222,7 +255,15 @@
 .spu-container {
     width: 100%;
     border-bottom: 1px solid #e6e6e6;
-    margin: 10px 0;
+    margin: 20px 0;
+}
+.spu-container .text-right{
+    margin: 0 0 20px;
+}
+.spu-container .col-md-9 h4{
+    font-size: 16px;
+    color: #808080;
+    font-weight: 700;
 }
 
 .spu-info-img {
@@ -234,9 +275,13 @@
     width: 100%;
     height: 30px;
 }
+.attr-container{
+    border: 1px solid #e6e6e6;
+    padding: 24px 24px;
+}
 
 .attr-values-container {
-    margin: 5px 0 0 -10px;
+    margin: 15px 0 0 -10px;
 }
 
 .attr-values-container div {
@@ -250,7 +295,7 @@
 
 .spu-attr-key {
     margin-left: 0;
-    color: #000;
+    color: #808080;
     font-size: 14px;
 }
 
@@ -313,4 +358,27 @@ ul {
 
 .tip {
     color: #b4a176;
+}
+
+/*支付按钮*/
+.listBtn{
+    color: #b4a176;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #b4a176;
+    font-size:16px;
+    text-align: center;
+    border-radius: 0!important;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin: 0 auto;
+
+}
+.listBtn:hover{
+    background: #b4a176;
+    color: #ffffff;
+}
+
+.listBtn:active{
+    background: #cfbd92;
 }

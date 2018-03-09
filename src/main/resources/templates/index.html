@@ -35,12 +35,27 @@
         /* 新轮播 */
         .swiper-container {
             width: 5rem;
-            height: 1.5rem;
+            height: 1.7rem;
 
         }
 
         .swiper-pagination-bullet-active {
             background-color: #ffffff;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets{
+            bottom: 25px;
+        }
+        .swiper-container .swiper-button-prev,.swiper-container .swiper-button-next{
+            width: 30px;
+            height: 20px;
+        }
+        .swiper-container .swiper-button-prev{
+            background: url("/static/images/innersrc/swiper-prev.png") no-repeat;
+            left: 12%;
+        }
+        .swiper-container .swiper-button-next{
+            background: url("/static/images/innersrc/swiper-next.png") no-repeat;
+            right: 12%;
         }
 
     </style>
@@ -192,6 +207,16 @@
             prevEl: '.swiper-button-prev',
         },
     });
+    // 移入显示二维码
+    $(".active").mouseover(function(){
+        $(".erweima").show();
+    })
+
+    $(".active").mouseout(function(){
+        $(".erweima").hide();
+    })
+
+
 </script>
 </body>
 </html>

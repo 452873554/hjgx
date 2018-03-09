@@ -2,7 +2,16 @@
 /* 头部样式 */
 header{height:90px;width:1200px; margin:0 auto;padding-top: 15px;}
 header .kouhao{ font-size: 14px;color:#808080; display: inline-table;margin-left:24px;
-  margin-top:10px; font-style: normal; font-family: "Microsoft YaHei"; float:left;} 
+  margin-top:10px; font-style: normal; font-family: "Microsoft YaHei"; float:left;}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;//关于解决输入框背景颜色
+-webkit-text-fill-color: #ffffff!important;//关于接输入框文字颜色
+  -webkit-border
+}
+input{
+  outline: none;
+  border: #b2b2b2 1px solid;
+}
 .head img{
   float: left;
   margin-top: 10px;
@@ -26,7 +35,7 @@ header .kouhao{ font-size: 14px;color:#808080; display: inline-table;margin-left
   width: 100%;
   padding-top: 164px;
   background: #8ebfce;
-  
+
 }
 .loginwrap{
   width: 1200px;

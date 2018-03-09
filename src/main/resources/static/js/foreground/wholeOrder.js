@@ -185,6 +185,30 @@ $(function () {
 
     });
 
+        // 计算件数
+    var str=0
+    $('.add').each(function () {
+        $(this).click(function () {
+          str=  $(this).parent().find(".qty").val();
+          str++;
+            $(this).parent().find('.qty').val(str);
+            $(this).parent().parent().parent().parent().find(".pnum").html(str);
+
+        })
+    })
+
+    $('.reduce').each(function () {
+        $(this).click(function () {
+            str=  $(this).parent().find(".qty").val();
+            if(str>1){
+                str--;
+            }
+            $(this).parent().find('.qty').val(str);
+            $(this).parent().parent().parent().parent().find(".pnum").html(str);
+        })
+    })
+
+
 
 
 

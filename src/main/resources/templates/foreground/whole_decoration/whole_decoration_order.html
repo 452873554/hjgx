@@ -25,9 +25,7 @@
 
         <div class="Ctitle">
             <span>全屋整装方案</span>
-            <button id="save-or-date-whole-decoration" style="float: right" type="button"
-                    class="btn btn-success btn-lg">
-                &nbsp;确认整装订单&nbsp;</button>
+
         </div>
 
         <div class="CbtnGroup">
@@ -60,7 +58,7 @@
                             <span th:text="${space.name}">空间名称</span>
                         </div>
                         <div class="col-md-3 ">
-                            <small>共<span>0</span>件</small>
+                            <small>共<span class="pnum"></span>件</small>
                         </div>
                     </div>
 
@@ -95,7 +93,9 @@
                             <div class="col-md-3">
                                 <input class="sku" type="hidden" >
                                 <input class="spu" type="hidden" >
-                                <input class="qty" placeholder="0">
+                                <img src="/static/images/innersrc/plus.png/" class="reduce"/>
+                                <input class="qty"  placeholder="0" value="">
+                                <img src="/static/images/innersrc/add.png/" class="add"/>
                             </div>
                         </div>
 
@@ -103,6 +103,14 @@
                         <div th:if="!${iterStat.last}" class="item-spu-container"></div>
 
                     </div>
+                </div>
+                <div class="computeTotal">
+                    <div> 合计<span style="color: rgb(247,0,0)">100</span>件</div>
+                </div>
+                <div class="design" >
+                    <button id="save-or-date-whole-decoration"  type="button"
+                            class="btn listBtn btn-lg">
+                        &nbsp;立即支付&nbsp;</button>
                 </div>
             </div>
 
@@ -120,6 +128,7 @@
                 </div>
 
             </div>
+
         </div>
 
 
@@ -158,7 +167,7 @@
             <%:=attrValues%>
         </div>
         <p class="text-right clearfix">
-            <button type="button" class="btn btn-success set-sku-to-item" data-toggle="button">加入配置单</button>
+            <button type="button" class="btn btn-warning set-sku-to-item" data-toggle="button">加入配置单</button>
         </p>
     </div>
 </script>

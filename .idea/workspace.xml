@@ -1,112 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b46be9e-1750-4ee0-836e-4f95b6644957" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/api/foreground/ClientProductApiController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/api/foreground/ClientProductApiController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientUserCenterController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientUserCenterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientWholeDecorationController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientWholeDecorationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationOrder.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/pagedto/WholeDecorationOrderDetailDto.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/pagedto/WholeDecorationOrderDetailDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IWholeDecorationOrderService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IWholeDecorationOrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationOrderService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationOrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationOrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationOrderMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/address.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/address.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/pay.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/pay.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/whole_decoration_order.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/whole_decoration_order.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order_pay.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order_pay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_list.html" />
-    </list>
-    <ignored path="portal.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="54f3185c-db51-4797-be29-968284859986" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hjgx$starter.coverage" NAME="starter Coverage Results" MODIFIED="1520412723357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="portal" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wholeOrder.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="about.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/about.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigator.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navigator.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="whole_decoration_order.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="60" column="53" lean-forward="false" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wholeOrder.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-322">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-              <folding>
-                <element signature="e#2424#2521#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wholeOrderPay.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrderPay.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="163" column="84" selection-start-line="163" selection-start-column="84" selection-end-line="163" selection-end-column="84" />
-              <folding>
-                <element signature="e#78#161#0" expanded="false" />
-                <element signature="e#208#1166#0" expanded="false" />
-                <element signature="e#1217#2015#0" expanded="false" />
-                <element signature="e#2062#2690#0" expanded="false" />
-                <element signature="e#2111#2682#0" expanded="false" />
-                <element signature="e#2278#2578#0" expanded="false" />
-                <element signature="e#2504#2564#0" expanded="false" />
-                <element signature="e#3106#3325#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientWholeDecorationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientWholeDecorationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="91" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WholeDecorationOrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationOrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+            <state relative-caret-position="418">
+              <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whole_decoration_order.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/whole_decoration_order.html">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WholeDecorationOrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/WholeDecorationOrderMapper.java">
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="-484">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/common/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="216" column="6" lean-forward="false" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -114,86 +120,8 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="readme" />
-      </map>
-    </option>
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/Utils/HttpUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/Utils/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/Utils/HttpClientUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/SystemController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/manage/ManageLoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientLoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/manage/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/Province.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/District.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/City.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IProvinceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/ProvinceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/ProvinceMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/ProvinceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/ICityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/CityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/CityMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/CityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IDistrictService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/DistrictMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/DistrictMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/DistrictService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/manage/SystemController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/whole.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-prod.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/whole_decoration_order.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/api/foreground/ClientProductApiController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/address.css" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/UserAddressMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/UserAddressMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientUserCenterController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/pay.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_list.html" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/pagedto/WholeDecorationOrderDetailDto.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/ProductSkuMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/ProductSku.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order_pay.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IUserAddressService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/UserAddressService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationOrderMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/IWholeDecorationOrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationOrderService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrderPay.js" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientWholeDecorationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/whole_decoration_order.html" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -201,32 +129,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="810" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -243,886 +147,144 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="whole_decoration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="usercenter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="font" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pagedto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hjgx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foreground" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="foreground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="foreground" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="foreground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="foreground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hjgx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hjgx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="foreground" type="462c0819:PsiDirectoryNode" />
+              <item name="whole_decoration" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files" />
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../b2b_kdn/distribution_sales" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="InterceptorAdapter&#9;PSI&#9;JAVA://org.springframework.web.servlet.handler.HandlerInterceptorAdapter" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/images/innersrc" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/foreground" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/css/foreground/common" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.hjgx.service" />
-      <recent name="cn.hjgx.Utils" />
-      <recent name="cn.hjgx.component" />
-      <recent name="cn.hjgx.controller.manage" />
-      <recent name="cn.hjgx.controller.foreground" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/cn/hjgx/entity" />
-      <recent name="$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/cn/hjgx/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js/foreground" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js/utility/datapicker" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.starter">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="GAPID_DISABLE_PCS" value="false" />
-      </Profilers>
-      <method />
-    </configuration>
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1137,162 +299,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1305,7 +311,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1313,77 +319,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="portal" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -1391,45 +326,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.hjgx.Starter" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -1444,7 +340,7 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
@@ -1457,155 +353,13 @@
       <envs />
       <properties />
       <listeners />
-      <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="starter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.hjgx.Starter" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="portal" />
-      <envs />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.starter" />
-    </list>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-apk/distribution_member" value="2987425530000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-origin/distribution_inventory" value="2986378142000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-origin/distribution_member" value="2986378144000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-origin/distribution_sales" value="2986378144000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-tb/distribution_products" value="2985551264000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock-tb/distribution_sales" value="2985629755000" />
-        <entry key="$PROJECT_DIR$/../../b2b-lockstock/distribution_sales" value="2985629755000" />
-        <entry key="$PROJECT_DIR$/../../b2b-orderaudit/distribution_cart" value="2991042826000" />
-        <entry key="$PROJECT_DIR$/../../b2b-orderaudit/distribution_inventory" value="2991042826000" />
-        <entry key="$PROJECT_DIR$/../../b2b-orderaudit/distribution_products" value="2991042828000" />
-        <entry key="$PROJECT_DIR$/../../b2b-orderaudit/distribution_sales" value="2991042828000" />
-        <entry key="$PROJECT_DIR$/../../b2b_07072017/distribution_inventory" value="2999526512000" />
-        <entry key="$PROJECT_DIR$/../../b2b_07072017/distribution_sales" value="2999526514000" />
-        <entry key="$PROJECT_DIR$/../../b2b_07072017_forcommit/distribution_inventory" value="2999645564000" />
-        <entry key="$PROJECT_DIR$/../../b2b_07072017_forcommit/distribution_sales" value="2999645566000" />
-        <entry key="$PROJECT_DIR$/../../b2b_bill/distribution_products" value="3005386118000" />
-        <entry key="$PROJECT_DIR$/../../b2b_bill/distribution_sales" value="3005386118000" />
-        <entry key="$PROJECT_DIR$/../../b2b_businessreport/distribution_inventory" value="3006948972000" />
-        <entry key="$PROJECT_DIR$/../../b2b_businessreport/distribution_member" value="3006948974000" />
-        <entry key="$PROJECT_DIR$/../../b2b_businessreport/distribution_products" value="3006948974000" />
-        <entry key="$PROJECT_DIR$/../../b2b_businessreport/distribution_sales" value="3006948974000" />
-        <entry key="$PROJECT_DIR$/../../b2b_financeaudit/distribution_cart" value="2991696334000" />
-        <entry key="$PROJECT_DIR$/../../b2b_financeaudit/distribution_member" value="2991696336000" />
-        <entry key="$PROJECT_DIR$/../../b2b_financeaudit/distribution_sales" value="2991725361000" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer/distribution_inventory" value="3022281570000" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer/distribution_sales" value="3022281572000" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer1/distribution_inventory" value="3023499505013" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer1/distribution_products" value="3025084327644" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer1/distribution_sales" value="3025084328213" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer1/tomtopcnb2b/distribution_inventory" value="3025050377927" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer1_t/distribution_products" value="3023911002705" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer2/distribution_inventory" value="3025220144569" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer2/distribution_products" value="3025163812946" />
-        <entry key="$PROJECT_DIR$/../../b2b_hktransfer2/distribution_sales" value="3025220146279" />
-        <entry key="$PROJECT_DIR$/../../b2b_initinventory3/distribution_inventory" value="2994874958000" />
-        <entry key="$PROJECT_DIR$/../../b2b_initinventory4/distribution_inventory" value="2995194548000" />
-        <entry key="$PROJECT_DIR$/../../b2b_initinventory7/distribution_sales" value="3010400476000" />
-        <entry key="$PROJECT_DIR$/../../b2b_master/distribution_cart" value="2993602310000" />
-        <entry key="$PROJECT_DIR$/../../b2b_master/distribution_inventory" value="2999371970000" />
-        <entry key="$PROJECT_DIR$/../../b2b_master/distribution_member" value="2993602310000" />
-        <entry key="$PROJECT_DIR$/../../b2b_master/distribution_payment" value="3021460526000" />
-        <entry key="$PROJECT_DIR$/../../b2b_master/distribution_sales" value="3020554380000" />
-        <entry key="$PROJECT_DIR$/../../b2b_organization2/distribution_inventory" value="3001736566000" />
-        <entry key="$PROJECT_DIR$/../../b2b_organization2/distribution_products" value="3001736568000" />
-        <entry key="$PROJECT_DIR$/../../b2b_organization2/distribution_sales" value="3001736569000" />
-        <entry key="$PROJECT_DIR$/../../b2b_productstock/distribution_products" value="2999311040000" />
-        <entry key="$PROJECT_DIR$/../../b2b_recalculation/distribution_sales" value="2992957830000" />
-        <entry key="$PROJECT_DIR$/../../b2b_splitorder/distribution_inventory" value="2999874645000" />
-        <entry key="$PROJECT_DIR$/../../b2b_splitorder/distribution_sales" value="2999874646000" />
-        <entry key="$PROJECT_DIR$/../../b2b_storagetime/distribution_inventory" value="2999489518000" />
-        <entry key="$PROJECT_DIR$/../../b2b_storagetime/distribution_sales" value="2998437446000" />
-        <entry key="$PROJECT_DIR$/../../b2b_syncinventory/distribution_inventory" value="3014397736000" />
-        <entry key="$PROJECT_DIR$/../../b2b_syncinventory/distribution_sales" value="3014398052000" />
-        <entry key="$PROJECT_DIR$/../../b2b_syncinventory_v2/distribution_inventory" value="3012843404000" />
-        <entry key="$PROJECT_DIR$/../../b2b_syncmember/distribution_inventory" value="3008977788000" />
-        <entry key="$PROJECT_DIR$/../../b2b_syncmember/distribution_sales" value="3008977790000" />
-        <entry key="$PROJECT_DIR$/../../b2c" value="64890750143000" />
-        <entry key="$PROJECT_DIR$/../../b2c_master" value="64979157214000" />
-        <entry key="$PROJECT_DIR$/../../hk2/distribution_products" value="3027182443567" />
-        <entry key="$PROJECT_DIR$/../../hk3/distribution_sales" value="3027698921894" />
-        <entry key="$PROJECT_DIR$/../../hktransfer2/distribution_products" value="3026608148498" />
-        <entry key="$PROJECT_DIR$/../../p5/distribution_products" value="3027875075578" />
-      </map>
-    </option>
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1614,92 +368,68 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="9b46be9e-1750-4ee0-836e-4f95b6644957" name="Default" comment="" />
-      <created>1514615664276</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1514615664276</updated>
-      <workItem from="1514615666252" duration="9015000" />
-      <workItem from="1514791214602" duration="47789000" />
-      <workItem from="1515081668806" duration="111000" />
-      <workItem from="1515081810000" duration="2994000" />
-      <workItem from="1515210916510" duration="2347000" />
-      <workItem from="1515315165312" duration="3360000" />
-      <workItem from="1515430673051" duration="619000" />
-      <workItem from="1515432553556" duration="3820000" />
-      <workItem from="1515492743652" duration="24871000" />
-      <workItem from="1515665808772" duration="22330000" />
-      <workItem from="1515905812918" duration="61260000" />
-      <workItem from="1516183966553" duration="75167000" />
-      <workItem from="1516430411531" duration="23733000" />
-      <workItem from="1516670339912" duration="52318000" />
-      <workItem from="1516843070568" duration="53843000" />
-      <workItem from="1517038934868" duration="965000" />
-      <workItem from="1517154291286" duration="21440000" />
-      <workItem from="1517220890548" duration="37741000" />
-      <workItem from="1517394174252" duration="4319000" />
-      <workItem from="1517448993331" duration="43950000" />
-      <workItem from="1517795877811" duration="50620000" />
-      <workItem from="1517912229372" duration="79051000" />
-      <workItem from="1518315606693" duration="13530000" />
-      <workItem from="1518400572229" duration="1149000" />
-      <workItem from="1518403779816" duration="14757000" />
-      <workItem from="1519607711097" duration="2114000" />
-      <workItem from="1519629966482" duration="8945000" />
-      <workItem from="1519867070714" duration="6122000" />
-      <workItem from="1519892352649" duration="35443000" />
-      <workItem from="1520129629970" duration="117000" />
-      <workItem from="1520130535788" duration="27339000" />
-      <workItem from="1520236811067" duration="33143000" />
-      <workItem from="1520385239710" duration="12726000" />
-    </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="777048000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="810" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32658958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.216763" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20953757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17179215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081545" sideWeight="0.4442748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2078125" sideWeight="0.4442748" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08959538" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1695279" sideWeight="0.5557252" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08959538" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.216763" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08959538" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32658958" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10498409" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2078125" sideWeight="0.4442748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2933526" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1695279" sideWeight="0.5557252" order="4" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1732,577 +462,379 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1695279" sideWeight="0.5557252" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/manage/ProductSpaceController.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="130" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/whole_decoration_order.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/manage/SystemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utility/template/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/utility/datapicker/distpicker.data.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/product/brand_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="111" column="37" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/CityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="e#600#601#0" expanded="false" />
-            <element signature="e#656#657#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/IProvinceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-597">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/paramDto/ResultDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/IDistrictService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/IBrandService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/api/foreground/ClientProductApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="108" column="42" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/address.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/UserAddressMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="145" column="92" selection-start-line="145" selection-start-column="92" selection-end-line="145" selection-end-column="92" />
-          <folding>
-            <marker date="1520318953371" expanded="true" signature="1222:1355" ph="select from t_user_address" />
-            <marker date="1520318953371" expanded="true" signature="1476:1596" ph="select from t_user_address" />
-            <marker date="1520318953371" expanded="true" signature="1686:1750" ph="delete from " />
-            <marker date="1520318953371" expanded="true" signature="1835:2284" ph="insert into t_user_address... " />
-            <marker date="1520318953371" expanded="true" signature="4399:5449" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5542:5638" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5691:5763" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5773:5844" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5773:5848" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5773:5858" ph="update t_use... " />
-            <marker date="1520318953371" expanded="true" signature="5959:6415" ph="update t_use... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/pay.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="314" column="19" selection-start-line="314" selection-start-column="19" selection-end-line="314" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecoration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/pagedto/WholeDecorationResultDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="38" column="68" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.jar!/com/fasterxml/jackson/databind/JsonNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.3.9.RELEASE/spring-jdbc-4.3.9.RELEASE.jar!/org/springframework/jdbc/support/AbstractFallbackSQLExceptionTranslator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/ProductSkuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <element signature="e#906#907#0" expanded="false" />
-            <element signature="e#962#963#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationOrderDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationOrderDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1691">
-          <caret line="40" column="79" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/ProductSkuMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
-          <folding>
-            <marker date="1520388219279" expanded="true" signature="1485:1602" ph="select from t_portal_product_sku" />
-            <marker date="1520388219279" expanded="true" signature="1708:1825" ph="select ,imag... " />
-            <marker date="1520388219279" expanded="true" signature="1940:2056" ph="select from t_portal_product_sku" />
-            <marker date="1520388219279" expanded="true" signature="2143:2213" ph="delete from " />
-            <marker date="1520388219279" expanded="true" signature="2296:2913" ph="insert into t_portal_product_sku... " />
-            <marker date="1520388219279" expanded="true" signature="5931:7191" ph="update t_por... " />
-            <marker date="1520388219279" expanded="true" signature="7286:7924" ph="update t_por... " />
-          </folding>
+          <caret line="3" column="58" lean-forward="false" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/ProductSku.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.9.RELEASE/spring-web-4.3.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/UserAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding />
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/UserAdministrator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/UserAddressMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/UserAddressService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
-          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
-          <folding>
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1171#1172#0" expanded="true" />
-          </folding>
+          <caret line="42" column="54" lean-forward="false" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/IUserAddressService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="20" />
-          <folding />
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/cn/hjgx/mapper/WholeDecorationOrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="656">
-          <caret line="240" column="9" selection-start-line="240" selection-start-column="9" selection-end-line="240" selection-end-column="9" />
-          <folding>
-            <marker date="1520404409335" expanded="true" signature="1943:2081" ph="select from t_portal_whole_decoration_order" />
-            <marker date="1520404409335" expanded="true" signature="2176:2261" ph="delete from " />
-            <marker date="1520404409335" expanded="true" signature="2417:3254" ph="insert into t_portal_whole_decoration_order... " />
-            <marker date="1520404409335" expanded="true" signature="6912:8874" ph="update t_por... " />
-            <marker date="1520404409335" expanded="true" signature="8987:9874" ph="update t_por... " />
-          </folding>
+          <caret line="240" column="9" lean-forward="false" selection-start-line="240" selection-start-column="9" selection-end-line="240" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/Supplier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrderPay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="163" column="84" selection-start-line="163" selection-start-column="84" selection-end-line="163" selection-end-column="84" />
-          <folding>
-            <element signature="e#78#161#0" expanded="false" />
-            <element signature="e#208#1166#0" expanded="false" />
-            <element signature="e#1217#2015#0" expanded="false" />
-            <element signature="e#2062#2690#0" expanded="false" />
-            <element signature="e#2111#2682#0" expanded="false" />
-            <element signature="e#2278#2578#0" expanded="false" />
-            <element signature="e#2504#2564#0" expanded="false" />
-            <element signature="e#3106#3325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order_pay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="147" column="89" selection-start-line="147" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#2;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#2;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#2;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#4;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1520392830713" expanded="false" signature="7519:7534" ph="..." />
-            <marker date="1520392830713" expanded="false" signature="7633:7662" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding>
-            <element signature="e#2424#2521#0" expanded="false" />
-          </folding>
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/pagedto/WholeDecorationOrderDetailDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientUserCenterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="113" column="96" selection-start-line="113" selection-start-column="96" selection-end-line="113" selection-end-column="96" />
-          <folding>
-            <element signature="method#to_usercenter_dashboard#0;class#ClientUserCenterController#0" expanded="false" />
-          </folding>
+          <caret line="113" column="96" lean-forward="false" selection-start-line="113" selection-start-column="96" selection-end-line="113" selection-end-column="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/controller/foreground/ClientWholeDecorationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="91" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="89" column="12" lean-forward="false" selection-start-line="89" selection-start-column="12" selection-end-line="91" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/IWholeDecorationOrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/mapper/WholeDecorationOrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/entity/WholeDecorationOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hjgx/service/impl/WholeDecorationOrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-          <folding />
+          <caret line="42" column="43" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/wholedetail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/whole.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrderPay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="146" column="70" lean-forward="false" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/wholeDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1936">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/whole_decoration_order.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/usercenter/whole_decoration_order.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="1408">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/usercenter/whole_decoration_order.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3982">
+          <caret line="181" column="19" lean-forward="false" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/usercenter/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4488">
+          <caret line="204" column="37" lean-forward="false" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order_pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2750">
+          <caret line="125" column="54" lean-forward="false" selection-start-line="125" selection-start-column="54" selection-end-line="125" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/pay.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/whole/address.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="270" column="1" lean-forward="false" selection-start-line="270" selection-start-column="1" selection-end-line="270" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/about.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>portal</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navigator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="216" column="6" lean-forward="false" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/common/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/foreground/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/foreground/whole_decoration/whole_decoration_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="60" column="53" lean-forward="false" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/foreground/wholeOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

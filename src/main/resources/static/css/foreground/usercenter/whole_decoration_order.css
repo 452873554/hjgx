@@ -174,10 +174,12 @@ th, td {
     font-size: 15px;
 }
 
+
 .BLwordG {
     width: 300px;
     color: #808080;
     float: left;
+    font-size: 14px;
 }
 
 .BLwordG div {
@@ -193,12 +195,36 @@ th, td {
     line-height: 100px;
     text-align: center;
     width: 124px;
-
+    vertical-align: top;
 }
 
-.BL4 {
+/* 操作列表 */
+.BL4{
     font-size: 15px;
     text-align: center;
     width: 178px;
-    line-height: 25px;
+    line-height: 30px!important;
+     vertical-align: top;
+}
+
+.BL4 .nav li{
+    height: 30px;
+}
+
+.BL4 .nav > li > a{
+    color: #333;
+    background: transparent;
+    padding:0;
+    font-size: 15px;
+}
+
+.BL4 .nav > li > a:hover{
+    color: #b4a176;
+    background: transparent;
+}
+
+.BL4 .nav > li > a:focus{
+    color: #b4a176;
+    background: transparent;
+
 }
